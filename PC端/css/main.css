@@ -1741,7 +1741,6 @@ textarea {
   margin-right: 30px;
 }
 .right-section .shebei-banji .class-box {
-  text-align: center;
   border: solid 1px #b4b4b4;
   cursor: pointer;
 }
@@ -2737,12 +2736,21 @@ div[class^="col"]:before > span.textArea {
 .class-box .fenzu {
   height: 40px;
   float: left;
+  width: 26%;
+  text-align: center;
   position: absolute;
-  margin-left: 45%;
+  margin-left: 37%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .class-box p {
   float: left;
-  margin-left: 20px;
+  margin-left: 15px;
+  width: 32%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .class-box a {
   float: right;
