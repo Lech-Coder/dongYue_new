@@ -58,7 +58,7 @@
         <input id="shujuluru" class="btn-small btn-green" type="button" value="数据录入">
         <input id="gengxintongjiData" class="btn-small btn-green w10" type="button" value="更新统计数据">
           <span>
-            <span class="time_1"></span>统计任务已下达，新的结果预计<span class="time_2">time2</span>可以查看
+            <span class="time_1">time1</span>统计任务已下达，新的结果预计<span class="time_2"></span>可以查看
           </span>
       </div>
       <div class="charts-content">
@@ -345,36 +345,36 @@
         strDate = "0" + strDate;
       }
       var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
-              + " " + date.getHours() + seperator2 + date.getMinutes()
-              + seperator2 + date.getSeconds();
       return currentdate
     }
-    $(".time_1")[0].innerText=getNowFormatDate()
-    $(".time_2")[0].innerText=getNextDate()
+    // $(".time_1")[0].innerText=getNowFormatDate()
+    $(".time_2")[0].innerText=getNextDate()+" 8:00:00"
 
-    var wait =86400
+    console.log(getNextDate())
 
-    function time(o){
-      if (wait == 0) {
-        o.removeAttribute("disabled");
-        o.value="更新数据统计";
-        wait = 86400;
-      } else {
-        if(wait==86400){
-          $(".time_1")[0].innerText=getNowFormatDate()
-          $(".time_2")[0].innerText=getNextDate()
-        }
-        o.setAttribute("disabled", true);
-        o.value=wait+"秒后可点击更新";
-        wait--;
-        setTimeout(function() {
-                  time(o)
-                },
-                1000)
-      }
-    }
+    // var wait =86400
+    //
+    // function time(o){
+    //   if (wait == 0) {
+    //     o.removeAttribute("disabled");
+    //     o.value="更新数据统计";
+    //     wait = 86400;
+    //   } else {
+    //     if(wait==86400){
+    //       $(".time_1")[0].innerText=getNowFormatDate()
+    //       $(".time_2")[0].innerText=getNextDate()
+    //     }
+    //     o.setAttribute("disabled", true);
+    //     o.value=wait+"秒后可点击更新";
+    //     wait--;
+    //     setTimeout(function() {
+    //               time(o)
+    //             },
+    //             1000)
+    //   }
+    // }
     $("#gengxintongjiData").on('click',function () {
-       time(this)
+      $(".time_2")[0].innerText=getNextDate()+" 8:00:00"
     })
   </script>
 </html>
