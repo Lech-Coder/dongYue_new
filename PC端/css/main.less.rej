@@ -1,0 +1,12 @@
+diff a/PC端/css/main.less b/PC端/css/main.less	(rejected hunks)
+@@ -158,10 +158,8 @@
+   }
+ 
+   .text {
+-    line-height: 30px;
+     font-size: 14px;
+     color: rgb(170, 170, 170);
+-    margin-top: 10px;
+     float: right;
+     /*
+     用来阻止页面文字被选中，出现蓝色

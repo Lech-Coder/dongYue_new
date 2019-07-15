@@ -1,0 +1,4 @@
+*.idea
+*.svn
+*.vscode
+*\mobiscroll.custom-2.17.0.min.js
