@@ -2731,12 +2731,14 @@ div[class^="col"]:before > span.textArea {
   height: 40px;
   line-height: 40px;
   padding: 0 ;
+  position: relative;
   float: right;
 }
 .class-box .fenzu {
   height: 40px;
   float: left;
-  margin-left: 20%;
+  position: absolute;
+  margin-left: 45%;
 }
 .class-box p {
   float: left;
