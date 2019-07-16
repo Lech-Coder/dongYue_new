@@ -10130,6 +10130,9 @@ input[type="button"] {
   background: #696969;
   margin-left: 0.7rem;
 }
+.table_btn a.focus {
+  background: #82b64a;
+}
 .fansililu #mCSB_1_container {
   height: 99%;
 }
@@ -11694,6 +11697,13 @@ input[type="button"] {
   height: 30px;
   padding: 0 5px;
   width: 100%;
+}
+.jxgl-my-cjbd .title-box select {
+  height: 30px;
+  width: 100%;
+}
+.jxgl-my-cjbd .title-box select option {
+  width: 70%;
 }
 .jxgl-my-cjbd .title-box .item-number {
   border: 1px solid #b4b4b4;

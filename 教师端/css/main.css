@@ -6602,7 +6602,7 @@ footer a:active {
 }
 .return-alert #icon-close_2 {
   margin-top: 6.7rem;
-  right: 2rem;
+  right: 1.6rem;
   border: 1px solid black;
   border-radius: 50%;
 }
@@ -6613,7 +6613,7 @@ footer a:active {
 }
 .return-alert .tanchuang_table {
   width: 7.33333333rem;
-  height: 4rem;
+  height: 3.33333333rem;
   background: #fff;
   border-radius: 0.2rem;
   margin: 6.5rem auto 0;
@@ -6626,7 +6626,7 @@ footer a:active {
   margin-left: 5%;
 }
 .return-alert .tanchuang_table .queding {
-  margin-top: 0.6rem;
+  margin-top: 0.24rem;
   width: 47%;
   height: 0.86666667rem;
   line-height: 0.86666667rem;

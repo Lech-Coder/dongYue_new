@@ -76,10 +76,10 @@
                             <a href="javascript:;" class="btn blueBtn">阶段统计</a>
                             <a href="javascript:;" class="btn themeBtn">新建表单</a>
                         </div>
-                        
+
                     </div>
                 </div>
-                    
+
                 <div class="table-content">
                     <div class="teacher-box clearfix">
 
@@ -142,7 +142,7 @@
                                 <div class="item">刘老师</div>
                             </div>
                         </div>
-                        
+
                         <div class="teacher-list-box clearfix">
                             <div class="title">分组1</div>
                             <div class="content-box clearfix">
@@ -162,7 +162,7 @@
                                 <div class="item">刘老师</div>
                             </div>
                         </div>
-                        
+
                         <div class="teacher-list-box clearfix">
                             <div class="title">分组1</div>
                             <div class="content-box clearfix">
@@ -182,7 +182,7 @@
                                 <div class="item">刘老师</div>
                             </div>
                         </div>
-                        
+
                         <div class="teacher-list-box clearfix">
                             <div class="title">分组1</div>
                             <div class="content-box clearfix">
@@ -202,7 +202,7 @@
                                 <div class="item">刘老师</div>
                             </div>
                         </div>
-                        
+
                         <div class="teacher-list-box clearfix">
                             <div class="title">分组1</div>
                             <div class="content-box clearfix">
@@ -222,7 +222,7 @@
                                 <div class="item">刘老师</div>
                             </div>
                         </div>
-                        
+
                         <div class="teacher-list-box clearfix">
                             <div class="title">分组1</div>
                             <div class="content-box clearfix">
@@ -242,7 +242,7 @@
                                 <div class="item">刘老师</div>
                             </div>
                         </div>
-                        
+
                         <div class="teacher-list-box clearfix">
                             <div class="title">分组1</div>
                             <div class="content-box clearfix">
@@ -331,6 +331,13 @@
 
                     </div>
 
+
+                    <div class="table_btn mt20 clearfix">
+                            <a class="btn grayBtn focus" >总体</a>
+                            <a class="btn grayBtn" >分类一</a>
+                            <a class="btn grayBtn" >分类一</a>
+                            <a class="btn grayBtn">分类二</a>
+                    </div>
                     <!-- 柱状图 -->
                     <div class="chart">
                         <div id="class-chart">
@@ -434,15 +441,15 @@
                 },
             })
         })
-   
+
         // 柱状图
         var myChart = echarts.init(document.getElementById('class-chart'));
         var option = {
             color: ['#3398DB'],
             tooltip : {
                 trigger: 'axis',
-                axisPointer : {      
-                    type : 'shadow'      
+                axisPointer : {
+                    type : 'shadow'
                 },
                 formatter: '{b}: {c}'
             },
@@ -482,6 +489,11 @@
                 })
             }
             })
+        })
+
+        //选择分类选项
+        $('.table_btn  a').on('click',function () {
+            $(this).addClass('focus').siblings().removeClass('focus')
         })
     </script>
 </body>
