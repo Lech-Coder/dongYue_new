@@ -67,7 +67,7 @@
                             <a href="javascript:;" class="btn blueBtn">阶段统计</a>
                             <a href="javascript:;" class="btn themeBtn">新建表单</a>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="jieduan-box">
@@ -78,35 +78,50 @@
                             <a href="javascript:;" class="btn grayBtn"   show-tab="xue-qi">学期统计</a>
                         </div>
                     </div>
-                    <!-- 周 -->
-                    <div class="select-box zhou">
-                        <select name="" id="">
-                            <option value="">2019.04.22~04.29</option>
-                            <option value="">2019.04.22~04.29</option>
-                            <option value="">2019.04.22~04.29</option>
-                            <option value="">2019.04.22~04.29</option>
-                            <option value="">2019.04.22~04.29</option>
-                        </select>
+
+
+                    <div class="select—data-tongji">
+                        <div class="col-8-16" >
+                            <!-- 周 -->
+                            <div class="select-box zhou">
+                                <select name="" id="">
+                                    <option value="">2019.04.22~04.29</option>
+                                    <option value="">2019.04.22~04.29</option>
+                                    <option value="">2019.04.22~04.29</option>
+                                    <option value="">2019.04.22~04.29</option>
+                                    <option value="">2019.04.22~04.29</option>
+                                </select>
+                            </div>
+                            <!-- 月 -->
+                            <div class="select-box yue hidden">
+                                <select name="" id="">
+                                    <option value="">一月</option>
+                                    <option value="">一月</option>
+                                    <option value="">一月</option>
+                                    <option value="">一月</option>
+                                </select>
+                            </div>
+
+                            <!-- 学期 -->
+                            <div class="select-box xue-qi hidden">
+                                <select name="" id="">
+                                    <option value="">2018~2019上学期</option>
+                                    <option value="">2018~2019上学期</option>
+                                    <option value="">2018~2019上学期</option>
+                                    <option value="">2018~2019上学期</option>
+                                    <option value="">2018~2019上学期</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="t_r">
+                            <a class="btn grayBtn focus" >总体</a>
+                            <a class="btn grayBtn" >分类一</a>
+                            <a class="btn grayBtn" >分类一</a>
+                            <a class="btn grayBtn">分类二</a>
+                        </div>
                     </div>
-                    <!-- 月 -->
-                    <div class="select-box yue hidden">
-                        <select name="" id="">
-                            <option value="">一月</option>
-                            <option value="">一月</option>
-                            <option value="">一月</option>
-                            <option value="">一月</option>
-                        </select>
-                    </div>
-                    <!-- 学期 -->
-                    <div class="select-box xue-qi hidden">
-                        <select name="" id="">
-                            <option value="">2018~2019上学期</option>
-                            <option value="">2018~2019上学期</option>
-                            <option value="">2018~2019上学期</option>
-                            <option value="">2018~2019上学期</option>
-                            <option value="">2018~2019上学期</option>
-                        </select>
-                    </div>
+
+
 
                     <div class="chart-box">
                         <!-- 周 -->
@@ -116,6 +131,8 @@
                         <!-- 学期 -->
                         <div class="chart xue-qi hidden" id="chart-three"></div>
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -129,7 +146,7 @@
         var $this = $(this);
         var showId = $this.attr('show-tab').trim();
         $this.addClass('yellowBtn').siblings().removeClass('yellowBtn').addClass('grayBtn');
-        
+
         $('.select-box').addClass('hidden');
         $('.chart-box .chart-box').addClass('hidden');
 
@@ -144,8 +161,8 @@
             color: ['#3398DB'],
             tooltip : {
                 trigger: 'axis',
-                axisPointer : {      
-                    type : 'shadow'      
+                axisPointer : {
+                    type : 'shadow'
                 },
                 formatter: '{b}: {c}'
             },

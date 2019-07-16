@@ -363,75 +363,145 @@
                 autoHeight: true,
                 data: '<div style="padding: 20px; width: 100%">\
                     <h3 class="t_c">评 分 详 情</h3><br>\
-                    <table>\
-                        <thead>\
-                            <tr>\
-                                <th></th>\
-                                <th>张老师</th>\
-                                <th>张老师</th>\
-                                <th>张老师</th>\
-                                <th>张老师</th>\
-                                <th>张老师</th>\
-                                <th>张老师</th>\
-                                <th>平均</th>\
-                            </tr>\
-                        </thead>\
-                        <tbody>\
-                            <tr>\
-                                <td>得分/扣分项1</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                            </tr>\
-                            <tr>\
-                                <td>得分/扣分项2</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                            </tr>\
-                            <tr>\
-                                <td>得分/扣分项3</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                            </tr>\
-                            <tr>\
-                                <td>总计</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                                <td>-0.5</td>\
-                            </tr>\
-                        </tbody>\
-                    </table>\
-                    <div class="pic-wapper">\
-                        <ul class="viewer">\
-                            <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
-                            <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
-                            <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
-                            <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
-                            <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
-                            <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
-                            <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
-                            <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
-                        </ul>\
-                    </div>\
-                </div>',
+                    <div class="table-row" style="height: 40px">\n' +
+                    '                        <div class="col-16-16 t_r clearfix">\n' +
+                    '                            <a href="javascript:;" class="btn yellowBtn t_r" id="share-code" shareLink="https://www.baidu.com/">生成分享</a>\n' +
+                    '                        </div>\n' +
+                    '\n' +
+                    '                    </div>\
+                                        <table>\
+                                            <thead>\
+                                                <tr>\
+                                                    <th style="width: 5px"></th>\
+                                                    <th></th>\
+                                                    <th>张老师</th>\
+                                                    <th>张老师</th>\
+                                                    <th>张老师</th>\
+                                                    <th>张老师</th>\
+                                                    <th>张老师</th>\
+                                                    <th>张老师</th>\
+                                                    <th>平均</th>\
+                                                </tr>\
+                                            </thead>\
+                                            <tbody>\
+                                                <tr>\
+                                                <td rowspan="3" class="leibie_1 no-padding">分<br/>类<br/>1</td>\
+                                                    <td>得分/扣分项1</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                </tr>\
+                                                <tr>\
+                                                    <td>得分/扣分项2</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                </tr>\
+                                                <tr>\
+                                                    <td>得分/扣分项3</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                </tr>\                                       \
+                                                <tr>\
+                                                <td rowspan="3" class="leibie_2 no-padding">分<br/>类<br/>2</td>\
+                                                    <td>得分/扣分项1</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                </tr>\
+                                                <tr>\
+                                                    <td>得分/扣分项2</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                </tr>\
+                                                <tr>\
+                                                    <td>得分/扣分项3</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                </tr>\
+                                                <tr>\
+                                                <td rowspan="4" class="leibie_1 no-padding">分<br/>类<br/>3</td>\
+                                                    <td>得分/扣分项1</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                </tr>\
+                                                <tr>\
+                                                    <td>得分/扣分项2</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                </tr>\
+                                                <tr>\
+                                                    <td>得分/扣分项3</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                </tr>\
+                                                <tr>\
+                                                    <td>总计</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                    <td>-0.5</td>\
+                                                </tr>\
+                                            </tbody>\
+                                        </table>\
+                                        <div class="pic-wapper">\
+                                            <ul class="viewer">\
+                                                <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
+                                                <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
+                                                <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
+                                                <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
+                                                <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
+                                                <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
+                                                <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
+                                                <li><img src="http://hackbinimg.luokangyuan.com/20181226151236/f3q5fum0di621.jpg" alt="" srcset=""></li>\
+                                            </ul>\
+                                        </div>\
+                                    </div>',
                 callBack: function () {
                     // 点击弹出图片
                     $('.viewer').viewer({

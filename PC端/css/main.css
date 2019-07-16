@@ -9428,7 +9428,6 @@ input[type="button"] {
 #data table,
 #data table tr th,
 #data table tr td {
-  border: 1px solid #d5d5d2;
   line-height: 30px;
 }
 #data table {
@@ -10460,6 +10459,14 @@ input[type="button"] {
 }
 .sheZhiMuBiao {
   margin-top: -10px;
+}
+.leibie_1 {
+  background: #8CB459;
+  width: 3px;
+}
+.leibie_2 {
+  background: #FACD91;
+  width: 3px;
 }
 .mubiao-window {
   width: 100%;
@@ -11909,6 +11916,10 @@ input[type="button"] {
 }
 .jieduan-box {
   padding: 10px 20px;
+}
+.jieduan-box .select—data-tongji {
+  width: 100%;
+  height: 40px;
 }
 .jieduan-box .select-box select,
 .jieduan-box .select-box option {
