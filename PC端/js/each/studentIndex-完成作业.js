@@ -1,5 +1,9 @@
+var rechart=[];
+
 $(function () {
   // 封装的echarts插件
+
+
   var Chart = {};
   // 折线图
   Chart.bar = function (options) {
@@ -70,12 +74,14 @@ $(function () {
 
       // 使用刚指定的配置项和数据显示图表。
       myChart.setOption(option);
+
+      rechart.push(myChart)
       resizeChart2 = myChart;
     }
   };
 
 
-  //填充柱状图数据，每个图的id不一样 
+  //填充柱状图数据，每个图的id不一样
   // =========================出勤===================
   Chart.bar({
     element: 'a',

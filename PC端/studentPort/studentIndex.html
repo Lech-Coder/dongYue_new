@@ -674,18 +674,35 @@
             resizeChart4.resize();
             resizeChart5.resize();
             resizeChart6.resize();
-            // setTimeout(function(){
-                //     window.print();
-                // }, 500);
+            for (let i = 0; i < resizeRadar.length; i++) {
+                resizeRadar[i].resize()
             }
-        window.onresize = function(){
-            resizeChart2.resize();
-            resizeChart1.resize();
-            resizeChart3.resize();
-            resizeChart4.resize();
-            resizeChart5.resize();
-            resizeChart6.resize();
-        }
+            for (let i=0;i<rechart.length;i++){
+                rechart[i].resize()
+            }
+            }
+
+        setTimeout(function () {
+            window.onresize = function () {
+
+                //雷达图
+                for (let i = 0; i < resizeRadar.length; i++) {
+                    resizeRadar[i].resize()
+                }
+                //出勤
+                for (let i=0;i<rechart.length;i++){
+                    rechart[i].resize()
+                }
+                resizeChart2.resize();
+                resizeChart1.resize();
+
+                //体质指标四个柱图
+                resizeChart3.resize();
+                resizeChart4.resize();
+                resizeChart5.resize();
+                resizeChart6.resize();
+            }
+        },200)
     </script>
 </body>
 
