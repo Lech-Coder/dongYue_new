@@ -4,7 +4,7 @@ var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?e70d2da10f164f7616ebe8b8f07f9c8d";
-  var s = document.getElementsByTagName("script")[0]; 
+  var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
 function selectNew(callback) {
@@ -246,7 +246,7 @@ function callAlert(alertName, options) {
     $('.alert-box').append(opts.data);
   });
   $("body").append(formBox);
-  
+
 }
 $(function () {
   checkBox();
@@ -528,7 +528,7 @@ $(function(){
       ajaxUrl:"/teachManage/changeOldPassword.do"
     });
   });
-  
+
   $('#dropDown-menu-head').mouseenter(function(){
     $('.dropdown-content').fadeIn(200);
   });
@@ -554,7 +554,7 @@ $(function(){
     var $this = $(this);
     var max = +$this.attr('max') || 100000000000000000000000;
     var min = +$this.attr('min') || 0;
-    var numValue = +$this.val();  
+    var numValue = +$this.val();
     if((/^\d+$/.test( numValue )) && numValue >= 0 && numValue != ''){
       if(numValue > max ){
         Alert.globalWarning({
@@ -576,14 +576,14 @@ $(function(){
         'callBack':function(){},
       })
       $this.val('');
-    }  
+    }
   })
 
   // 最小值验证
   $('body').on('input propertychange', '.set_min', function(){
     var $this = $(this);
     var min = +$this.attr('min') || 0;
-    var numValue = +$this.val();  
+    var numValue = +$this.val();
     if(numValue < min){
       Alert.globalWarning({
         'words':'请输入大于' + min+ '的整数',
