@@ -39,7 +39,7 @@ $(function(){
     }
   }  
 
-
+  $('#sort-down').click();
   //降序排列
   $('body').on('click','#sort-up', function(){
     var domList = $('#sort-box .once').get();
@@ -50,7 +50,9 @@ $(function(){
       if(elOne < elTwo) return -1;
       return 0;
     });
-    $('#sort-box').append(domList)
+    setTimeout(function () {
+      $('#sort-box').append(domList)
+    }, 500);
   });
   //升序排列
   $('body').on('click','#sort-down', function(){
@@ -62,7 +64,9 @@ $(function(){
       if(elOne < elTwo) return 1;
       return 0;
     });
-    $('#sort-box').append(domList)
+    setTimeout(function () {
+      $('#sort-box').append(domList)
+    }, 500);
   });
 
 // 点击切换年级/年龄数据

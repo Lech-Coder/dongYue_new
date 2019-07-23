@@ -783,7 +783,18 @@ i{
           clear: both;
           margin-right: 20px;
           .limit_nei {
-
+            & {
+              *zoom: 1;
+            }
+            &:before,
+            &:after {
+              display: table;
+              line-height: 0;
+              content: "";
+            }
+            &:after {
+              clear: both;
+            }
             > span {
               height: 100%;
               line-height: 40px;
