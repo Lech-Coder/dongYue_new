@@ -5029,11 +5029,10 @@ i {
   background-Color: #C280FF;
 }
 .healthyChart .healthyBox > .center .row .limit .txt {
-  margin-top: 10px;
   font-size: 14px;
 }
 .healthyChart .healthyBox > .center .row .limit .txt > span {
-  margin-right: 3px;
+  margin-right: 10%;
 }
 .healthyChart .healthyBox > .center .row .pic-right {
   margin-left: 10px;
