@@ -169,20 +169,20 @@ $('body').on('click', '.chart-item-box', function () {
           data:[{
             type: 'map',
             name: '数据名称',
-            map: '320100',
+            map: '510000',
             data: [
-              { name: '市辖区', value: 40000 },
-              { name: '玄武区', value: 45988 },
-              { name: '秦淮区', value: 34753 },
-              { name: '建邺区', value: 42467 },
-              { name: '鼓楼区', value: 46734 },
-              { name: '浦口区', value: 39085 },
-              { name: '栖霞区', value: 40877 },
-              { name: '雨花台区', value: 48007 },
-              { name: '江宁区', value: 44978 },
-              { name: '六合区', value: 42356 },
-              { name: '溧水县', value: 43567 },
-              { name: '高淳县', value: 47846 }
+              { name: '成都市', value: 40000 },
+              { name: '自贡市', value: 45988 },
+              { name: '攀枝花市', value: 34753 },
+              { name: '泸州市', value: 42467 },
+              { name: '德阳市', value: 46734 },
+              { name: '绵阳市', value: 39085 },
+              { name: '广元市', value: 40877 },
+              { name: '遂宁市', value: 48007 },
+              { name: '内江市', value: 44978 },
+              { name: '乐山市', value: 42356 },
+              { name: '南充市', value: 43567 },
+              { name: '眉山市', value: 47846 }
             ],
           }]
         })
@@ -354,8 +354,8 @@ chart.map = function (options) {
   // 默认值覆盖
   var opts = $.extend({}, defaults, options);
 
-  $.get('../js/mapjson/geometryCouties/320100.json', function (chinaJson) {
-    echarts.registerMap('320100', chinaJson);
+  $.get('/监管端/js/mapJson/geometryProvince/51.json', function (chinaJson) {
+    echarts.registerMap('510000', chinaJson);
     var myChart = echarts.init(document.getElementById(opts.element));
     var option = {
       title: {
