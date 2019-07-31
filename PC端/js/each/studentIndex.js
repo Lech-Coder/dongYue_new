@@ -53,10 +53,10 @@ $(function () {
   var jige1=[10,10,10,10,10,10]
 
 
- resizeChart3 =  setLines($('.tizhi .num1').find(".point"),databar1,youxiu1,lianghao1,jige1,"我的得分");
-  resizeChart4 = setLines($('.tizhi .num1').find(".grade"),databar1,youxiu1,lianghao1,jige1,"我的成绩");
-  resizeChart5 = setLines($('.tizhi .num2').find(".point"),databar1,youxiu1,lianghao1,jige1,"我的得分");
-  resizeChart6 = setLines($('.tizhi .num2').find(".grade"),databar1,youxiu1,lianghao1,jige1,"我的成绩");
+  setLines($('.tizhi .num1').find(".point"),databar1,youxiu1,lianghao1,jige1,"我的得分");
+  setLines($('.tizhi .num1').find(".grade"),databar1,youxiu1,lianghao1,jige1,"我的成绩");
+  setLines($('.tizhi .num2').find(".point"),databar1,youxiu1,lianghao1,jige1,"我的得分");
+  setLines($('.tizhi .num2').find(".grade"),databar1,youxiu1,lianghao1,jige1,"我的成绩");
 
   $(".health-line-item").each(function () {
     $(this).find(">.chart-tab-btn").on("click", ">a", function () {
@@ -192,7 +192,7 @@ $(function () {
       ]
     };
     var chart = echarts.init(wrapper[0]);
+    rechart.push(chart)
     chart.setOption(lineOption)
-    return chart
   }
 })

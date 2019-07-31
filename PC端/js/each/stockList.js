@@ -74,10 +74,13 @@ $(function(){
     var importName=$(this).val();
     $(this).closest("label").parent().prev().children().find(">input").val(importName);
   });
+
+
   $(".close-btn").click(function () {
     $('.alert-box').css('display','none');
       $('.shouhuan-box').css('display','none');
   });
+
 
   //管理选择
     $('.btn_manage').on('click','>a',function (d) {

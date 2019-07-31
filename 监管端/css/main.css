@@ -104,7 +104,7 @@
   left: 100%;
 }
 .option-box .option-content .first li:hover {
-  background-color: #68923F ;
+  background-color: #68923F;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -931,8 +931,8 @@
   background: #dd8400;
 }
 .btn.disabled {
-  background: #dddddd!important;
-  color: #999!important;
+  background: #dddddd !important;
+  color: #999 !important;
 }
 .btn-big {
   display: inline-block;
@@ -4158,7 +4158,7 @@ img {
   background: #ffb444 !important;
 }
 .back_white {
-  background: #fff!important;
+  background: #fff !important;
 }
 .back_gray {
   background: #c9c9c9 !important;
@@ -4227,7 +4227,7 @@ img {
 }
 .cantClickCss {
   cursor: not-allowed;
-  background: #eee!important;
+  background: #eee !important;
 }
 .h_40 {
   height: 42px!important;
@@ -5495,7 +5495,7 @@ i {
   height: 200px;
   margin: 20px 20px 30px 0px;
   border: 1px solid #f0f0f0;
-  transition: .3s;
+  transition: 0.3s;
 }
 .passRate .charts-content .chart-item-box.bigger {
   width: 95%;
@@ -5534,7 +5534,7 @@ i {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: .3s;
+  transition: 0.3s;
   opacity: 0;
   top: 0;
   left: 0;
@@ -6634,7 +6634,7 @@ input[type=button] {
   height: 350px;
   background: #fff;
   text-align: center;
-  animation: toTopShow .3s;
+  animation: toTopShow 0.3s;
 }
 .tanchuang-content .select-box .close-tanchuang {
   position: absolute;
@@ -6649,7 +6649,7 @@ input[type=button] {
   color: #777777;
   font-size: 12px;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 .tanchuang-content .select-box .close-tanchuang:hover {
   transform: rotate(180deg);
@@ -6694,3 +6694,4 @@ input[type=button] {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+/*# sourceMappingURL=main.css.map */

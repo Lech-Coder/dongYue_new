@@ -670,10 +670,7 @@
             // resizeLineChart.resize();
             resizeChart1.resize();
             resizeChart2.resize();
-            resizeChart3.resize();
-            resizeChart4.resize();
-            resizeChart5.resize();
-            resizeChart6.resize();
+
             for (let i = 0; i < resizeRadar.length; i++) {
                 resizeRadar[i].resize()
             }
@@ -681,10 +678,8 @@
                 rechart[i].resize()
             }
             }
-
         setTimeout(function () {
             window.onresize = function () {
-
                 //雷达图
                 for (let i = 0; i < resizeRadar.length; i++) {
                     resizeRadar[i].resize()
@@ -695,12 +690,7 @@
                 }
                 resizeChart2.resize();
                 resizeChart1.resize();
-
                 //体质指标四个柱图
-                resizeChart3.resize();
-                resizeChart4.resize();
-                resizeChart5.resize();
-                resizeChart6.resize();
             }
         },200)
     </script>
