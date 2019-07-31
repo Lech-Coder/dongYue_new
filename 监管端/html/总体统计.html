@@ -338,41 +338,46 @@
       var seperator2 = ":";
       var month = date.getMonth() + 1;
       var strDate = date.getDate()+1;
-      if (month >= 1 && month <= 9) {
-        month = "0" + month;
-      }
-      console.log(strDate)
       if (strDate >= 0 && strDate <= 9) {
         strDate = "0" + strDate;
       }
-      var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+      //新加一些判断
+      var currentdate
+      if (strDate<getLastDay(date.getFullYear(),month)) {
+        if (month >= 1 && month <= 9) {
+          month = "0" + month;
+        }
+        currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+      }else if (month<12) {
+        month=month+1
+        if (month >= 1 && month <= 9) {
+          month = "0" + month;
+        }
+        currentdate = date.getFullYear()  + seperator1 + month + seperator1 + '01'
+      }else{
+        currentdate = date.getFullYear()+1  + seperator1 + '01' + seperator1 + '01'
+      }
       return currentdate
     }
     // $(".time_1")[0].innerText=getNowFormatDate()
     $(".time_2")[0].innerText=getNextDate()+" 8:00"
-    // var wait =86400
-    //
-    // function time(o){
-    //   if (wait == 0) {
-    //     o.removeAttribute("disabled");
-    //     o.value="更新数据统计";
-    //     wait = 86400;
-    //   } else {
-    //     if(wait==86400){
-    //       $(".time_1")[0].innerText=getNowFormatDate()
-    //       $(".time_2")[0].innerText=getNextDate()
-    //     }
-    //     o.setAttribute("disabled", true);
-    //     o.value=wait+"秒后可点击更新";
-    //     wait--;
-    //     setTimeout(function() {
-    //               time(o)
-    //             },
-    //             1000)
-    //   }
-    // }
+
     $("#gengxintongjiData").on('click',function () {
       $(".time_2")[0].innerText=getNextDate()+" 8:00"
     })
+
+
+    function getLastDay(year,month) {
+      var d= new Date(0)
+      if (month==12){
+        d.setUTCFullYear(year+1)
+        d.setUTCMonth(0)
+      }else {
+        d.setUTCFullYear(year)
+        d.setUTCMonth(month)
+      }
+      d.setTime(d.getTime()-1)
+      return d.getUTCDate()
+    }
   </script>
 </html>
