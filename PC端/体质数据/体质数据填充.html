@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta HTTP-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/icon.css">
+    <link rel="stylesheet" href="../css/scroll.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../plugins/jquery.slimscroll.js"></script>
+    <script src="../js/pageInit.js"></script>
+    <script src="../js/main.js"></script>
+    <title>体质数据</title>
+    <script>
+    </script>
+</head>
+<body>
+<div class="pageContent">
+    <div class="left-menu">
+        <a class="logo-box">
+        <span class="logo-img">
+        </span>
+        </a>
+        <ul class="menu-list f16">
+            <li class="current"><a href="" class=""><i class="icon-home">&nbsp;</i>主页</a></li>
+            <li class=""><a href="" class=""><i class="icon-group">&nbsp;</i>教研群组</a></li>
+            <li class=""><a href="" class=""><i class="icon-teachManage">&nbsp;</i>教学管理</a></li>
+            <li class=""><a href="" class=""><i class="icon-import">&nbsp;</i>数据录入</a></li>
+            <li class=""><a href="" class=""><i class="icon-homeWork">&nbsp;</i>家庭作业</a></li>
+        </ul>
+        <ul class="bottom-menu menu-list f16">
+            <li class=""><a href="" class=""><i class="icon-add">&nbsp;</i>收藏</a></li>
+            <li class=""><a href="" class=""><i class="icon-setting">&nbsp;</i>设置</a></li>
+            <li class=""><a href="" class=""><i class="icon-back">&nbsp;</i>返回启动页</a></li>
+        </ul>
+    </div>
+    <div class="rightPage">
+        <div class="page-head">
+            <div class="bread-nav-box txt_w">
+                <a href="javascript:;"><b>体质数据</b></a> >
+                <a href="javascript:;"><b>体质数据填充</b></a>
+            </div>
+            <div class="head-menu">
+                <ul class="head-menu-ul f16">
+                    <li class="head-menu-item"><a href="javascript:;" class="txt_w">退出</a></li>
+                    <li class="head-menu-item"><a href="javascript:;" class="txt_w">账户信息<i class="icon-hehe"></i></a>
+                    </li>
+                    <li class="head-menu-item"><a href="javascript:;" class="txt_w">欢迎页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="table-content">
+                <div class="table-btn-group">
+                    <div class="table-row">
+                        <div class="col-14-16">
+                            <h4 style="color: rgb(219, 59, 59)">
+                                <i class="icon-tips"></i>
+                                由于导入数据表可能涉及敏感信息，请于数据表导入后，尽快导出相关文件，系统将于每日<span style="font-size: 24px;">6:00am</span>  自动清空数据，需要重新导入
+                            </h4>
+                        </div>
+                        <div class="col-2-16  margin-bottom20 txt-fr">
+                            <a href="javascript:;" class="btn blueBtn">数据表导入</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-16-16 txt-fr">
+                    <div class="table-box excel-table">
+                        <div class="table-row f16">
+                            <div class="col-8-32">数据表名称</div>
+                            <div class="col-8-32">当前状态</div>
+                            <div class="col-8-32">剩余时间</div>
+                            <div class="col-8-32">操作</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-16-16 txt-fr" style="height: 50px">
+                    <div class="table-box excel-table">
+                        <div class="table-row back_white table-item txt_b">
+                            <div class="col-8-32">导入Excel表格的名称</div>
+                            <div class="col-8-32">可导出</div>
+                            <div class="col-8-32">12:34:56</div>
+                            <div class="col-8-32">
+                                <span class="txt-green">导出</span>&emsp;
+                                <span class="txt-green">删除</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-16-16 txt-fr" style="height: 50px">
+                    <div class="table-box excel-table">
+                        <div class="table-row back_white table-item txt_b">
+                            <div class="col-8-32">三年级一班学生数据</div>
+                            <div class="col-8-32">已导出</div>
+                            <div class="col-8-32">00:25:12</div>
+                            <div class="col-8-32">
+                                <span class="txt-green">导出</span>&emsp;
+                                <span class="txt-green">删除</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('body').on('click','.class-model-title',function(){
+        $(this).parent().find('.class-box-div').toggle(300);
+    });
+</script>
+</body>
+</html>

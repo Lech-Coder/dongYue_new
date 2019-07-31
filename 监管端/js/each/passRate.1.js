@@ -16,26 +16,26 @@ $(function(){
   }  
 
 
-  //降序排列
-  $('body').on('click','#sort-up', function(){
-    var domList = $('#sort-box .once').get();
-    domList.sort(function(a,b){
-      var elOne = $(a).find('.percent').text();
-      var elTwo = $(b).find('.percent').text();
-      if(elOne > elTwo) return 1;
-      if(elOne < elTwo) return -1;
+  //低到高
+  $('body').on('click', '#sort-up', function () {
+    var domList = $('#sort-box .order-el').get();
+    domList.sort(function (a, b) {
+      var elOne = +($(a).find('.order-val').text().split("%")[0]);
+      var elTwo = +($(b).find('.order-val').text().split("%")[0]);
+      if (elOne > elTwo) return 1;
+      if (elOne < elTwo) return -1;
       return 0;
     });
     $('#sort-box').append(domList)
   });
-  //升序排列
-  $('body').on('click','#sort-down', function(){
-    var domList = $('#sort-box .once').get();
-    domList.sort(function(a,b){
-      var elOne = $(a).find('.percent').text();
-      var elTwo = $(b).find('.percent').text();
-      if(elOne > elTwo) return -1;
-      if(elOne < elTwo) return 1;
+  //高到低
+  $('body').on('click', '#sort-down', function () {
+    var domList = $('#sort-box .order-el').get();
+    domList.sort(function (a, b) {
+      var elOne = +($(a).find('.order-val').text().split("%")[0]);
+      var elTwo = +($(b).find('.order-val').text().split("%")[0]);
+      if (elOne > elTwo) return -1;
+      if (elOne < elTwo) return 1;
       return 0;
     });
     $('#sort-box').append(domList)

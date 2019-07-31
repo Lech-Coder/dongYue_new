@@ -714,7 +714,7 @@ i{
         // top: 7px;
         display: inline-block;
       }
-    }
+    } 
     >.center{
       .caption{
         height: 40px;
@@ -783,7 +783,18 @@ i{
           clear: both;
           margin-right: 20px;
           .limit_nei {
-
+            & {
+              *zoom: 1;
+            }
+            &:before,
+            &:after {
+              display: table;
+              line-height: 0;
+              content: "";
+            }
+            &:after {
+              clear: both;
+            }
             > span {
               height: 100%;
               line-height: 40px;
@@ -823,10 +834,10 @@ i{
             }
           }
           .txt{
-            margin-top: 10px;
+            // margin-top: 10px;
             font-size: 14px;
             >span{
-              margin-right: 3px;
+              margin-right: 10%;
             }
           }
         }
