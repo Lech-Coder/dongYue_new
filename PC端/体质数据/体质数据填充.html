@@ -60,6 +60,10 @@
                                 <i class="icon-tips"></i>
                                 由于导入数据表可能涉及敏感信息，请于数据表导入后，尽快导出相关文件，系统将于每日<span style="font-size: 24px;">6:00am</span>  自动清空数据，需要重新导入
                             </h4>
+                            <h4 style="color: rgb(219, 59, 59)">
+                                <i class="icon-tips"></i>
+                                剩余时间<span id="rest-time"></span>
+                            </h4>
                         </div>
                         <div class="col-2-16  margin-bottom20 txt-fr">
                             <a href="javascript:;" class="btn blueBtn">数据表导入</a>
@@ -72,7 +76,6 @@
                         <div class="table-row f16">
                             <div class="col-8-32">数据表名称</div>
                             <div class="col-8-32">当前状态</div>
-                            <div class="col-8-32">剩余时间</div>
                             <div class="col-8-32">操作</div>
                         </div>
                     </div>
@@ -83,7 +86,6 @@
                         <div class="table-row back_white table-item txt_b">
                             <div class="col-8-32">导入Excel表格的名称</div>
                             <div class="col-8-32">可导出</div>
-                            <div class="col-8-32">12:34:56</div>
                             <div class="col-8-32">
                                 <span class="txt-green">导出</span>&emsp;
                                 <span class="txt-green">删除</span>
@@ -97,7 +99,6 @@
                         <div class="table-row back_white table-item txt_b">
                             <div class="col-8-32">三年级一班学生数据</div>
                             <div class="col-8-32">已导出</div>
-                            <div class="col-8-32">00:25:12</div>
                             <div class="col-8-32">
                                 <span class="txt-green">导出</span>&emsp;
                                 <span class="txt-green">删除</span>
@@ -111,9 +112,24 @@
     </div>
 </div>
 <script>
-    $('body').on('click','.class-model-title',function(){
-        $(this).parent().find('.class-box-div').toggle(300);
-    });
+    function getNow() {
+        var Now = new Date;
+        var hours = Now.getHours();
+        var min = Now.getMinutes();
+        var sec = Now.getSeconds();
+        
+        hours -= 6;
+        min -= 60;
+        sec -= 60;
+        if(hours >= 6){
+            hours += 24;
+        }
+        return Math.abs(hours)+ '小时' +Math.abs(min)+ '分' +Math.abs(sec)+ '秒';
+    }
+    setInterval(() => {
+        console.log(getNow())
+        $('#rest-time').html(getNow());
+    }, 1000);
 </script>
 </body>
 </html>
