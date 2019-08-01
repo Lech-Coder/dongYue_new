@@ -6370,6 +6370,15 @@ input[type="button"] {
 .healthyChart .chooseclass ul > li.focus {
   color: #82b64a;
 }
+.healthyChart .choosedata {
+  background: #fff;
+  min-height: 50px;
+  line-height: 50px;
+}
+.healthyChart .choosedata > span {
+  margin-left: 10px;
+  float: left;
+}
 .healthyBox {
   background: #fff;
   margin-top: 20px;
@@ -9645,6 +9654,50 @@ input[type="button"] {
   right: 12px;
   color: #a8a8a8;
   cursor: pointer;
+}
+.zhihuiBox {
+  margin-top: 20px;
+  background: white;
+  clear: both;
+}
+.zhihuiBox .left {
+  float: left;
+  width: 70%;
+  height: 400px;
+}
+.zhihuiBox .left .zhihui_table {
+  margin-top: 20px;
+  clear: both;
+  float: left;
+  width: 100%;
+  height: 500px;
+}
+.zhihuiBox .left .zhihui_table .col_hei {
+  height: 45px;
+  line-height: 45px;
+}
+.zhihuiBox .left .pages {
+  position: relative;
+  bottom: 0;
+}
+.zhihuiBox .right {
+  float: left;
+  width: 27%;
+  margin-left: 3%;
+}
+.zhihuiBox .right .pie-chart-box-zhihui {
+  width: 100%;
+  background: white;
+  margin-top: 20px;
+}
+.title_zhihui {
+  height: 45px;
+  line-height: 45px;
+  font-size: 18px;
+  background: #9999ff;
+  text-align: left;
+  padding-left: 20px;
+  color: #fff;
 }
 .ktbg-content .title {
   height: 45px;

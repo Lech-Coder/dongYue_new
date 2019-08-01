@@ -338,26 +338,30 @@
       var seperator2 = ":";
       var month = date.getMonth() + 1;
       var strDate = date.getDate()+1;
+      // if (month >= 1 && month <= 9) {
+      //   month = "0" + month;
+      // }
+
       if (strDate >= 0 && strDate <= 9) {
         strDate = "0" + strDate;
       }
-      //新加一些判断
-      var currentdate
-      if (strDate<getLastDay(date.getFullYear(),month)) {
-        if (month >= 1 && month <= 9) {
-          month = "0" + month;
+        //新加一些判断
+        var currentdate
+        if (strDate<getLastDay(date.getFullYear(),month)) {
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+        }else if (month<12) {
+            month=month+1
+            if (month >= 1 && month <= 9) {
+                month = "0" + month;
+            }
+            currentdate = date.getFullYear()  + seperator1 + month + seperator1 + '01'
+        }else{
+            currentdate = date.getFullYear()+1  + seperator1 + '01' + seperator1 + '01'
         }
-        currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
-      }else if (month<12) {
-        month=month+1
-        if (month >= 1 && month <= 9) {
-          month = "0" + month;
-        }
-        currentdate = date.getFullYear()  + seperator1 + month + seperator1 + '01'
-      }else{
-        currentdate = date.getFullYear()+1  + seperator1 + '01' + seperator1 + '01'
-      }
-      return currentdate
+        return currentdate
     }
     // $(".time_1")[0].innerText=getNowFormatDate()
     $(".time_2")[0].innerText=getNextDate()+" 8:00"

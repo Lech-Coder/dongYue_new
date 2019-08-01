@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta HTTP-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/icon.css">
+    <link rel="stylesheet" href="../plugins/animate.min.css">
+    <link rel="stylesheet" href="../css/scroll.css">
+    <link rel="stylesheet" href="../plugins/datepicker.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../plugins/mousewheel.js"></script>
+    <script src="../plugins/jquery.slimscroll.js"></script>
+    <script src="../plugins/echart.js"></script>
+    <script src="../js/pageInit.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/each/dataChoose.js"></script>
+    <title>智慧校园</title>
+</head>
+
+<body>
+<div class="pageContent">
+    <div class="left-menu">
+        <a class="logo-box">
+        <span class="logo-img">
+        </span>
+        </a>
+        <ul class="menu-list f16">
+            <li class="current">
+                <a href="" class="">
+                    <i class="icon-home">&nbsp;</i>主页</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-group">&nbsp;</i>教研群组</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-teachManage">&nbsp;</i>教学管理</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-import">&nbsp;</i>数据录入</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-homeWork">&nbsp;</i>家庭作业</a>
+            </li>
+        </ul>
+        <ul class="bottom-menu menu-list f16">
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-add">&nbsp;</i>收藏</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-setting">&nbsp;</i>设置</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-back">&nbsp;</i>返回启动页</a>
+            </li>
+        </ul>
+    </div>
+    <div class="rightPage">
+        <div class="page-head">
+            <div class="bread-nav-box txt_w">
+                <a href="javascript:;">
+                    <b>智慧校园</b>
+                </a>
+
+            </div>
+            <div class="head-menu">
+                <ul class="head-menu-ul f16">
+                    <li class="head-menu-item">
+                        <a href="javascript:;" class="txt_w">退出</a>
+                    </li>
+                    <li class="head-menu-item">
+                        <a href="javascript:;" class="txt_w">账户信息
+                            <i class="icon-hehe"></i>
+                        </a>
+                    </li>
+                    <li class="head-menu-item">
+                        <a href="javascript:;" class="txt_w">欢迎页</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="datelimit">
+            <div class="healthyChart">
+                <div class="choosee">
+                    <a class="btn grayBtn">进出校记录</a>
+                    <a class="btn grayBtn">阶段统计</a>
+                </div>
+
+                <div style="clear:both;"></div>
+                <div class="choosegrade">
+                    <span>选择年级:</span>
+                    <ul>
+                        <li class="focus">一年级</li>
+                        <li>二年级</li>
+                        <li>三年级</li>
+                        <li>四年级</li>
+                        <li>五年级</li>
+                        <li>六年级</li>
+                        <li>全校</li>
+                    </ul>
+                </div>
+                <div class="chooseclass">
+                    <span>选择班级:</span>
+                    <ul>
+                        <li class="focus">一年级一班</li>
+                        <li>一年级一班</li>
+                        <li>一年级一班</li>
+                        <li>一年级一班</li>
+                        <li>一年级一班</li>
+                        <li>一年级一班</li>
+                        <li>全校</li>
+                    </ul>
+                </div>
+                <div class="choosedata">
+                    <span>选择日期:</span>
+                    <div class="ml25 f_l">
+                        　<select id="year" onchange="addDay()"></select>
+
+                        　　<select id="month" onchange="addDay()"></select>
+
+                        　　<select id="date"></select>
+                    </div>
+                </div>
+
+                <div class="zhihuiBox no-padding">
+                    <div class="ktbg-content mt20 clearfix">
+                        <div class="title_zhihui t_l">
+                            <span class="mr20 ">进出校记录</span>
+                        </div>
+                        <div class="left clearfix left-new" id="line_chart">
+                        </div>
+                    </div>
+                </div>
+                <div class="zhihuiBox no-padding ">
+                    <div class="left">
+                        <div class="zhihui_table">
+                            <div class="col-16-16 normal_back_white col_hei f16">
+                                <div class="col-3-16 t_c">班级</div>
+                                <div class="col-2-16 t_c">学号</div>
+                                <div class="col-3-16 t_c">姓名</div>
+                                <div class="col-2-16 t_c">性别</div>
+                                <div class="col-3-16 t_c">行为</div>
+                                <div class="col-3-16 t_c">时间</div>
+                            </div>
+                            <div class="col-16-16 col_hei f16">
+                                <div class="col-3-16 t_c">一年级一班</div>
+                                <div class="col-2-16 t_c">1</div>
+                                <div class="col-3-16 t_c">王可可</div>
+                                <div class="col-2-16 t_c">男</div>
+                                <div class="col-3-16 t_c">进校</div>
+                                <div class="col-3-16 t_c">05-05 8：24</div>
+                            </div>
+                        </div>
+                        <div class="pages">
+                            <div class="goods-pages">
+                                <div class="tcd-page-code">
+                                    <span class="pageB disabled"><em class="iconfont icon-left mr5"></em>上一页</span>
+                                    <span class="current">1</span>
+                                    <a href="javascript:void(0);" class="tcdNumber">2</a>
+                                    <a href="javascript:void(0);" class="tcdNumber">3</a>
+                                    <span>...</span>
+                                    <a href="javascript:void(0);" class="tcdNumber">15</a>
+                                    <a href="javascript:void(0);" class="pageB nextPage">下一页></a>
+                                    <span class="turnpage3">共<span>15</span>页&nbsp;&nbsp;到第</span>
+                                    <input class="turnpage0" type="text" maxlength="3" onafterpaste="BASEisNotNum(this);">
+                                    <span>页</span>
+                                    <a class="turnpage1 grayBtn">确定</a></div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="right">
+                        <div class="title_zhihui">
+                            <span class=" t_l">考勤统计</span>
+                        </div>
+
+                        <div class="pie-chart-box-zhihui"></div>
+                        <div class="pie-chart-box-zhihui"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/each/selectTime.js"></script>
+<script src="../js/each/pie_zhihui.js"></script>
+<script src="../js/each/line_zhihui.js"></script>
+<script>
+    $('.pie-chart-box-zhihui')[0].style.height=$('.pie-chart-box-zhihui')[0].clientWidth-7+'px'
+    $('.pie-chart-box-zhihui')[1].style.height=$('.pie-chart-box-zhihui')[1].clientWidth-7+'px'
+    var data = [
+        {value:666, name:'正常'},
+        {value:110, name:'早退'},
+        {value:134, name:'缺勤'},
+        {value:135, name:'迟到'}
+    ]
+    resizeArr=[];
+    pie_zhihui( $('.pie-chart-box-zhihui')[0],'一年级一班',data)
+    pie_zhihui( $('.pie-chart-box-zhihui')[1],'一年级二班',data)
+
+    var time = ['7:30','8:00','8:30','9:00','9:30','10:00','10:30',
+        '14:30','15:00','15:30','16:00','16:30']
+    var data_inSchool =[11, 11, 15, 13, 12, 13, 10,11, 11, 15, 13, 12]
+    var data_outSchool =[-1, -2, -2, -5, -3, -2, 0,-1, -2, -2, -5, -3]
+    line_zhihui($('#line_chart')[0],time,data_inSchool,data_outSchool)
+
+
+    setTimeout(function () {
+        window.onresize = function () {
+            for (let i=0;i<resizeArr.length;i++){
+                resizeArr[i].resize()
+            }
+        }
+    },200)
+
+</script>
+</body>
+
+</html>
