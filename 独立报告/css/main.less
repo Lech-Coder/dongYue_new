@@ -5678,185 +5678,98 @@ input[type="button"] {
 
 // 健康分布图表
 .healthyChart {
-    padding: 50px;
+    padding: 0 50px;
     height: 700px;
     width: 100%;
-    .choosee {
-        margin-bottom: 40px;
-        height: 38px;
-        float: left;
-        .address {
-            >li {
-                font-size: 12px;
-                background: #969696;
-                margin-right: 5px;
-                color: #fff;
-                .limit {
-                    margin-left: -60px;
-                    max-height: 190px;
-                    position: relative;
-                    z-index: 100;
-                    width: 200px;
-                    background-color: #F5F5F5;
-                    overflow: auto;
-                }
-                &.focus {
-                    color: #fff;
-                    background-color: #ffb444;
-                    >ul {
-                        display: block;
-                        li {
-                            width: 200px;
-                            color: #000;
-                        }
-                    }
-                }
-                >ul {
-                    display: none;
-                    li {
-                        &:hover {
-                            color: #fff;
-                            background-color: @themeColor;
-                            transition: all 0.2s ease-in-out;
-                        }
-                    }
-                }
-            }
-        }
-
-        .time {
-            padding-left: 10px;
-            cursor: text;
-        }
-        >input {
-            display: inline-block;
-        }
-        >input[type=button] {
-            margin-left: 10px;
-            border: 0;
-        }
-        >ul {
-            display: inline-block;
-            height: 100%;
-            >li {
-                float: left;
-                display: inline-block;
-            }
-        }
-        >span {
-            display: inline-block;
-            height: 100%;
-            line-height: 38px;
-            margin-left: 10px;
-            margin-right: 20px;
-            float: left;
-        }
-    }
-    .choose {
-        height: 38px;
+    .eye_title{
+        height: 470px;
         position: relative;
-        float: left;
-        z-index: 999;
-        .address {
-            >li {
-                border: 1px solid #B5B5B5;
-                .limit {
-                    height: 190px;
-                    overflow: auto;
-                    background-color: #fff;
+        .choosegrade {
+            background: #008080;
+            height: 300px;
+            padding: 10px 40px;
+            line-height: 50px;
+            z-index: 2;
+            position: relative;
+            .baogao_name{
+                position: absolute;
+                height: 180px;
+                width: 70%;
+                img{
+                    width: 180px;
+                    height: 180px;
                 }
-                &.focus {
-                    color: #fff;
-                    background-color: @themeColor;
-                    >ul {
-                        display: block;
-                        li {
-                            color: #000;
-                        }
+                span{
+                    color: white;
+                    font-size: 50px;
+                    position: absolute;
+                    bottom: 40px;
+                }
+            }
+            .eyetable{
+                width: 25%;
+                height: 250px;
+                position: absolute;
+                right: 0px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .info{
+                width: 90%;
+                height: 50px;
+                position: absolute;
+                bottom: 70px;
+                .info_juti{
+                    height: 50px;
+                    margin-right: 10%;
+                    color: white;
+                    line-height: 50px;
+                    font-size: 24px;
+                    float: left;
+                    img{
+                        width: 50px;
+                        height: 50px;
                     }
                 }
-                >ul {
-                    display: none;
-                    li {
-                        &:hover {
-                            color: @themeColor;
-                            transition: all 0.2s ease-in-out;
-                        }
-                    }
+                .info_time{
+                    height: 50px;
+                    color: white;
+                    line-height: 50px;
+                    font-size: 18px;
+                    float: left;
                 }
+
             }
         }
-        .time {
-            padding-left: 10px;
-        }
-        >ul {
-            display: inline-block;
-            height: 100%;
-            >li {
+        .nav{
+            margin-top: -50px;
+            z-index: 55555;
+            height: 200px;
+            position: relative;
+            .nav_biaoqian{
+                width: 30%;
+                height: 200px;
+                background: rgba(242, 242, 242, 1);
                 float: left;
-                display: inline-block;
-            }
-        }
-        >span {
-            display: inline-block;
-            height: 100%;
-            line-height: 38px;
-            margin-left: 10px;
-            margin-right: 20px;
-            float: left;
-        }
-    }
-    .choosegrade {
-        background: #fff;
-        height: 50px;
-        line-height: 50px;
-        >span {
-            margin-left: 10px;
-            float: left;
-        }
-        ul {
-            display: inline-block;
-            float: left;
-            >li {
-                cursor: pointer;
-                margin-left: 30px;
-                float: left;
-                &.focus {
-                    color: @themeColor;
+                border-radius: 10px;
+                margin-left: 2.5%;
+                padding: 20px 40px;
+                p{
+                    margin-top: 10px;
+                    font-size: 20px;
+                }
+                h{
+                    margin-top: 10px;
+                    text-align: right;
+                    font-size: 50px;
+                    float: right;
                 }
             }
         }
     }
-    .chooseclass {
-        background: #fff;
-        min-height: 50px;
-        line-height: 50px;
-        >span {
-            margin-left: 10px;
-            float: left;
-        }
-        ul {
-            // display:inline-block;
-            // float:left;
-            >li {
-                cursor: pointer;
-                margin-left: 30px;
-                float: left;
-                &.focus {
-                    color: @themeColor;
-                }
-            }
-        }
-    }
-    .choosedata{
-        background: #fff;
-        min-height: 50px;
-        line-height: 50px;
-        >span {
-            margin-left: 10px;
-            float: left;
-        }
-    }
+
 }
 .healthyBox {
     background: #fff;
@@ -9441,14 +9354,81 @@ input[type="button"] {
 
 .zhihuiBox{
     margin-top: 20px;
+    padding: 10px;
     background: white;
     clear: both;
+    .banjitongji{
+        width: 100%;
+        height: 600px;
+        float: left;
+        background: white;
+        .title{
+            height: 5%;
+            position: relative;
+            h1{
+                float: left;
+            }
+            span{
+                font-size: 16px;
+                float: left;
+                color: #aaaaaa;
+                position: absolute;
+                bottom: 0;
+                left: 10%;
+            }
+        }
+        .banjitongji_chart{
+            height: 95%;
+            width: 100%;
+        }
+    }
+    .banjipingjun{
+        width: 50%;
+        height: 400px;
+        float: left;
+        p{
+            font-size: 20px;
+        }
+        .oneline{
+            display:flex;
+            justify-content: space-around;
+            line-height:80px;
+            border-bottom:1px solid #d7d7d7;
+            .text-hide{
+                visibility: hidden;
+            }
+            >div{
+                //text-align:center;
+                flex:1;
+                font-size: 26px;
+                padding-left: 10px;
+                &:last-child{
+                    text-align: right;
+                    padding-right: 10px;
+                }
+            }
+        }
+        .tongji_chart{
+            width: 100%;
+            height: 90%;
+        }
+    }
+    .banji-chart{
+        float: left;
+        width:50%;
+        height:400px;
+        .tongji_chart{
+            width: 100%;
+            height: 90%;
+        }
+    }
     .left{
         float: left;
         width:70%;
         height: 400px;
         //background: red;
         .zhihui_table{
+            margin-top: 20px;
             clear: both;
             float: left;
             width:100%;
@@ -9517,7 +9497,7 @@ input[type="button"] {
                 .oneline{
                     display:flex;
                     justify-content: space-around;
-                    height:25px;
+                    height:100px;
                     line-height:25px;
                     padding-left:10px;
                     .text-hide{
@@ -11259,31 +11239,41 @@ input[type="button"] {
             }
         }
     }
+    h1{
+        padding: 0 20px;
+    }
     .banjipingjun{
         width: 50%;
         height: 310px;
         border-bottom:1px solid #d7d7d7;
         float: left;
-        padding-top: 12px;
+        padding: 12px 20px 0 20px;
+        p{
+           font-size: 20px;
+        }
         .oneline{
             display:flex;
             justify-content: space-around;
-            line-height:36px;
+            line-height:50px;
             border-bottom:1px solid #d7d7d7;
             .text-hide{
                 visibility: hidden;
             }
             >div{
-                text-align:center;
+                //text-align:center;
                 flex:1;
+                font-size: 26px;
+                padding-left: 10px;
                 &:last-child{
-                    border-left:1px solid #d7d7d7;
+                   text-align: right;
+                    padding-right: 10px;
                 }
             }
         }
     }
     .banji-chart{
         float: left;
+        background: red;
         width:50%;
         height:310px;
     }

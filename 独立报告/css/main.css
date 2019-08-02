@@ -6212,172 +6212,96 @@ input[type="button"] {
   background: #e4eaf1;
 }
 .healthyChart {
-  padding: 50px;
+  padding: 0 50px;
   height: 700px;
   width: 100%;
 }
-.healthyChart .choosee {
-  margin-bottom: 40px;
-  height: 38px;
-  float: left;
-}
-.healthyChart .choosee .address > li {
-  font-size: 12px;
-  background: #969696;
-  margin-right: 5px;
-  color: #fff;
-}
-.healthyChart .choosee .address > li .limit {
-  margin-left: -60px;
-  max-height: 190px;
+.healthyChart .eye_title {
+  height: 470px;
   position: relative;
-  z-index: 100;
-  width: 200px;
-  background-color: #F5F5F5;
-  overflow: auto;
 }
-.healthyChart .choosee .address > li.focus {
-  color: #fff;
-  background-color: #ffb444;
-}
-.healthyChart .choosee .address > li.focus > ul {
-  display: block;
-}
-.healthyChart .choosee .address > li.focus > ul li {
-  width: 200px;
-  color: #000;
-}
-.healthyChart .choosee .address > li > ul {
-  display: none;
-}
-.healthyChart .choosee .address > li > ul li:hover {
-  color: #fff;
-  background-color: #82b64a;
-  transition: all 0.2s ease-in-out;
-}
-.healthyChart .choosee .time {
-  padding-left: 10px;
-  cursor: text;
-}
-.healthyChart .choosee > input {
-  display: inline-block;
-}
-.healthyChart .choosee > input[type=button] {
-  margin-left: 10px;
-  border: 0;
-}
-.healthyChart .choosee > ul {
-  display: inline-block;
-  height: 100%;
-}
-.healthyChart .choosee > ul > li {
-  float: left;
-  display: inline-block;
-}
-.healthyChart .choosee > span {
-  display: inline-block;
-  height: 100%;
-  line-height: 38px;
-  margin-left: 10px;
-  margin-right: 20px;
-  float: left;
-}
-.healthyChart .choose {
-  height: 38px;
+.healthyChart .eye_title .choosegrade {
+  background: #008080;
+  height: 300px;
+  padding: 10px 40px;
+  line-height: 50px;
+  z-index: 2;
   position: relative;
-  float: left;
-  z-index: 999;
 }
-.healthyChart .choose .address > li {
-  border: 1px solid #B5B5B5;
+.healthyChart .eye_title .choosegrade .baogao_name {
+  position: absolute;
+  height: 180px;
+  width: 70%;
 }
-.healthyChart .choose .address > li .limit {
-  height: 190px;
-  overflow: auto;
-  background-color: #fff;
+.healthyChart .eye_title .choosegrade .baogao_name img {
+  width: 180px;
+  height: 180px;
 }
-.healthyChart .choose .address > li.focus {
-  color: #fff;
-  background-color: #82b64a;
+.healthyChart .eye_title .choosegrade .baogao_name span {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  bottom: 40px;
 }
-.healthyChart .choose .address > li.focus > ul {
-  display: block;
+.healthyChart .eye_title .choosegrade .eyetable {
+  width: 25%;
+  height: 250px;
+  position: absolute;
+  right: 0px;
 }
-.healthyChart .choose .address > li.focus > ul li {
-  color: #000;
-}
-.healthyChart .choose .address > li > ul {
-  display: none;
-}
-.healthyChart .choose .address > li > ul li:hover {
-  color: #82b64a;
-  transition: all 0.2s ease-in-out;
-}
-.healthyChart .choose .time {
-  padding-left: 10px;
-}
-.healthyChart .choose > ul {
-  display: inline-block;
+.healthyChart .eye_title .choosegrade .eyetable img {
+  width: 100%;
   height: 100%;
 }
-.healthyChart .choose > ul > li {
-  float: left;
-  display: inline-block;
-}
-.healthyChart .choose > span {
-  display: inline-block;
-  height: 100%;
-  line-height: 38px;
-  margin-left: 10px;
-  margin-right: 20px;
-  float: left;
-}
-.healthyChart .choosegrade {
-  background: #fff;
+.healthyChart .eye_title .choosegrade .info {
+  width: 90%;
   height: 50px;
+  position: absolute;
+  bottom: 70px;
+}
+.healthyChart .eye_title .choosegrade .info .info_juti {
+  height: 50px;
+  margin-right: 10%;
+  color: white;
   line-height: 50px;
-}
-.healthyChart .choosegrade > span {
-  margin-left: 10px;
+  font-size: 24px;
   float: left;
 }
-.healthyChart .choosegrade ul {
-  display: inline-block;
-  float: left;
+.healthyChart .eye_title .choosegrade .info .info_juti img {
+  width: 50px;
+  height: 50px;
 }
-.healthyChart .choosegrade ul > li {
-  cursor: pointer;
-  margin-left: 30px;
-  float: left;
-}
-.healthyChart .choosegrade ul > li.focus {
-  color: #82b64a;
-}
-.healthyChart .chooseclass {
-  background: #fff;
-  min-height: 50px;
+.healthyChart .eye_title .choosegrade .info .info_time {
+  height: 50px;
+  color: white;
   line-height: 50px;
-}
-.healthyChart .chooseclass > span {
-  margin-left: 10px;
+  font-size: 18px;
   float: left;
 }
-.healthyChart .chooseclass ul > li {
-  cursor: pointer;
-  margin-left: 30px;
+.healthyChart .eye_title .nav {
+  margin-top: -50px;
+  z-index: 55555;
+  height: 200px;
+  position: relative;
+}
+.healthyChart .eye_title .nav .nav_biaoqian {
+  width: 30%;
+  height: 200px;
+  background: #f2f2f2;
   float: left;
+  border-radius: 10px;
+  margin-left: 2.5%;
+  padding: 20px 40px;
 }
-.healthyChart .chooseclass ul > li.focus {
-  color: #82b64a;
+.healthyChart .eye_title .nav .nav_biaoqian p {
+  margin-top: 10px;
+  font-size: 20px;
 }
-.healthyChart .choosedata {
-  background: #fff;
-  min-height: 50px;
-  line-height: 50px;
-}
-.healthyChart .choosedata > span {
-  margin-left: 10px;
-  float: left;
+.healthyChart .eye_title .nav .nav_biaoqian h {
+  margin-top: 10px;
+  text-align: right;
+  font-size: 50px;
+  float: right;
 }
 .healthyBox {
   background: #fff;
@@ -9657,8 +9581,73 @@ input[type="button"] {
 }
 .zhihuiBox {
   margin-top: 20px;
+  padding: 10px;
   background: white;
   clear: both;
+}
+.zhihuiBox .banjitongji {
+  width: 100%;
+  height: 600px;
+  float: left;
+  background: white;
+}
+.zhihuiBox .banjitongji .title {
+  height: 5%;
+  position: relative;
+}
+.zhihuiBox .banjitongji .title h1 {
+  float: left;
+}
+.zhihuiBox .banjitongji .title span {
+  font-size: 16px;
+  float: left;
+  color: #aaaaaa;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+.zhihuiBox .banjitongji .banjitongji_chart {
+  height: 95%;
+  width: 100%;
+}
+.zhihuiBox .banjipingjun {
+  width: 50%;
+  height: 400px;
+  float: left;
+}
+.zhihuiBox .banjipingjun p {
+  font-size: 20px;
+}
+.zhihuiBox .banjipingjun .oneline {
+  display: flex;
+  justify-content: space-around;
+  line-height: 80px;
+  border-bottom: 1px solid #d7d7d7;
+}
+.zhihuiBox .banjipingjun .oneline .text-hide {
+  visibility: hidden;
+}
+.zhihuiBox .banjipingjun .oneline > div {
+  flex: 1;
+  font-size: 26px;
+  padding-left: 10px;
+}
+.zhihuiBox .banjipingjun .oneline > div:last-child {
+  text-align: right;
+  padding-right: 10px;
+}
+.zhihuiBox .banjipingjun .tongji_chart {
+  width: 100%;
+  height: 90%;
+}
+.zhihuiBox .banji-chart {
+  float: left;
+  width: 50%;
+  height: 400px;
+}
+.zhihuiBox .banji-chart .tongji_chart {
+  width: 100%;
+  height: 90%;
 }
 .zhihuiBox .left {
   float: left;
@@ -9666,6 +9655,7 @@ input[type="button"] {
   height: 400px;
 }
 .zhihuiBox .left .zhihui_table {
+  margin-top: 20px;
   clear: both;
   float: left;
   width: 100%;
@@ -9732,7 +9722,7 @@ input[type="button"] {
 .ktbg-content .left .list-content .list-left .oneline {
   display: flex;
   justify-content: space-around;
-  height: 25px;
+  height: 100px;
   line-height: 25px;
   padding-left: 10px;
 }
@@ -11381,31 +11371,40 @@ input[type="button"] {
 .print .right-section .mCSB_container .left {
   width: 100%;
 }
+.print h1 {
+  padding: 0 20px;
+}
 .print .banjipingjun {
   width: 50%;
   height: 310px;
   border-bottom: 1px solid #d7d7d7;
   float: left;
-  padding-top: 12px;
+  padding: 12px 20px 0 20px;
+}
+.print .banjipingjun p {
+  font-size: 20px;
 }
 .print .banjipingjun .oneline {
   display: flex;
   justify-content: space-around;
-  line-height: 36px;
+  line-height: 50px;
   border-bottom: 1px solid #d7d7d7;
 }
 .print .banjipingjun .oneline .text-hide {
   visibility: hidden;
 }
 .print .banjipingjun .oneline > div {
-  text-align: center;
   flex: 1;
+  font-size: 26px;
+  padding-left: 10px;
 }
 .print .banjipingjun .oneline > div:last-child {
-  border-left: 1px solid #d7d7d7;
+  text-align: right;
+  padding-right: 10px;
 }
 .print .banji-chart {
   float: left;
+  background: red;
   width: 50%;
   height: 310px;
 }

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta HTTP-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/icon.css">
+    <link rel="stylesheet" href="../plugins/animate.min.css">
+    <link rel="stylesheet" href="../css/scroll.css">
+    <link rel="stylesheet" href="../plugins/datepicker.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../plugins/mousewheel.js"></script>
+    <script src="../plugins/jquery.slimscroll.js"></script>
+    <!--<script src="../plugins/echart.js"></script>-->
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/pageInit.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/each/dataChoose.js"></script>
+    <title>智慧校园</title>
+</head>
+
+<body>
+<div class="pageContent">
+    <div class="rightPage">
+        <div class="datelimit">
+            <div class="healthyChart">
+                <div class="eye_title">
+                    <div class="choosegrade">
+                        <div class="baogao_name">
+                            <img src="../images/tongji.svg" alt="">
+                            <span>校园视力统计报告</span>
+                        </div>
+                        <div class="eyetable">
+                            <img src="../images/eyetable.svg" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="info_juti">
+                                <img src="../images/school.svg" alt="">
+                                <span>成都市·龙江路小学</span>
+                            </div>
+                            <div class="info_juti">
+                                <img src="../images/place.svg" alt="">
+                                <span>成都市武侯区临江路17号</span>
+                            </div>
+                            <div class="info_juti">
+                                <img src="../images/people.svg" alt="">
+                                <span>998人</span>
+                            </div>
+                            <div class="info_time">
+                                <span>2019 - 05 - 31 21:33</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="nav">
+                        <div class="nav_biaoqian">
+                            <h1>筛查覆盖率</h1>
+                            <p>筛查人数/总人数</p>
+                            <h>98.5%</h>
+                        </div>
+                        <div class="nav_biaoqian">
+                            <h1>视力不良占比</h1>
+                            <p>裸眼视力低于正常水平</p>
+                            <h>28.5%</h>
+                        </div>
+                        <div class="nav_biaoqian">
+                            <h1>近视率</h1>
+                            <p>筛查人数/总人数</p>
+                            <h>25.5%</h>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="zhihuiBox ">
+
+                    <div class="clearfix">
+                            <h1>学校视力统计总览</h1>
+                            <div class="banjipingjun">
+                                <p>最近一次普查</p>
+                                <!--<div class="oneline">-->
+                                <!--<div></div>-->
+                                <!--&lt;!&ndash; 占位置保持布局的数据 &ndash;&gt;-->
+                                <!--<div class="text-hide">122</div>-->
+                                <!--</div>-->
+                                <div class="oneline">
+                                    <div>参与人数</div>
+                                    <div>950人</div>
+                                </div>
+                                <div class="oneline">
+                                    <div> 筛查覆盖率 </div>
+                                    <div>100.00%</div>
+                                </div>
+                                <div class="oneline">
+                                    <div> 视力不良率 </div>
+                                    <div>28.5%</div>
+                                </div>
+                                <div class="oneline">
+                                    <div>近视率</div>
+                                    <div>25.5%</div>
+                                </div>
+                            </div>
+                            <!-- 饼状图 -->
+                            <div class="banji-chart no-padding" id="shilichange-chart">
+                                <!-- 饼状图加载位置 -->
+                            </div>
+
+
+                        </div>
+
+                    <div class="clearfix">
+                        <div class="banjipingjun">
+                            <h1>全校统计</h1>
+                            <div class="tongji_chart" id="school_tongji_pie"></div>
+                        </div>
+
+                        <div class="banji-chart no-padding">
+                            <h1>年级统计</h1>
+                            <div class="tongji_chart" id="grade_tongji_bar"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--班级统计-->
+                <div class="zhihuiBox  ">
+                    <div class="clearfix">
+                    <div class="banjitongji">
+                        <div class="title">
+                            <h1>班级统计</h1> <span>班级近视率</span>
+                        </div>
+                        <div class="banjitongji_chart" id="banjitongji_chart"></div>
+                    </div>
+                    </div>
+                </div>
+
+                <!--一年级-->
+                <div class="zhihuiBox ">
+                    <h1>一年级</h1>
+                    <div class="clearfix">
+                        <div class="banjipingjun">
+                            <h2>近视率</h2>
+                            <div class="tongji_chart" id="jinshilv"></div>
+                        </div>
+
+                        <div class="banji-chart no-padding">
+                            <h2>变化趋势</h2>
+                            <div class="tongji_chart" id="bianhuaqushi"></div>
+                        </div>
+                        <div class="banjitongji">
+                            <div class="title">
+                                <h2>班级近视率对比</h2>
+                            </div>
+                            <div class="banjitongji_chart" id="jinshilvduibi_1"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/each/pie_huan.js"></script>
+<script src="../js/each/pie_shili.js"></script>
+<script src="../js/each/bar_shili.js"></script>
+<script src="../js/each/line_shili.js"></script>
+<script>
+    var xdata = ['2014', '2015', '2016', '2017', '2018', '2019']
+    var jishilv =[10, 11, 13, 17, 21, 24]
+    var shilibuliang = [15, 24, 26, 30, 32, 35]
+    line_shili($('#shilichange-chart')[0],xdata,jishilv,shilibuliang)
+
+    var grade =['一年级', '二年级', '三年级', '四年级', '五年级', '六年级'];
+    var value = [0.7, 7.8, 14.3, 29.6, 41.2, 39];
+    bar_shili($('#grade_tongji_bar')[0],grade,value)
+
+    var jishi_data = [
+        {value:110, name:'近视率'},
+        {value:566, name:'视力不良率'}
+    ]
+    var point  = jishi_data[0].value/(jishi_data[0].value+jishi_data[1].value)
+    pie_shili($('#school_tongji_pie')[0],point,jishi_data)
+
+    var banji_data = [
+        {value:335, name:'1-1'},
+        {value:310, name:'1-2'},
+        {value:234, name:'1-3'},
+        {value:135, name:'1-4'},
+        {value:335, name:'2-1'},
+        {value:310, name:'2-2'},
+        {value:234, name:'2-3'},
+        {value:135, name:'2-4'},
+        {value:335, name:'3-1'},
+        {value:310, name:'3-2'},
+        {value:234, name:'3-3'},
+        {value:135, name:'3-4'},
+        {value:335, name:'4-1'},
+        {value:310, name:'4-2'},
+        {value:234, name:'4-3'},
+        {value:135, name:'4-4'},
+        {value:335, name:'5-1'},
+        {value:310, name:'5-2'},
+        {value:234, name:'5-3'},
+        {value:135, name:'5-4'},
+        {value:335, name:'6-1'},
+        {value:310, name:'6-2'},
+        {value:234, name:'6-3'},
+        {value:135, name:'6-4'}
+    ]
+    pie_huanxin($('#banjitongji_chart')[0],banji_data)
+
+    var grade_one = ['一年级一班', '一年级二班', '一年级三班', '一年级四班']
+    var value_one = [0.7, 7.8, 14.3, 29.6]
+    //一年级
+    pie_shili($('#jinshilv')[0],point,jishi_data)
+    line_shili($('#bianhuaqushi')[0],xdata,jishilv,shilibuliang)
+    bar_shili($('#jinshilvduibi_1')[0],grade_one,value_one)
+</script>
+</body>
+
+</html>
