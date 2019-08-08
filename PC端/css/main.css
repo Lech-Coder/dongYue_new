@@ -6461,7 +6461,6 @@ input[type="button"] {
   background-Color: #C280FF;
 }
 .healthyBox .center {
-  margin-top: 50px;
   padding: 0 20px;
 }
 .healthyBox .center .roww {
@@ -6487,7 +6486,7 @@ input[type="button"] {
 }
 .healthyBox .center .roww .school,
 .healthyBox .center .roww .category {
-  width: 9.5%;
+  width: 11%;
   text-align: center;
 }
 .healthyBox .center .roww .persent {
@@ -6508,7 +6507,7 @@ input[type="button"] {
 }
 .healthyBox .center .row .limit {
   height: 100%;
-  width: 55%;
+  width: 52%;
   display: inline-block;
   float: left;
   margin-right: 18px;
