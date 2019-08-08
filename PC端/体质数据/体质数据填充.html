@@ -118,11 +118,10 @@
         var min = Now.getMinutes();
         var sec = Now.getSeconds();
         
-        hours -= 6;
         min -= 60;
         sec -= 60;
         if(hours >= 6){
-            hours += 24;
+            hours -= 30;
         }
         return Math.abs(hours)+ '小时' +Math.abs(min)+ '分' +Math.abs(sec)+ '秒';
     }
