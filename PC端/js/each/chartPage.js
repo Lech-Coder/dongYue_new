@@ -32,8 +32,8 @@ $(function () {
     },
     grid:{
       left:'5%',
-      top:'5%',
-      bottom:'12%',
+      top:'25%',
+      bottom:'20%',
       right:'5%'
     },
     toolbox: {
