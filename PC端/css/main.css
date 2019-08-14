@@ -6486,7 +6486,7 @@ input[type="button"] {
 }
 .healthyBox .center .roww .school,
 .healthyBox .center .roww .category {
-  width: 11%;
+  width: 9.5%;
   text-align: center;
 }
 .healthyBox .center .roww .persent {
@@ -8465,8 +8465,12 @@ input[type="button"] {
 }
 .kaoqin .gw-content .center .roww .school,
 .kaoqin .gw-content .center .roww .category {
-  width: 14%;
+  width: 10%;
   text-align: center;
+}
+.kaoqin .gw-content .center .roww .school p,
+.kaoqin .gw-content .center .roww .category p {
+  float: left;
 }
 .kaoqin .gw-content .center .roww .persent {
   text-align: center;
