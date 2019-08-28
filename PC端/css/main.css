@@ -3709,6 +3709,9 @@ div[class^="col"]:before > span.textArea {
   line-height: 36px;
   cursor: pointer;
 }
+.schedule-table tbody td.current:before {
+  content: attr(data-content);
+}
 .schedule-table.back-color tbody .set-class-item {
   background: #FCE9CB;
   cursor: auto;
