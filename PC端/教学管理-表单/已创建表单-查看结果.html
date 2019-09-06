@@ -548,13 +548,17 @@
                             <div style="position: absolute: width: 100%; padding: 0 40px;">\
                                 <input readonly class="form-control" type="text" style="width: 70%; height: 40px; float:left; padding: 0 5px" value=' +linkSrc+ '>\
                                 <a style="width: 30%; float:left; text-align:center" href="javascript:;" class="btn themeBtn" id="copy-link">点击复制</a>\
+                                \
+                                \
                             </div>';
             Alert.smallWindow({
             data:ewmImg,
             callBack:function(){
                 $('#qrcode').qrcode(linkSrc)
                 .find('canvas').css('width','99%');
-                $('body').on('click', '#copy-link', function () {
+                $('body').on('click', '#copy-link', function (e) {
+                    //新增语句
+                    copyText(linkSrc)
                     $(this).parent().find('input').select();
                 })
             }
@@ -565,6 +569,15 @@
         $('.table_btn  a').on('click',function () {
             $(this).addClass('focus').siblings().removeClass('focus')
         })
+
+        //新增复制文本方法
+        function copyText(text) {
+            $('body').append('  <textarea id="input"></textarea>')
+            var input = $('#input')[0];
+            input.value = text; // 修改文本框的内容
+            input.select(); // 选中文本
+            document.execCommand("copy"); // 执行浏览器复制命令
+        }
     </script>
 </body>
 

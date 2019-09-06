@@ -99,6 +99,8 @@ function changdata(data) {
     }
     return arr
 }
+
+//学校体质健康报告
 function half_pie(div,title,minValue,height_data,little_data,cucolor) {
     var myChart = echarts.init(div);
     option = {
