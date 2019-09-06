@@ -99,3 +99,278 @@ function changdata(data) {
     }
     return arr
 }
+function half_pie(div,title,minValue,height_data,little_data,cucolor) {
+    var myChart = echarts.init(div);
+    option = {
+        title:{
+            text:title,
+            left:'5%' ,
+            top:'5%'
+        },
+        "series": [
+            {
+                "radius": [
+                    "49%",
+                    "50%"
+                ],
+                // "clockWise": false,
+                "hoverAnimation": false,
+                "type": "pie",
+                "itemStyle": {
+                    "normal": {
+                        "label": {
+                            "show": true,
+                            "textStyle": {
+                                "fontSize": 25,   //字体
+                                "fontWeight": "bold"
+                            },
+                            "position": "center"
+                        },
+                        // "labelLine": {
+                        //     "show": false
+                        // },
+                        "color": "black",     //字的颜色
+                        "borderColor": cucolor,    //粗线背景色
+                        "borderWidth": 15
+                    }
+                },
+                "data": [
+                    {
+                        "name": " ",
+                        "value": little_data,     //细线数据
+                        "itemStyle": {
+                            "normal": {
+                                // "label": {
+                                //     // "show": false
+                                // },
+                                // "labelLine": {
+                                //     "show": false
+                                // },
+                                "color": "#5886f0",
+                                "borderColor": "#ccc",
+                                "borderWidth": 3
+                            }
+                        }
+                    },
+                    {
+                        "value": height_data,        //粗线数据
+                        "name": minValue
+                    }
+
+                ]
+            }
+        ]
+    };
+    myChart.setOption(option, true);
+}
+
+function bar_duidie(dom,oridata) {
+    var myChart = echarts.init(dom);
+    var data0 = [];
+    var data1 = [];
+    var data2 = [];
+    var data3 = [];
+    var total;
+    for (var i = 0, l = oridata[0].length; i < l; i++) {
+        total = oridata[0][i] + oridata[1][i] + oridata[2][i]+ oridata[2][i];
+        data0.push(Math.round(oridata[0][i]/total * 100));
+        data1.push(Math.round(oridata[1][i]/total * 100));
+        data3.push(Math.round(oridata[3][i]/total * 100));
+        data2.push(100 - data0[data0.length - 1] - data1[data1.length - 1]- data3[data3.length - 1]);
+    }
+    option = {
+        color:['#e2b000','#ff7640','#185c80','#1e9ea1'],
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : { // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left:'10%',
+            top:'10%',
+            bottom:'10%',
+            right:'10%',
+        },
+        legend: {
+            data:['不及格','及格','良好',"优秀"]
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ['一年级','二年级','三年级','四年级','五年级','六年级','男生','女生']
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value',
+                splitArea : {show : true},
+                axisLabel: {
+                    formatter: '{value}%',
+                },
+            }
+        ],
+        series : [
+            {
+                name:'不及格',
+                type:'bar',
+                barWidth: '35%',
+                stack: '成绩',
+                data:data0
+            },
+            {
+                name:'及格',
+                type:'bar',
+                stack: '成绩',
+                data:data1
+            },
+            {
+                name:'良好',
+                type:'bar',
+                stack: '成绩',
+                data:data2
+            },{
+                name:'优秀',
+                type:'bar',
+                stack: '成绩',
+                data:data3
+            }
+        ]
+    };
+    myChart.setOption(option, true);
+}
+
+function simple_pie(dom,pdata){
+    var myChart = echarts.init(dom);
+    option = {
+        title : {
+            text: '总体比例'
+        },
+        grid: {
+            left:'10%',
+            top:'10%',
+            bottom:'10%',
+            right:'10%',
+        },
+        color:['#185c80','#1e9ea1','#e2b000','#ff7640'],
+        tooltip : {
+            formatter: "{b} : {d}%"
+        },
+        series : [
+            {
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                label:{
+                    normal:{
+                        formatter: "{b}  {d}%",
+                        fontSize:12,
+                    }
+                },
+                data:pdata,
+                // itemStyle: {
+                //     emphasis: {
+                //         shadowBlur: 10,
+                //         shadowOffsetX: 0,
+                //         shadowColor: 'rgba(0, 0, 0, 0.5)'
+                //     }
+                // }
+            }
+        ]
+    };
+    myChart.setOption(option, true);
+}
+function simple_bar(dom,grade,bdata,PE_type) {
+    var myChart = echarts.init(dom);
+
+    option = {
+        color: ['#3398DB'],
+        title:{
+            text:grade
+        },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '10%',
+            right: '10%',
+            bottom: '10%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : PE_type,
+                axisTick: {
+                    alignWithLabel: true
+                },
+                axisLabel:{
+                    rotate:40,
+                    fontSize:16
+                }
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                type:'bar',
+                barWidth: '40%',
+                data:bdata
+            }
+        ]
+    };
+    myChart.setOption(option, true);
+
+}
+function simple_line(dom,type_name,boy_data,girl_data) {
+    var myChart = echarts.init(dom);
+    option = {
+        title: {
+            text: type_name
+        },
+        color:['#28b4f2','#ed88dd'],
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['男生','女生']
+        },
+        grid: {
+            left: '5%',
+            right: '5%',
+            bottom: '10%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['一年级','二年级','三年级','四年级','五年级','六年级'],
+            axisLabel:{
+                fontSize:16
+            }
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name:'男生',
+                type:'line',
+                data:boy_data
+            },
+            {
+                name:'女生',
+                type:'line',
+                data:girl_data
+            }
+        ]
+    };
+    myChart.setOption(option, true);
+}

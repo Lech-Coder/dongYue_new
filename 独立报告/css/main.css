@@ -383,6 +383,12 @@ img {
 .hidden-node {
   display: none;
 }
+.border_top {
+  border-top: 1px solid black;
+}
+.border_bottom {
+  border-bottom: 1px solid black;
+}
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -1283,6 +1289,9 @@ textarea {
 }
 .display-no {
   display: none;
+}
+.addbold {
+  font-weight: bold;
 }
 .bg-yellow {
   background: #ffb444 !important;
@@ -2196,6 +2205,9 @@ textarea {
 .col-31-32 {
   width: 96.925%;
 }
+.col-1-10 {
+  width: 10%;
+}
 .col-32-32 {
   width: 100%;
 }
@@ -2388,6 +2400,7 @@ textarea {
 .col-offset-31-32 {
   margin-left: 96.925%;
 }
+.col-1-10,
 .col-1-16,
 .col-2-16,
 .col-3-16,
@@ -2987,6 +3000,24 @@ div[class^="col"]:before > span.textArea {
   white-space: nowrap;
 }
 .excel-table .table-item > div .visited-gray {
+  color: gray !important;
+}
+.excel-table30 {
+  line-height: 30px;
+}
+.excel-table30 .table-item {
+  margin: 5px 0;
+}
+.excel-table30 .table-item > div {
+  height: 30px;
+  line-height: 30px;
+}
+.excel-table30 .table-item > div * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.excel-table30 .table-item > div .visited-gray {
   color: gray !important;
 }
 .selectItem {
@@ -9584,6 +9615,75 @@ input[type="button"] {
   padding: 10px;
   background: white;
   clear: both;
+}
+.zhihuiBox .clearfix .school_name {
+  width: 100%;
+  height: 40px;
+}
+.zhihuiBox .clearfix .school_name h1 {
+  float: left;
+}
+.zhihuiBox .clearfix .school_name .school_address {
+  width: 80%;
+  float: left;
+  padding: 10px;
+  height: 20px;
+}
+.zhihuiBox .clearfix .nei_rong {
+  width: 100%;
+  padding-top: 20px;
+}
+.zhihuiBox .clearfix .nei_rong p {
+  font-size: 16px;
+}
+.zhihuiBox .clearfix .nei_rong .chart_z {
+  width: 100%;
+}
+.zhihuiBox .clearfix .nei_rong .chart_z .chart_pi {
+  width: 25%;
+  float: left;
+}
+.zhihuiBox .clearfix .nei_rong .nei_rong_l {
+  width: 65%;
+  float: left;
+}
+.zhihuiBox .clearfix .nei_rong .nei_rong_r {
+  width: 35%;
+  float: right;
+}
+.zhihuiBox .clearfix .nei_rong .nei_rong_r .parper_address {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.zhihuiBox .clearfix .nei_rong .ul_address {
+  margin: 0 auto;
+}
+.zhihuiBox .clearfix .nei_rong .ul_address li {
+  font-size: 16px;
+}
+.zhihuiBox .clearfix .nei_rong .bar_chart,
+.zhihuiBox .clearfix .nei_rong .xiangmu_data,
+.zhihuiBox .clearfix .nei_rong .single_chart_line,
+.zhihuiBox .clearfix .nei_rong .single_chart_bar {
+  width: 50%;
+  float: left;
+}
+.zhihuiBox .clearfix .nei_rong .bar_chart .xiangmu_chart,
+.zhihuiBox .clearfix .nei_rong .xiangmu_data .xiangmu_chart,
+.zhihuiBox .clearfix .nei_rong .single_chart_line .xiangmu_chart,
+.zhihuiBox .clearfix .nei_rong .single_chart_bar .xiangmu_chart {
+  width: 100%;
+}
+.zhihuiBox .clearfix .class_address {
+  border: 1px black solid;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 16px;
+}
+.zhihuiBox .clearfix .pingding_table {
+  text-align: center;
+  margin: 0 auto;
 }
 .zhihuiBox .banjitongji {
   width: 100%;

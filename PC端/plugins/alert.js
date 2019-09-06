@@ -56,6 +56,7 @@ Alert.dialogBox = function (boxType, words, options) {
   }
   $(".close-btn").click(function () {
     Alert.removeDialog("alertType");
+
   });
   $(".cancel").click(function () {
     opts.cancelFn?opts.cancelFn():Alert.removeDialog("alertType");
@@ -786,7 +787,7 @@ Alert.changePass = function(options){
         }
       });
     }
-    
+
 
   });
   $modal.html(changePassBox);
@@ -803,7 +804,7 @@ Alert.twoBtn = function(options){
     btnRight: '立即创建',
     btnLeftGray: false,//是否灰色
     btnRightGray:  false,//是否灰色
-    time: 5,    
+    time: 5,
     timer: false,
     timer2: false,
     callBack: null
@@ -857,7 +858,7 @@ Alert.twoBtn = function(options){
         }
       },1000);
       $('#btn-right').val(opts.btnRight).removeClass('grayBtn').addClass('themeBtn').removeAttr('disabled');
-    }else 
+    }else
     //右边按钮倒计时
     if(opts.timer != true && opts.timer2 == true){
       var time = opts.time;
@@ -907,7 +908,7 @@ Alert.bigWindow = function(options){
         '<div id="data" style="height:90%;overflow: auto;"></div>'+
       '</div>' +
     '</div>');
-    
+
   box.find('#data ').append(opts.data);
   $modal.append(box);
   $('body').append($modal);
@@ -923,7 +924,7 @@ Alert.bigWindow = function(options){
     Alert.removeDialog("alertType");
   });
 
-  
+
   //回调
   opts.callBack();
 }
@@ -944,7 +945,7 @@ Alert.middleWindow = function(options){
         '<div id="data" style="height:90%;overflow: auto;"></div>'+
       '</div>' +
     '</div>');
-    
+
   box.find('#data ').append(opts.data);
   $modal.append(box);
   $('body').append($modal);
@@ -986,7 +987,7 @@ Alert.smallWindow = function(options){
         '<div id="data" style="height:90%;overflow: auto;"></div>'+
       '</div>' +
     '</div>');
-    
+
   box.find('#data ').append(opts.data);
   $modal.append(box);
   $('body').append($modal);

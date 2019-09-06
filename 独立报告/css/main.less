@@ -83,7 +83,10 @@ textarea{
 .display-no {
     display: none;
 }
-
+//加粗
+.addbold{
+    font-weight: bold;
+}
 .bg-yellow{
     background: @yellowColor !important;
 }
@@ -1126,7 +1129,9 @@ textarea{
 .col-31-32 {
     width: 96.925%;
 }
-
+.col-1-10{
+    width: 10%;
+}
 .col-32-32 {
     width: 100%;
 }
@@ -1385,7 +1390,7 @@ textarea{
 .col-offset-31-32 {
     margin-left: 96.925%;
 }
-
+.col-1-10,
 .col-1-16,
 .col-2-16,
 .col-3-16,
@@ -2041,7 +2046,24 @@ div[class^="col"]:before {
         }
     }
 }
-
+.excel-table30 {
+    line-height: 30px;
+    .table-item {
+        margin: 5px 0;
+        >div {
+            height: 30px;
+            line-height: 30px;
+            *{
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+            }
+            .visited-gray{
+                color:gray !important;
+            }
+        }
+    }
+}
 .selectItem {
     position: relative;
     z-index: 1000;
@@ -9357,6 +9379,76 @@ input[type="button"] {
     padding: 10px;
     background: white;
     clear: both;
+    .clearfix{
+        .school_name{
+
+            width: 100%;
+            height: 40px;
+            h1{
+                float: left;
+            }
+            .school_address{
+                width: 80%;
+                float: left;
+                padding: 10px;
+                height: 20px;
+            }
+        }
+        .nei_rong {
+            width: 100%;
+            padding-top: 20px;
+            p {
+                font-size: 16px;
+            }
+            .chart_z {
+                width: 100%;
+
+                .chart_pi {
+                    width: 25%;
+                    float: left;
+                }
+            }
+            .nei_rong_l{
+                width: 65%;
+                float: left;
+            }
+            .nei_rong_r{
+                width: 35%;
+                float: right;
+                .parper_address{
+                    width: 70%;
+                    margin: 0 auto;
+                    padding: 10px;
+                }
+            }
+            .ul_address{
+                margin: 0 auto;
+                li{
+                    font-size: 16px;
+                }
+            }
+            .bar_chart,.xiangmu_data
+            ,.single_chart_line
+            ,.single_chart_bar{
+                width: 50%;
+                float: left;
+                .xiangmu_chart{
+                    width: 100%;
+                }
+            }
+
+        }
+        .class_address{
+            border: 1px black solid;
+            width: 90%;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+        .pingding_table{
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
     .banjitongji{
         width: 100%;
         height: 600px;
