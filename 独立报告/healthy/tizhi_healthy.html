@@ -2354,8 +2354,14 @@
         {value:234, name:'不及格'},
         {value:135, name:'优秀'},
     ]
-    bar_duidie($('#duidie_chart')[0],oridata)
+    var duidie_xdata=['不及格','及格','良好',"优秀"]
+    var duidie_ydata=['一年级','二年级','三年级','四年级','五年级','六年级','男生','女生']
+
+
+    bar_duidie($('#duidie_chart')[0],oridata,duidie_xdata,duidie_ydata)
     simple_pie($('#all_bili')[0],all_bili)
+
+
     var grade_bar_data =[200, 334, 390, 330, 220,44]
     var PE_type=['BMI指数', '肺活量', '坐位体前屈', '50米跑', '一分钟跳绳','一分钟仰卧起坐']
     simple_bar($('.bar_chart')[0],'一年级',grade_bar_data,PE_type)
@@ -2372,7 +2378,7 @@
 
     for(var i=0;i< $('.single_chart_line').length;i++) {
         simple_line($('.single_chart_line')[i], '', boy_data, girl_data)
-        bar_duidie($('.single_chart_bar')[i], oridata)
+        bar_duidie($('.single_chart_bar')[i], oridata,duidie_xdata,duidie_ydata)
     }
 </script>
 </html>

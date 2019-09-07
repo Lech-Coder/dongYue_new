@@ -166,7 +166,7 @@ function half_pie(div,title,minValue,height_data,little_data,cucolor) {
     myChart.setOption(option, true);
 }
 
-function bar_duidie(dom,oridata) {
+function bar_duidie(dom,oridata,xdata,ydata) {
     var myChart = echarts.init(dom);
     var data0 = [];
     var data1 = [];
@@ -195,12 +195,12 @@ function bar_duidie(dom,oridata) {
             right:'10%',
         },
         legend: {
-            data:['不及格','及格','良好',"优秀"]
+            data:xdata
         },
         xAxis : [
             {
                 type : 'category',
-                data : ['一年级','二年级','三年级','四年级','五年级','六年级','男生','女生']
+                data : ydata
             }
         ],
         yAxis : [
@@ -214,25 +214,25 @@ function bar_duidie(dom,oridata) {
         ],
         series : [
             {
-                name:'不及格',
+                name:xdata[0],
                 type:'bar',
                 barWidth: '35%',
                 stack: '成绩',
                 data:data0
             },
             {
-                name:'及格',
+                name:xdata[1],
                 type:'bar',
                 stack: '成绩',
                 data:data1
             },
             {
-                name:'良好',
+                name:xdata[2],
                 type:'bar',
                 stack: '成绩',
                 data:data2
             },{
-                name:'优秀',
+                name:xdata[3],
                 type:'bar',
                 stack: '成绩',
                 data:data3
@@ -375,4 +375,96 @@ function simple_line(dom,type_name,boy_data,girl_data) {
         ]
     };
     myChart.setOption(option, true);
+}
+function rose_pie(dom,pdata){
+    var myChart = echarts.init(dom);
+    option = {
+        grid: {
+            left:'10%',
+            top:'5%',
+            bottom:'10%',
+            right:'10%',
+        },
+        color:['#185c80','#1e9ea1','#e2b000','#ff7640'],
+        tooltip : {
+            formatter: "{b} : {d}%"
+        },
+        series : [
+            {
+                type: 'pie',
+                radius : '60%',
+                roseType: 'radius',
+                label:{
+                    normal:{
+                        formatter: "{b}  {d}%",
+                        fontSize:12,
+                    }
+                },
+                data:pdata,
+                // itemStyle: {
+                //     emphasis: {
+                //         shadowBlur: 10,
+                //         shadowOffsetX: 0,
+                //         shadowColor: 'rgba(0, 0, 0, 0.5)'
+                //     }
+                // }
+            }
+        ]
+    };
+    myChart.setOption(option, true);
+    return myChart
+}
+
+function line_sport(div,data_x,data) {
+
+    var myChart = echarts.init(div);
+    var series=[]
+
+    for (let i=0;i<data.length;i++){
+        series.push({
+            name: data[i].name,
+            data:data[i].data,
+            type: 'line',
+            smooth: true
+        })
+    }
+    option = {
+        color:['#c1413e','#9ac3e5','#66ac52','#ffc032','#549bd3','#f47e39'],
+        xAxis: {
+            type: 'category',
+            data: data_x
+        },
+        // grid: {
+        //     left:'10%',
+        //     top:'5%',
+        //     bottom:'10%',
+        //     right:'10%',
+        // },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:data_set(data),
+            y:'bottom'
+        },
+        yAxis: {
+            type: 'value',
+            // max:100,
+            axisLabel: {
+                formatter: '{value}',
+            },
+        },
+        series: series
+    };
+
+
+    myChart.setOption(option, true);
+
+}
+function  data_set(data) {
+    var le=[]
+    for(let i=0;i<data.length;i++){
+        le.push(data[i].name)
+    }
+    return le
 }

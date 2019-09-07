@@ -34,7 +34,6 @@ function bar_shili(div,xdata,ydata) {
         ],
         series : [
             {
-                name:'直接访问',
                 type:'bar',
                 barWidth: '35%',
                 data:ydata,
@@ -58,4 +57,5 @@ function bar_shili(div,xdata,ydata) {
     };
     myChart.setOption(option, true);
 
+    return myChart
 }
