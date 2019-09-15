@@ -10002,6 +10002,28 @@ input[type="button"] {
   background: white;
   margin-top: 20px;
 }
+.mao_url {
+  width: 150px;
+  position: fixed;
+  left: 10px;
+  top: 25%;
+}
+.mao_url ul li {
+  clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+  height: 24px;
+  line-height: 24px;
+  color: white;
+  margin-top: 5px;
+}
+.mao_url ul li a {
+  color: white;
+}
+.mao_url ul li.w150 {
+  width: 150px;
+}
+.mao_url ul li.w120 {
+  width: 120px;
+}
 .title_zhihui {
   height: 45px;
   line-height: 45px;
