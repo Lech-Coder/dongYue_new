@@ -22,10 +22,8 @@
     <title>智慧校园</title>
 </head>
 
-<body>
+<body style="overflow: inherit">
 <div class="pageContent">
-    <div class="rightPage">
-        <div class="datelimit">
             <div class="healthyChart" style="padding: 0 150px">
 
                 <div class="zhihuiBox" style="padding: 0 50px">
@@ -2976,8 +2974,11 @@
 
 
     //BMI
-    simple_line($('.single_chart_line')[0], '', boy_data, girl_data)
+   simple_line($('.single_chart_line')[0], '', boy_data, girl_data)
     bar_duidie($('.single_chart_bar')[0], oridata,duidie_xdata,duidie_ydata)
+
+
+
     //肺活量
     simple_line($('.single_chart_line')[1], '', boy_data, girl_data)
     bar_duidie($('.single_chart_bar')[1], oridata,duidie_xdata,duidie_ydata)
@@ -2996,5 +2997,14 @@
     //50米*8往返跑
     simple_line($('.single_chart_line')[6], '', boy_data, girl_data)
     bar_duidie($('.single_chart_bar')[6], oridata,duidie_xdata,duidie_ydata)
+
+    setTimeout(function () {
+        window.onresize = function () {
+            for (let i=0;i<resizeChart.length;i++){
+
+                console.log(resizeChart[i])
+                resizeChart[i].resize()
+            }
+        }},200)
 </script>
 </html>

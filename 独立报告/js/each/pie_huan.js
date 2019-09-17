@@ -1,3 +1,5 @@
+var  resizeChart=[]
+
 function pie_huanxin(div,data) {
     var myChart = echarts.init(div);
     option = {
@@ -240,6 +242,8 @@ function bar_duidie(dom,oridata,xdata,ydata) {
         ]
     };
     myChart.setOption(option, true);
+
+    resizeChart.push(myChart)
 }
 
 function simple_pie(dom,pdata){
@@ -281,6 +285,7 @@ function simple_pie(dom,pdata){
         ]
     };
     myChart.setOption(option, true);
+    resizeChart.push(myChart)
 }
 function simple_bar(dom,grade,bdata,PE_type) {
     var myChart = echarts.init(dom);
@@ -329,7 +334,7 @@ function simple_bar(dom,grade,bdata,PE_type) {
         ]
     };
     myChart.setOption(option, true);
-
+    resizeChart.push(myChart)
 }
 function simple_line(dom,type_name,boy_data,girl_data) {
     var myChart = echarts.init(dom);
@@ -375,6 +380,7 @@ function simple_line(dom,type_name,boy_data,girl_data) {
         ]
     };
     myChart.setOption(option, true);
+    resizeChart.push(myChart)
 }
 function rose_pie(dom,pdata){
     var myChart = echarts.init(dom);

@@ -1488,6 +1488,7 @@ textarea {
   box-shadow: 0 0 3px red;
 }
 .rightPage {
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -6243,7 +6244,7 @@ input[type="button"] {
 }
 .healthyChart {
   padding: 0 50px;
-  overflow: auto;
+  height: 700px;
   width: 100%;
 }
 .healthyChart .eye_title {
