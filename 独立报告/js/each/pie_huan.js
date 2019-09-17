@@ -40,7 +40,7 @@ function pie_huanxin(div,data) {
         series: [
 
             {
-                name:'访问来源',
+                name:'近视率',
                 type:'pie',
                 radius: ['40%', '55%'],
                 label: {

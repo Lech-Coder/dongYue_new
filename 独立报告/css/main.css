@@ -6285,17 +6285,17 @@ input[type="button"] {
   height: 100%;
 }
 .healthyChart .eye_title .choosegrade .info {
-  width: 90%;
+  width: 85%;
   height: 50px;
   position: absolute;
   bottom: 70px;
 }
 .healthyChart .eye_title .choosegrade .info .info_juti {
   height: 50px;
-  margin-right: 10%;
+  margin-right: 5%;
   color: white;
   line-height: 50px;
-  font-size: 24px;
+  font-size: 20px;
   float: left;
 }
 .healthyChart .eye_title .choosegrade .info .info_juti img {
