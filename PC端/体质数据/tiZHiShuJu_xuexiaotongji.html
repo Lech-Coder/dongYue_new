@@ -24,7 +24,7 @@
     <!-- 左侧菜单 -->
     <div class="left-menu">
         <a class="logo-box">
-						<span class="logo-img" >
+						<span class="logo-img">
 			    </span>
         </a>
         <div style="height:80%;overflow:auto;">
@@ -112,6 +112,12 @@
                     查看视力数据统计
                 </a>
 
+
+                <!--新增按钮  学校体质报告-->
+                <a href="../../独立报告/healthy/healthy_report.html" class="btn blueBtn no-padding btn-mid" style="margin-left:40px;">
+                    学校体质报告
+                </a>
+
                 <div style="clear:both;"></div>
 
 
@@ -119,13 +125,13 @@
                     <span>选择项目:</span>
                     <ul>
                         <li class="project" data-val="0">总成绩</li>
-                        <li class="project" data-val="12">身体指数BMI </li>
-                        <li class="project" data-val="2">肺活量 </li>
-                        <li class="project" data-val="3">50米跑 </li>
-                        <li class="project" data-val="4">坐位体前屈 </li>
-                        <li class="project" data-val="6">一分钟仰卧起坐 </li>
-                        <li class="project" data-val="5">一分钟跳绳 </li>
-                        <li class="project" data-val="7">50米×8往返跑 </li>
+                        <li class="project" data-val="12">身体指数BMI</li>
+                        <li class="project" data-val="2">肺活量</li>
+                        <li class="project" data-val="3">50米跑</li>
+                        <li class="project" data-val="4">坐位体前屈</li>
+                        <li class="project" data-val="6">一分钟仰卧起坐</li>
+                        <li class="project" data-val="5">一分钟跳绳</li>
+                        <li class="project" data-val="7">50米×8往返跑</li>
                     </ul>
                 </div>
 
@@ -136,26 +142,23 @@
                         <span class="left">(对比种类)</span>
 
                         <span class="center">
-                <span>展示切换:</span>
-                <a href="javascript:;" class="statisticsList" data-val="1">列表</a>
-
-                <span>/</span>
-
-                <a href="javascript:;" class="statisticsList focus" data-val="2">图表</a>
-              </span>
+                            <span>展示切换:</span>
+                            <a href="javascript:;" class="statisticsList" data-val="1">列表</a>
+                            <span>/</span>
+                            <a href="javascript:;" class="statisticsList focus" data-val="2">图表</a>
+                        </span>
                         <span class="center ">
-				  <div class="checkeSex">
-		              <span >
-		                <span>性别切换:</span>
-		                <a href="javascript:void(0)" class="sexType ">全部</a>
-		                <span>/</span>
-		                <a href="javascript:void(0)" class="sexType " data-val="1">男</a>
-		                <span>/</span>
-		                <a href="javascript:void(0)" class="sexType " data-val="2">女</a>
-		              </span>
-				  </div>
-              </span>
-
+                          <div class="checkeSex">
+                              <span>
+                                <span>性别切换:</span>
+                                <a href="javascript:void(0)" class="sexType ">全部</a>
+                                <span>/</span>
+                                <a href="javascript:void(0)" class="sexType " data-val="1">男</a>
+                                <span>/</span>
+                                <a href="javascript:void(0)" class="sexType " data-val="2">女</a>
+                              </span>
+                          </div>
+                        </span>
                     </div>
                     <div class="center data">
                         <div class="caption">
@@ -271,11 +274,10 @@
         </div>
     </div>
     <script>
-        $(function(){
+        $(function () {
             $("#dataExcel").addClass("current").siblings("li").removeClass("current");
         });
     </script>
-
 
 
 </div>
@@ -309,16 +311,16 @@
 
 
 <script>
-    $('#gradeData_export li').click(function(){
-        $('.alert-box').css('display','block');
+    $('#gradeData_export li').click(function () {
+        $('.alert-box').css('display', 'block');
         setAlertPosition();
     })
-    $('.totalDataExport').click(function(){
-        $('.alert-box').css('display','block');
+    $('.totalDataExport').click(function () {
+        $('.alert-box').css('display', 'block');
         setAlertPosition();
     })
     $(".close-btn").click(function () {
-        $('.alert-box').css('display','none');
+        $('.alert-box').css('display', 'none');
     });
 </script>
 </body>
