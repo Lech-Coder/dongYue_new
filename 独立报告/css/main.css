@@ -9687,14 +9687,15 @@ input[type="button"] {
 .zhihuiBox .clearfix .nei_rong .ul_address li {
   font-size: 16px;
 }
-.zhihuiBox .clearfix .nei_rong .bar_chart,
 .zhihuiBox .clearfix .nei_rong .xiangmu_data,
 .zhihuiBox .clearfix .nei_rong .single_chart_line,
 .zhihuiBox .clearfix .nei_rong .single_chart_bar {
   width: 50%;
   float: left;
 }
-.zhihuiBox .clearfix .nei_rong .bar_chart .xiangmu_chart,
+.zhihuiBox .clearfix .nei_rong .xiangmu_data .bar_chart,
+.zhihuiBox .clearfix .nei_rong .single_chart_line .bar_chart,
+.zhihuiBox .clearfix .nei_rong .single_chart_bar .bar_chart,
 .zhihuiBox .clearfix .nei_rong .xiangmu_data .xiangmu_chart,
 .zhihuiBox .clearfix .nei_rong .single_chart_line .xiangmu_chart,
 .zhihuiBox .clearfix .nei_rong .single_chart_bar .xiangmu_chart {
