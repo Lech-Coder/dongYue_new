@@ -30,3 +30,5 @@ $(window).on("resize", function(){
   // };
   // setScroll($(".right-section"));
 });
+
+

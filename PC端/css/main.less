@@ -5878,6 +5878,38 @@ input[type="button"] {
     padding: 0 20px;
     padding-bottom: 100px;
     clear: both;
+    .data_top{
+        position: relative;
+        height: 80px;
+        >span:not(.right) {
+            margin-top: 0px;
+            display: inline-block; // height: 53px;
+            line-height: 80px;
+        }
+        .left {
+            margin-left: 20px;
+        }
+        p{
+            display: inline-block;
+        }
+        .data_tiao{
+            border: 1px solid black;
+            width: 15px;
+            height: 70px;
+            display: inline-block;
+            position: relative;
+            top: 15px;
+            .white_bg{
+                width: 13px;
+                height: 19px;
+            }
+            .green_bg{
+                width: 13px;
+                height: 49px;
+                background: @themeColor;
+            }
+        }
+    }
     .top {
         position: relative;
         height: 53px;
@@ -5964,6 +5996,86 @@ input[type="button"] {
     .center {
         //margin-top: 50px;
         padding: 0 20px;
+        .all_grade{
+            position: relative;
+            height: 50px;
+            top: 10px;
+            >span:not(.right) {
+                margin-top: 0px;
+                display: inline-block; // height: 53px;
+                line-height: 50px;
+            }
+            .infor_wanzhengdu{
+                display: inline-block;
+            }
+        }
+        .single_grade{
+            width: 100%;
+            margin-top: 20px;
+            height: 300px;
+            .pie_grade{
+                width: 30%;
+                height: 300px;
+                float: left;
+
+            }
+            .bar_grade{
+                width: 70%;
+                height: 300px;
+                float: left;
+                .grade{
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 10px;
+                    width: 49%;
+                    .once{
+                        height: 30px;
+                        width: 100%;
+                        margin-bottom: 4px;
+                        line-height: 30px;
+                        display:flex;
+                        flex-direction: row;
+                        >span{
+                            height: 100%;
+                            line-height: 30px;
+                            text-align: center;
+                            display: inline-block;
+                        }
+                        .school{
+                            margin-right: 10px;
+                            line-height:30px;
+                            display:flex;
+                            text-align: left;
+                            align-items:center;
+                        }
+                        .limit{
+                            width: 85%;
+                            color:#000;
+                            display: flex;
+                            height: 30px;
+                            >span{
+                                display: inline-block;
+                                text-align: center;
+                                height: 30px;
+                                line-height: 30px;
+                            }
+                            .slide{
+                                background-color: @themeColor;
+                                margin: 0px 5px;
+                            }
+                            .percent{
+                                display: inline-block;
+                                width:50px;
+                                height: 30px;
+                                line-height: 30px;
+                                color: #000;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .roww {
             // height: 38px;
             width: 100%;

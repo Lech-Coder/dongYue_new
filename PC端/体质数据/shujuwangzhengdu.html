@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta HTTP-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/icon.css">
+    <link rel="stylesheet" href="../css/scroll.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="../plugins/jquery.slimscroll.js"></script>
+    <script src="../js/pageInit.js"></script>
+    <script src="../js/main.js"></script>
+
+    <!--<script src="../js/each/statisticsExport.js"></script>-->
+    <title>成绩管理</title>
+
+    <title>体质数据</title>
+</head>
+<body>
+<div id="tanchu"></div>
+<div class="pageContent">
+    <!-- 左侧菜单 -->
+    <div class="left-menu">
+        <a class="logo-box">
+						<span class="logo-img">
+			    </span>
+        </a>
+        <div style="height:80%;overflow:auto;">
+            <ul class="menu-list f16">
+                <li class="" id="homeIndex">
+                    <a href="/homeIndex/homeIndex.do" class=""><i class="icon-home">&nbsp;</i>主页</a>
+                </li>
+                <li id="teachGroup">
+                    <a href="/teachingGroup/teachingGroupList.do" class=""><i class="icon-group">&nbsp;</i>教研群组</a>
+                </li>
+                <li id="teachingContent">
+                    <a href="/teachManage/index.do" class=""><i class="icon-teachManage">&nbsp;</i>教学管理</a>
+                </li>
+                <li id="dataExcel" class="current">
+                    <a href="/dataExcelIndex/dataExcelIndex.do" class=""><i class="icon-left-tzsj">&nbsp;</i>体质数据</a>
+                </li>
+                <li id="searchPage">
+                    <a href="/searchModel/contentList.do" class=""><i class="icon-left-jxzy">&nbsp;</i>教学资源</a>
+                </li>
+                <li class="" id="training">
+                    <a href="/training/trainingList.do" class=""><i class="icon-left-zzpx">&nbsp;</i>在职培训</a>
+                </li>
+                <li id="heplMe">
+                    <a href="/teachManage/help.do" class=""><i class="icon-left-sybz">&nbsp;</i>使用帮助</a>
+                </li>
+                <li id="setting">
+                    <a href="/teachManage/setUp.do" class=""><i class="icon-setting">&nbsp;</i>设置</a>
+                </li>
+            </ul>
+        </div>
+        <!--
+        <ul class="bottom-menu menu-list f16">
+
+        </ul>
+        -->
+    </div>
+    <div class="rightPage">
+        <div class="page-head">
+            <div class="bread-nav-box txt_w">
+                <a href="/dataExcelIndex/dataExcelIndex.do">
+                    <b>体质数据</b>
+                </a> &gt;
+                <a href="/statistics/attendance/attendanceStatisticsByClass.do">
+                    <b>学校统计图表</b>
+                </a>
+            </div>
+            <div class="head-menu">
+                <!-- 1-修改密码  2-展示姓名  3-退出登录 -->
+                <!-- 顶部个人信息 -->
+                <ul class="head-menu-ul f16">
+                    <li class="head-menu-item"><a href="javascript:;" class="txt_w">退出</a></li>
+                    <li class="head-menu-item"><a href="javascript:;" class="txt_w">账户信息<i class="icon-hehe"></i></a>
+                    </li>
+                    <li class="head-menu-item"><a href="javascript:;" class="txt_w">欢迎页</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="datelimit" style="height: 894px;">
+            <div class="healthyChart">
+                <div class="choosee">
+                    <span>选择范围:</span>
+
+                    <ul class="address clearfix">
+                        <li class="btn-small guo focus ">全校</li>
+
+                        <li class="btn-small sheng ">年级</li>
+
+                    </ul>
+                </div>
+
+                <div class="choose btn-mid btn-green dataExport" style="margin-left:40px;">
+                    分项分析数据导出
+                    <ul id="gradeData_export">
+                        <li class="choose btn-mid btn blueBtn no-padding ">按年级导出</li>
+                        <li class="choose btn-mid btn blueBtn no-padding">按班级导出</li>
+                    </ul>
+                </div>
+
+                <div class="choose btn-mid btn-green  totalDataExport" style="margin-left:40px;">
+                    总成绩分析数据导出
+                </div>
+
+                <!--新增按钮  数据完整度-->
+                <div class="choose btn-mid btn-green " style="margin-left:40px;">
+                    数据完整度
+                </div>
+
+
+                <a href="../体质数据/视力统计-列表.html" class="btn blueBtn no-padding btn-mid" style="margin-left:40px;">
+                    查看视力数据统计
+                </a>
+
+                <!--新增按钮  学校体质报告-->
+                <a href="../../独立报告/healthy/healthy_report.html" class="btn blueBtn no-padding btn-mid" style="margin-left:40px;">
+                    学校体质报告
+                </a>
+
+                <div style="clear:both;"></div>
+
+                <div class="healthyBox">
+
+                    <div class="data_top f18">
+                        <span class="left">全校体质数据完整度</span>
+                        <p class="f32">&nbsp;85%&nbsp;</p>
+                        <div class="data_tiao">
+                            <div class="white_bg"></div>
+                            <div class="green_bg"></div>
+                        </div>
+                    </div>
+                        <div class="center">
+
+                            <div class="all_grade">
+                                <span class="name f18">各年级及班级数据完整度</span>
+                                <p class="infor_wanzhengdu f14">（已有数据人数/总人数/百分比）</p>
+                            </div>
+
+                            <div class="single_grade">
+                                <div class="pie_grade">
+                                </div>
+                                <div class="bar_grade">
+                                    <div class="grade" >
+                                        <div class="once">
+                                            <span class="school">一班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:70%;">&nbsp;</span>
+                                                <span class="percent">14/32/70%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">二班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:60%;">&nbsp;</span>
+                                                <span class="percent">30/100/60%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">三班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">78/120/30%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">四班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:80%;">&nbsp;</span>
+                                                <span class="percent">75/65/80%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">五班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">30/30/30%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">六班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">30/30/30%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade" >
+                                        <div class="once">
+                                            <span class="school">一班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:70%;">&nbsp;</span>
+                                                <span class="percent">14/32/70%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">二班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:60%;">&nbsp;</span>
+                                                <span class="percent">30/100/60%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">三班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">78/120/30%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">四班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:80%;">&nbsp;</span>
+                                                <span class="percent">75/65/80%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">五班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">30/30/30%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_grade">
+                                <div class="pie_grade">
+                                </div>
+                                <div class="bar_grade">
+                                    <div class="grade" >
+                                        <div class="once">
+                                            <span class="school">一班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:70%;">&nbsp;</span>
+                                                <span class="percent">14/32/70%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">二班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:60%;">&nbsp;</span>
+                                                <span class="percent">30/100/60%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">三班</span>
+                                            <div class="limit">
+                                                <span class="slide bg-blue" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">78/120/30%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">四班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:80%;">&nbsp;</span>
+                                                <span class="percent">75/65/80%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">五班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">30/30/30%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">六班</span>
+                                            <div class="limit">
+                                                <span class="slide bg-gray" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">30/30/30%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_grade">
+                                <div class="pie_grade">
+                                </div>
+                                <div class="bar_grade">
+                                    <div class="grade" >
+                                        <div class="once">
+                                            <span class="school">一班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:70%;">&nbsp;</span>
+                                                <span class="percent">14/32/70%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">二班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:60%;">&nbsp;</span>
+                                                <span class="percent">30/100/60%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">三班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">78/120/30%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">四班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:80%;">&nbsp;</span>
+                                                <span class="percent">75/65/80%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">五班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">30/30/30%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">六班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">30/30/30%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grade" >
+                                        <div class="once">
+                                            <span class="school">一班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:70%;">&nbsp;</span>
+                                                <span class="percent">14/32/70%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">二班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:60%;">&nbsp;</span>
+                                                <span class="percent">30/100/60%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">三班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">78/120/30%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">四班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:80%;">&nbsp;</span>
+                                                <span class="percent">75/65/80%</span>
+                                            </div>
+                                        </div>
+                                        <div class="once">
+                                            <span class="school">五班</span>
+                                            <div class="limit">
+                                                <span class="slide" style="width:30%;">&nbsp;</span>
+                                                <span class="percent">30/30/30%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $("#dataExcel").addClass("current").siblings("li").removeClass("current");
+        });
+    </script>
+
+
+</div>
+
+<div class="alert-box animated fadeIn alertType" style="display:none">
+    <div class="alert-box formType animated fadeIn">
+        <div class="alert-div form-box back_white animated fadeInDownBig" style="margin-top: -161.5px;">
+            <form id="loadRealia" action="loadRealiaExcel.do" method="post" enctype="multipart/form-realia">
+                <div class="form-head t_r"><a class="close-btn f18" href="javascript:;">×</a></div>
+                <h3 class="form-title t_c">数据导出</h3>
+                <div class="form-content">
+                    <div class="form-inline clearfix mt20 file-root">
+                        <div class="col-32-32 no-padding">
+                            <label class="form-control">
+                                <input type="text" id="fileTemplate" placeholder="输入开始学年：如 2014">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-line submitBtn mt10 clearfix">
+                        <a href="javascript:;" class="blockBtn themeBtn form-confirm">确定</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<a id="chat">
+    <img src="../../../../statics/images/icon_Online.png">
+    <div>QQ客服</div>
+</a>
+
+<script src="../js/each/shujuwangzhengdu.js"></script>
+<script>
+    $('#gradeData_export li').click(function () {
+        $('.alert-box').css('display', 'block');
+        setAlertPosition();
+    })
+    $('.totalDataExport').click(function () {
+        $('.alert-box').css('display', 'block');
+        setAlertPosition();
+    })
+    $(".close-btn").click(function () {
+        $('.alert-box').css('display', 'none');
+    });
+
+
+    sanxing($('.pie_grade')[0],'一年级',95)
+    sanxing($('.pie_grade')[1],'二年级',80)
+    sanxing($('.pie_grade')[2],'三年级',70)
+</script>
+</body>
+</html>

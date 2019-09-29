@@ -6400,6 +6400,38 @@ input[type="button"] {
   padding-bottom: 100px;
   clear: both;
 }
+.healthyBox .data_top {
+  position: relative;
+  height: 80px;
+}
+.healthyBox .data_top > span:not(.right) {
+  margin-top: 0px;
+  display: inline-block;
+  line-height: 80px;
+}
+.healthyBox .data_top .left {
+  margin-left: 20px;
+}
+.healthyBox .data_top p {
+  display: inline-block;
+}
+.healthyBox .data_top .data_tiao {
+  border: 1px solid black;
+  width: 15px;
+  height: 70px;
+  display: inline-block;
+  position: relative;
+  top: 15px;
+}
+.healthyBox .data_top .data_tiao .white_bg {
+  width: 13px;
+  height: 19px;
+}
+.healthyBox .data_top .data_tiao .green_bg {
+  width: 13px;
+  height: 49px;
+  background: #82b64a;
+}
 .healthyBox .top {
   position: relative;
   height: 53px;
@@ -6476,6 +6508,85 @@ input[type="button"] {
 }
 .healthyBox .center {
   padding: 0 20px;
+}
+.healthyBox .center .all_grade {
+  position: relative;
+  height: 50px;
+  top: 10px;
+}
+.healthyBox .center .all_grade > span:not(.right) {
+  margin-top: 0px;
+  display: inline-block;
+  line-height: 50px;
+}
+.healthyBox .center .all_grade .infor_wanzhengdu {
+  display: inline-block;
+}
+.healthyBox .center .single_grade {
+  width: 100%;
+  margin-top: 20px;
+  height: 300px;
+}
+.healthyBox .center .single_grade .pie_grade {
+  width: 30%;
+  height: 300px;
+  float: left;
+}
+.healthyBox .center .single_grade .bar_grade {
+  width: 70%;
+  height: 300px;
+  float: left;
+}
+.healthyBox .center .single_grade .bar_grade .grade {
+  float: left;
+  margin-top: 30px;
+  margin-left: 10px;
+  width: 49%;
+}
+.healthyBox .center .single_grade .bar_grade .grade .once {
+  height: 30px;
+  width: 100%;
+  margin-bottom: 4px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.healthyBox .center .single_grade .bar_grade .grade .once > span {
+  height: 100%;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+}
+.healthyBox .center .single_grade .bar_grade .grade .once .school {
+  margin-right: 10px;
+  line-height: 30px;
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+.healthyBox .center .single_grade .bar_grade .grade .once .limit {
+  width: 85%;
+  color: #000;
+  display: flex;
+  height: 30px;
+}
+.healthyBox .center .single_grade .bar_grade .grade .once .limit > span {
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.healthyBox .center .single_grade .bar_grade .grade .once .limit .slide {
+  background-color: #82b64a;
+  margin: 0px 5px;
+}
+.healthyBox .center .single_grade .bar_grade .grade .once .limit .percent {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  color: #000;
+  font-size: 15px;
 }
 .healthyBox .center .roww {
   width: 100%;
