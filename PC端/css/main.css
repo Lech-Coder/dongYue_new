@@ -2963,9 +2963,9 @@ div[class^="col"]:before > span.textArea {
   color: red;
 }
 .table-row .zhushi {
-  position: absolute;
-  bottom: -5px;
   right: 5px;
+  font-size: 16px;
+  color: #f97272;
 }
 .select_nianji a.active {
   color: #14b2fa;
@@ -8969,13 +8969,11 @@ input[type="button"] {
 .zuoyewanchengfenshushezhi .myBtn.myGray {
   background: #969696;
 }
-.my-score-table .table-row div:nth-child(5) {
-  color: #e73f3f !important;
-  visibility: hidden;
+.my-score-table .table-row div:nth-child(4) {
+  font-weight: bold;
 }
-.my-score-table .table-row div:nth-child(7) {
-  color: #e73f3f !important;
-  visibility: hidden;
+.my-score-table .table-row div:nth-child(6) {
+  font-weight: bold;
 }
 .gerenxinxibianji-box {
   background: #e4eaf1;
