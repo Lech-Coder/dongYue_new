@@ -5749,7 +5749,10 @@ i {
   text-align: center;
 }
 .studentClass .healthyBox .center .row .add {
-  width: 85%;
+  width: 65%;
+}
+.studentClass .healthyBox .center .row .wgai {
+  width: 25%;
 }
 .studentClass .healthyBox .center .row .item {
   width: 55%;
