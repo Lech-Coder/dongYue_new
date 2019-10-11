@@ -9687,6 +9687,10 @@ input[type="button"] {
 .zhihuiBox .clearfix .nei_rong .ul_address li {
   font-size: 16px;
 }
+.zhihuiBox .clearfix .nei_rong .bar_chart_tizhi {
+  width: 50%;
+  float: left;
+}
 .zhihuiBox .clearfix .nei_rong .xiangmu_data,
 .zhihuiBox .clearfix .nei_rong .single_chart_line,
 .zhihuiBox .clearfix .nei_rong .single_chart_bar {

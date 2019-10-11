@@ -304,24 +304,24 @@
                             <h2>年级数据对比 </h2>
                         <span>同年级项目间的对比，采用项目平均得分，而不是测量平均成绩，均以百分制计分</span>
                         <div class="nei_rong">
-                           <div class="bar_chart"></div>
-                            <div class="bar_chart"></div>
+                           <div class="bar_chart_tizhi"></div>
+                            <div class="bar_chart_tizhi"></div>
                             <div style="padding:0 40px">
                                 <p>  一年级  xx项目 整体表现最好，平均得分为 xx  ，xx项目  整体平均评分最低为xx，</p>
                                 <p>  二年级  xx项目 整体表现最好，平均得分为 xx  ，xx项目  整体平均评分最低为xx，</p>
                             </div>
                         </div>
                         <div class="nei_rong">
-                            <div class="bar_chart"></div>
-                            <div class="bar_chart"></div>
+                            <div class="bar_chart_tizhi"></div>
+                            <div class="bar_chart_tizhi"></div>
                             <div style="padding:0 40px">
                             <p>  三年级  xx项目 整体表现最好，平均得分为 xx  ，xx项目  整体平均评分最低为xx，</p>
                             <p>  四年级  xx项目 整体表现最好，平均得分为 xx  ，xx项目  整体平均评分最低为xx，</p>
                             </div>
                         </div>
                         <div class="nei_rong">
-                            <div class="bar_chart"></div>
-                            <div class="bar_chart"></div>
+                            <div class="bar_chart_tizhi"></div>
+                            <div class="bar_chart_tizhi"></div>
                             <div style="padding:0 40px">
                             <p>  五年级  xx项目 整体表现最好，平均得分为 xx  ，xx项目  整体平均评分最低为xx，</p>
                             <p>  六年级  xx项目 整体表现最好，平均得分为 xx  ，xx项目  整体平均评分最低为xx，</p>
@@ -2326,8 +2326,8 @@
     $('#duidie_chart')[0].style.height=($('.nei_rong_r')[0].clientWidth)+'px'
     $('#all_bili')[0].style.height=($('.nei_rong_r')[0].clientWidth)+'px'
 
-    for(var i=0;i< $('.bar_chart').length;i++){
-        $('.bar_chart')[i].style.height=($('.bar_chart')[0].clientWidth)*0.6+'px'
+    for(var i=0;i< $('.bar_chart_tizhi').length;i++){
+        $('.bar_chart_tizhi')[i].style.height=($('.bar_chart_tizhi')[0].clientWidth)*0.6+'px'
     }
     for(var i=0;i< $('.xiangmu_chart').length;i++){
         $('.xiangmu_chart')[i].style.height=($('.xiangmu_data')[0].clientWidth)*0.6+'px'
@@ -2363,20 +2363,21 @@
 
     var grade_bar_data =[200, 334, 390, 330, 220,44]
     var PE_type=['BMI指数', '肺活量', '坐位体前屈', '50米跑', '一分钟跳绳','一分钟仰卧起坐']
-    simple_bar($('.bar_chart')[0],'一年级',grade_bar_data,PE_type)
-    simple_bar($('.bar_chart')[1],'二年级',grade_bar_data,PE_type)
-    simple_bar($('.bar_chart')[2],'三年级',grade_bar_data,PE_type)
-    simple_bar($('.bar_chart')[3],'四年级',grade_bar_data,PE_type)
-    simple_bar($('.bar_chart')[4],'五年级',grade_bar_data,PE_type)
-    simple_bar($('.bar_chart')[5],'六年级',grade_bar_data,PE_type)
+    simple_bar($('.bar_chart_tizhi')[0],'一年级',grade_bar_data,PE_type)
+    simple_bar($('.bar_chart_tizhi')[1],'二年级',grade_bar_data,PE_type)
+    simple_bar($('.bar_chart_tizhi')[2],'三年级',grade_bar_data,PE_type)
+    simple_bar($('.bar_chart_tizhi')[3],'四年级',grade_bar_data,PE_type)
+    simple_bar($('.bar_chart_tizhi')[4],'五年级',grade_bar_data,PE_type)
+    simple_bar($('.bar_chart_tizhi')[5],'六年级',grade_bar_data,PE_type)
 
     var boy_data =[120, 132, 101, 134, 90, 230, 210]
     var girl_data =[220, 182, 191, 234, 290, 330, 310]
-    simple_line($('.xiangmu_chart')[0],'身高',boy_data,girl_data)
-    simple_line($('.xiangmu_chart')[1],'体重',boy_data,girl_data)
+    var x_line_data=['一年级','二年级','三年级','四年级','五年级','六年级']
+    simple_line($('.xiangmu_chart')[0],'身高',boy_data,girl_data,x_line_data)
+    simple_line($('.xiangmu_chart')[1],'体重',boy_data,girl_data,x_line_data)
 
     for(var i=0;i< $('.single_chart_line').length;i++) {
-        simple_line($('.single_chart_line')[i], '', boy_data, girl_data)
+        simple_line($('.single_chart_line')[i], '', boy_data, girl_data,x_line_data)
         bar_duidie($('.single_chart_bar')[i], oridata,duidie_xdata,duidie_ydata)
     }
 </script>

@@ -2969,6 +2969,7 @@
     var duidie_xdata=['不及格','及格','良好',"优秀"]
     var duidie_ydata=['一年级','二年级','三年级','四年级','五年级','六年级','男生','女生']
     bar_duidie($('#duidie_chart')[0],oridata,duidie_xdata,duidie_ydata)
+
     simple_pie($('#all_bili')[0],all_bili)
 
     //年级数据与图
@@ -2984,8 +2985,9 @@
     //身体形态发育状况的结果与分析
     var boy_data =[120, 132, 101, 134, 90, 230, 210]
     var girl_data =[220, 182, 191, 234, 290, 330, 310]
-    simple_line($('.xiangmu_chart')[0],'身高',boy_data,girl_data)
-    simple_line($('.xiangmu_chart')[1],'体重',boy_data,girl_data)
+    var x_line_data = ['一年级','二年级','三年级','四年级','五年级','六年级']
+    simple_line($('.xiangmu_chart')[0],'身高',boy_data,girl_data,x_line_data)
+    simple_line($('.xiangmu_chart')[1],'体重',boy_data,girl_data,x_line_data)
 
 
     //BMI
@@ -2995,29 +2997,27 @@
 
 
     //肺活量
-    simple_line($('.single_chart_line')[1], '', boy_data, girl_data)
+    simple_line($('.single_chart_line')[1], '', boy_data, girl_data,x_line_data)
     bar_duidie($('.single_chart_bar')[1], oridata,duidie_xdata,duidie_ydata)
     //坐位体前屈
-    simple_line($('.single_chart_line')[2], '', boy_data, girl_data)
+    simple_line($('.single_chart_line')[2], '', boy_data, girl_data,x_line_data)
     bar_duidie($('.single_chart_bar')[2], oridata,duidie_xdata,duidie_ydata)
     //50米跑
-    simple_line($('.single_chart_line')[3], '', boy_data, girl_data)
+    simple_line($('.single_chart_line')[3], '', boy_data, girl_data,x_line_data)
     bar_duidie($('.single_chart_bar')[3], oridata,duidie_xdata,duidie_ydata)
     //一分钟跳绳
-    simple_line($('.single_chart_line')[4], '', boy_data, girl_data)
+    simple_line($('.single_chart_line')[4], '', boy_data, girl_data,x_line_data)
     bar_duidie($('.single_chart_bar')[4], oridata,duidie_xdata,duidie_ydata)
     //一分钟仰卧起坐
-    simple_line($('.single_chart_line')[5], '', boy_data, girl_data)
+    simple_line($('.single_chart_line')[5], '', boy_data, girl_data,x_line_data)
     bar_duidie($('.single_chart_bar')[5], oridata,duidie_xdata,duidie_ydata)
     //50米*8往返跑
-    simple_line($('.single_chart_line')[6], '', boy_data, girl_data)
+    simple_line($('.single_chart_line')[6], '', boy_data, girl_data,x_line_data)
     bar_duidie($('.single_chart_bar')[6], oridata,duidie_xdata,duidie_ydata)
 
     setTimeout(function () {
         window.onresize = function () {
             for (let i=0;i<resizeChart.length;i++){
-
-                console.log(resizeChart[i])
                 resizeChart[i].resize()
             }
         }},200)

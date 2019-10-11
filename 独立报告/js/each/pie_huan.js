@@ -188,7 +188,8 @@ function bar_duidie(dom,oridata,xdata,ydata) {
             trigger: 'axis',
             axisPointer : { // 坐标轴指示器，坐标轴触发有效
                 type : 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-            }
+            },
+            // formatter: "{b}: {c} ({d}%)"
         },
         grid: {
             left:'10%',
@@ -336,7 +337,7 @@ function simple_bar(dom,grade,bdata,PE_type) {
     myChart.setOption(option, true);
     resizeChart.push(myChart)
 }
-function simple_line(dom,type_name,boy_data,girl_data) {
+function simple_line(dom,type_name,boy_data,girl_data,x_line_data) {
     var myChart = echarts.init(dom);
     option = {
         title: {
@@ -358,7 +359,7 @@ function simple_line(dom,type_name,boy_data,girl_data) {
         xAxis: {
             type: 'category',
             boundaryGap: false,
-            data: ['一年级','二年级','三年级','四年级','五年级','六年级'],
+            data: x_line_data,
             axisLabel:{
                 fontSize:16
             }
