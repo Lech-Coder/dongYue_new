@@ -6244,7 +6244,7 @@ input[type="button"] {
 }
 .healthyChart {
   padding: 0 50px;
-  height: 700px;
+  height: 100%;
   width: 100%;
 }
 .healthyChart .eye_title {

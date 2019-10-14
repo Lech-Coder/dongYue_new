@@ -9487,6 +9487,9 @@ input[type="button"] {
 .zk-table .lscj .table table tbody td:nth-child(26) {
   background: #e4eef4;
 }
+.zk-table .dxdc {
+  width: 150%;
+}
 .zk-table .table-content .title .menu {
   font-size: 20px;
   margin-left: 36px;
