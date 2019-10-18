@@ -176,12 +176,24 @@ function bar_duidie(dom,oridata,xdata,ydata) {
     var data3 = [];
     var total;
     for (var i = 0, l = oridata[0].length; i < l; i++) {
-        total = oridata[0][i] + oridata[1][i] + oridata[2][i]+ oridata[2][i];
-        data0.push(Math.round(oridata[0][i]/total * 100));
-        data1.push(Math.round(oridata[1][i]/total * 100));
-        data3.push(Math.round(oridata[3][i]/total * 100));
-        data2.push(100 - data0[data0.length - 1] - data1[data1.length - 1]- data3[data3.length - 1]);
+        total = oridata[0][i] + oridata[1][i] + oridata[2][i]+ oridata[3][i];
+        if (total==0){
+            data0.push(0);
+            data1.push(0);
+            data2.push(0);
+            data3.push(0);
+        } else {
+            data0.push(Math.round(oridata[0][i]/total * 100));
+            data1.push(Math.round(oridata[1][i]/total * 100));
+            data2.push(Math.round(oridata[2][i]/total * 100));
+            data3.push(100 - data0[data0.length - 1] - data1[data1.length - 1]- data2[data2.length - 1]);
+        }
     }
+
+    console.log(data0)
+    console.log(data1)
+    console.log(data2)
+    console.log(data3)
     option = {
         color:['#e2b000','#ff7640','#185c80','#1e9ea1'],
         tooltip : {

@@ -6221,13 +6221,10 @@ input[type="button"] {
   width: 95%;
   margin: 0 auto;
 }
-.datelimit {
-  overflow: auto;
-  background: #e4eaf1;
-}
 .healthyChart {
   padding: 50px;
   height: 700px;
+  background: #e4eaf1;
   width: 100%;
 }
 .healthyChart .choosee {
@@ -6541,7 +6538,7 @@ input[type="button"] {
   float: left;
   margin-top: 30px;
   margin-left: 10px;
-  width: 49%;
+  width: 48%;
 }
 .healthyBox .center .single_grade .bar_grade .grade .once {
   height: 30px;
@@ -6670,7 +6667,7 @@ input[type="button"] {
   margin-left: 3px;
 }
 .healthyBox .center .row .sex_gai {
-  width: 35%;
+  width: 36%;
   float: left;
   height: 40px;
   text-align: center;

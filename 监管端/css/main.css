@@ -6067,6 +6067,13 @@ i {
   width: 10%;
   text-align: center;
 }
+.healthyList .healthyBox > .center .row .category_8 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 12.5%;
+  text-align: center;
+}
 .healthyList .healthyBox .see-more {
   text-align: right;
   margin-top: 10px;
