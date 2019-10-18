@@ -56,7 +56,7 @@ function pie_shili(div,point,data) {
 }
 
 function toPercent(point){
-    var str=Number(point*100).toFixed(1);
+    var str=Number(point*100).toFixed(2);
     str+="%";
     return str;
 }
