@@ -35,7 +35,7 @@ function bar_shili(div,xdata,ydata) {
         series : [
             {
                 type:'bar',
-                barWidth: '35%',
+                barWidth: '50px',
                 data:ydata,
                 itemStyle: {
                     normal: {
