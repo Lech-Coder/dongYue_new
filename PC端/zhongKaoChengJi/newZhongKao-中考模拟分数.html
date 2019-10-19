@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta HTTP-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/icon.css">
+    <link rel="stylesheet" href="../plugins/animate.min.css">
+    <link rel="stylesheet" href="../css/scroll.css">
+    <link rel="stylesheet" href="../plugins/datepicker.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../plugins/mousewheel.js"></script>
+    <script src="../plugins/jquery.slimscroll.js"></script>
+    <script src="../js/pageInit.js"></script>
+    <script src="../js/main.js"></script>
+    <title>新中考</title>
+</head>
+
+<body>
+<div id="tanchu"></div>
+<div class="pageContent">
+    <div class="left-menu">
+        <a class="logo-box">
+                <span class="logo-img">
+                </span>
+        </a>
+        <ul class="menu-list f16">
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-home">&nbsp;</i>主页</a>
+            </li>
+            <li class="current">
+                <a href="" class="">
+                    <i class="icon-group">&nbsp;</i>教研群组</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-teachManage">&nbsp;</i>教学管理</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-import">&nbsp;</i>数据录入</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-homeWork">&nbsp;</i>家庭作业</a>
+            </li>
+        </ul>
+        <ul class="bottom-menu menu-list f16">
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-add">&nbsp;</i>收藏</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-setting">&nbsp;</i>设置</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-back">&nbsp;</i>返回启动页</a>
+            </li>
+        </ul>
+    </div>
+    <div class="rightPage">
+        <div class="page-head">
+            <div class="bread-nav-box txt_w">
+                <a href="javascript:;">
+                    <b>教学管理</b>
+                </a> >
+                <a href="javascript:;">
+                    <b>中考成绩</b>
+                </a>
+            </div>
+            <div class="head-menu">
+                <ul class="head-menu-ul f16">
+                    <li class="head-menu-item">
+                        <a href="javascript:;" class="txt_w">退出</a>
+                    </li>
+                    <li class="head-menu-item">
+                        <a href="javascript:;" class="txt_w">账户信息
+                            <i class="icon-hehe"></i>
+                        </a>
+                    </li>
+                    <li class="head-menu-item">
+                        <a href="javascript:;" class="txt_w">欢迎页</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="setHomeWork-wrapper zhongkao">
+                <div class="hwork-head-menu">
+                    <span href="javascript:void(0)" class="btn grayBtn current">单项成绩</span>
+                    <span href="javascript:void(0)" class="btn grayBtn">测试成绩</span>
+                    <span href="javascript:void(0)" class="btn grayBtn">中考模拟成绩</span>
+                    <span href="javascript:void(0)" class="btn grayBtn">统计</span>
+                    <span href="javascript:void(0)" class="btn grayBtn">设置</span>
+                    <span class="btn yellowBtn f_r mt10 mr50 ljchengj-daochu">导出</span>
+                    <span class="btn yellowBtn f_r mt10 mr20  inport-tizhi">体测成绩导入</span>
+                    <span class="btn mybtn themeBtn f_r mt10">
+                            <a href="javascrip:;" class="zk-download">
+                                <i class="icon-download">&nbsp;</i>
+                                模板下载
+                            </a>
+                        </span>
+
+                </div>
+                <div class="s-menu">
+                    <div class="class-select dxdc current clearfix">
+                        <div class="form-inline clearfix">
+                            <div class="col-1-16 label-name">年级</div>
+                            <div class="col-15-16 year-link-group link-group">
+                                <a href="javascript:void(0)" class="current">七年级</a>
+                                <a href="javascript:void(0)">八年级</a>
+                                <a href="javascript:void(0)">九年级</a>
+                            </div>
+                        </div>
+                        <div class="form-inline clearfix">
+                            <div class="col-1-16 label-name">班级</div>
+                            <div class="col-15-16 year-link-group link-group">
+                                <a href="javascript:void(0)" class="current">七年级（1）班</a>
+                                <a href="javascript:void(0)">八年级（2）班</a>
+                                <a href="javascript:void(0)">七年级（3）班</a>
+                            </div>
+                        </div>
+                        <!-- 查询按钮 -->
+                        <!-- <div class="form-inline clearfix">
+                            <div class="col-1-16 label-name" style="visibility: hidden">分段</div>
+                            <div class="col-15-16 year-link-group link-group multi">
+                                <a class="search-all btn yellowBtn mt10">查询</a>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="zk-table mt20 clearfix s-menu">
+                <!-- 单项多次成绩 table-->
+                <div class="table-content">
+                    <div class="table mt20 clearfix">
+                        <!-- 单项表格 -->
+                        <table border="1px" id="sortTest" class="new_cscj">
+                            <thead>
+                            <tr>
+                                <td rowspan="2">序号</td>
+                                <td rowspan="2">学籍号</td>
+                                <td rowspan="2">班级</td>
+                                <td rowspan="2">姓名</td>
+                                <td rowspan="2">性别</td>
+                                <td colspan="8">统一考试</td>
+                                <td rowspan="2">体育与健康<br>学科评分</td>
+                                <td rowspan="2">体质健康<br>测试评分</td>
+                                <td rowspan="2">中考体育<br>得分</td>
+
+                            </tr>
+                            <tr>
+                                <td >足球<br>运球绕标志杆</td>
+                                <td >排球<br>对枪垫球</td>
+                                <td >篮球<br>行型间运球上篮</td>
+                                <td >引体向上（男）<br>斜身引体（女）</td>
+                                <td >原地双手正面<br>投掷实心球</td>
+                                <td >立定跳远</td>
+                                <td >1000米（男）<br>800米（女）</td>
+                                <td >计分</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>GD000********0002</td>
+                                <td>初一（1）班</td>
+                                <td><a href="#">欧阳</a></td>
+                                <td>男</td>
+                                <td>95</td>
+                                <td>43</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>GD000********0002</td>
+                                <td>初一（1）班</td>
+                                <td><a href="#">欧阳</a></td>
+                                <td>男</td>
+                                <td>120</td>
+                                <td>4567</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>GD000********0002</td>
+                                <td>初一（1）班</td>
+                                <td><a href="#">欧阳</a></td>
+                                <td>男</td>
+                                <td>120</td>
+                                <td>345</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>GD000********0002</td>
+                                <td>初一（1）班</td>
+                                <td><a href="#">欧阳</a></td>
+                                <td>男</td>
+                                <td>120</td>
+                                <td>34</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>GD000********0002</td>
+                                <td>初一（1）班</td>
+                                <td><a href="#">欧阳</a></td>
+                                <td>男</td>
+                                <td>120</td>
+                                <td>65</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>436</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>GD000********0002</td>
+                                <td>初一（1）班</td>
+                                <td><a href="#">欧阳</a></td>
+                                <td>男</td>
+                                <td>120</td>
+                                <td>67</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>15</td>
+                                <td>120</td>
+                                <td>56</td>
+                            </tr>
+
+                            <!--<tr>-->
+                                <!--<td colspan="5">总平均分</td>-->
+                                <!--<td colspan="2">48</td>-->
+                                <!--<td colspan="2">48</td>-->
+                                <!--<td colspan="2">48</td>-->
+                                <!--<td colspan="2">48</td>-->
+                            <!--</tr>-->
+                            <!--<tr>-->
+                                <!--<td colspan="5">人数</td>-->
+                                <!--<td colspan="2">48</td>-->
+                                <!--<td colspan="2">48</td>-->
+                                <!--<td colspan="2">48</td>-->
+                                <!--<td colspan="2">48</td>-->
+                            <!--</tr>-->
+                            </tbody>
+                        </table>
+                        <br>
+                    </div><br>
+                </div>
+            </div>
+            <!-- 页码 -->
+            <div class="pages">
+                <div class="goods-pages">
+                    <div class="tcd-page-code">
+                        <span class="pageB disabled"><em class="iconfont icon-left mr5"></em>上一页</span>
+                        <span class="current">1</span>
+                        <a href="javascript:void(0);" class="tcdNumber">2</a>
+                        <a href="javascript:void(0);" class="tcdNumber">3</a>
+                        <span>...</span>
+                        <a href="javascript:void(0);" class="tcdNumber">15</a>
+                        <a href="javascript:void(0);" class="pageB nextPage">下一页></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="../plugins/alert.js"></script>
+<script src="../plugins/echart.js"></script>
+<script src="../js/each/zhongkao.js"></script>
+<script>
+
+    var item = $('.new_cscj')[0]
+    for (let i=2;i<item.rows.length;i++){
+
+        //球类 三个
+        let  a =item.rows[i].cells[5].innerHTML*1,
+            b=item.rows[i].cells[6].innerHTML*1,
+            c=item.rows[i].cells[7].innerHTML*1
+        let  arr =[a,b,c]
+        let num  =maxNum(arr)
+        switch (true) {
+
+            case a>=num:item.rows[i].cells[5].style.background = '#82b64a';break;
+            case b>=num:item.rows[i].cells[6].style.background = '#82b64a';break;
+            case c>=num:item.rows[i].cells[7].style.background = '#82b64a';break;
+        }
+
+        //两个
+        let d=item.rows[i].cells[8].innerHTML*1,e=item.rows[i].cells[9].innerHTML*1
+        let arr_t = [d,e]
+        let num_2 = maxNum(arr_t)
+        switch (true) {
+            case d>=num_2:item.rows[i].cells[8].style.background = '#82b64a';break;
+            case e>=num_2:item.rows[i].cells[9].style.background = '#82b64a';break;
+        }
+
+
+        item.rows[i].cells[10].style.background = '#82b64a'
+        item.rows[i].cells[11].style.background = '#82b64a'
+
+        item.rows[i].cells[12].style.background = '#46c2fb'
+        item.rows[i].cells[13].style.background = '#46c2fb'
+        item.rows[i].cells[14].style.background = '#46c2fb'
+        item.rows[i].cells[15].style.background = '#46c2fb'
+    }
+
+
+    function maxNum(arguments) {
+        if (arguments.length < 0) {
+            return;
+        }
+        var max = arguments[0];
+        for(var i = 0; i <arguments.length;i++){
+            if (max < arguments[i]) {
+                max = arguments[i];
+            }
+        }
+        return max;
+    }
+
+
+</script>
+</body>
+
+</html>
