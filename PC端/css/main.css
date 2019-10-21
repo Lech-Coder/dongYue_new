@@ -341,6 +341,9 @@ img {
 .l_h40 {
   line-height: 40px;
 }
+.l_h50 {
+  line-height: 50px;
+}
 .no-padding {
   padding: 0!important;
 }
@@ -9532,6 +9535,76 @@ input[type="button"] {
 }
 .zk-table .table-content .table .circle-item:not(:nth-child(3n)) {
   margin-right: 2%;
+}
+.zk-table .table-content .tizhi_ceshi {
+  width: 32%;
+  float: left;
+  margin-right: 1%;
+}
+.zk-table .table-content .clip_div {
+  margin-right: -10px;
+  clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0 100%);
+}
+.zk-table .table-content .now_year {
+  background: #d8d8d8;
+}
+.zk-table .table-content .now_year.active {
+  background: #82b64a;
+}
+.zk-table .table-content .ago_year {
+  background: #d8d8d8;
+}
+.zk-table .table-content .ago_year.grayBtn {
+  background: #969696;
+}
+.zk-table .table-content .shupaizi {
+  margin: 0px auto;
+  word-wrap: break-word;
+  letter-spacing: 10px;
+  writing-mode: vertical-lr;
+}
+.zk-table .grade_tongji {
+  width: 100%;
+}
+.zk-table .student_name {
+  width: 100%;
+  height: 40px;
+}
+.zk-table .setZhi {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  border-top: 1px solid #c9c9c9;
+}
+.zk-table .setZhi .s_Zgrade {
+  width: 38%;
+  height: 200px;
+  float: left;
+  margin-right: 2%;
+}
+.zk-table .setZhi .s_Zgrade .grade_btn {
+  width: 45%;
+  text-align: center;
+}
+.zk-table .setZhi .s_Zgrade input {
+  width: 100%;
+  height: 25px;
+  border: 1px solid #c9c9c9;
+  text-align: center;
+}
+.zk-table .setZhi .s_Zbtn {
+  width: 20%;
+  height: 200px;
+  float: left;
+  position: relative;
+}
+.zk-table .setZhi .s_Zbtn .peizhi_posi {
+  position: absolute;
+  bottom: 35px;
+  left: 20%;
+}
+#lh_table {
+  line-height: 20px;
 }
 .color-table {
   overflow-x: auto;

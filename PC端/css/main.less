@@ -9257,9 +9257,7 @@ input[type="button"] {
     .dxdc{
         width: 150%;
     }
-    .new_cscj{
 
-    }
     .table-content {
         .title {
             .menu {
@@ -9316,7 +9314,81 @@ input[type="button"] {
                 }
             }
         }
+        .tizhi_ceshi{
+            width: 32%;
+            float: left;
+            margin-right: 1%;
+        }
+        .clip_div{
+            margin-right: -10px;
+            clip-path: polygon(0% 0%,85% 0%,100% 100%,0 100%);
+        }
+        .now_year{
+            background:#d8d8d8;
+            &.active{
+                background:@themeColor;
+            }
+        }
+        .ago_year{
+            background:#d8d8d8;
+            &.grayBtn{
+                background: #969696;
+            }
+        }
+        .shupaizi{
+            margin: 0px auto;
+            word-wrap: break-word;
+            letter-spacing: 10px;
+            writing-mode: vertical-lr;
+        }
     }
+    .grade_tongji{
+        width: 100%;
+    }
+    .student_name{
+        width: 100%;
+        height: 40px;
+    }
+    .setZhi{
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+        border-top:1px solid #c9c9c9 ;
+        .s_Zgrade{
+            width: 38%;
+            height: 200px;
+            float: left;
+            margin-right: 2%;
+            .grade_btn{
+                width: 45%;
+                text-align: center;
+
+            }
+
+            input{
+                width: 100%;
+                height: 25px;
+                border: 1px solid #c9c9c9;
+                text-align: center;
+            }
+
+        }
+        .s_Zbtn{
+            width: 20%;
+            height: 200px;
+            float: left;
+            position: relative;
+            .peizhi_posi{
+                position: absolute;
+                bottom: 35px;
+                left: 20%;
+            }
+        }
+    }
+
+}
+#lh_table{
+    line-height: 20px;
 }
 .color-table {
     &.my-width{

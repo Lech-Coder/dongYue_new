@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta HTTP-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/icon.css">
+    <link rel="stylesheet" href="../plugins/animate.min.css">
+    <link rel="stylesheet" href="../css/scroll.css">
+    <link rel="stylesheet" href="../plugins/datepicker.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../plugins/mousewheel.js"></script>
+    <script src="../plugins/jquery.slimscroll.js"></script>
+    <script src="../js/pageInit.js"></script>
+    <script src="../js/main.js"></script>
+    <title>新中考</title>
+</head>
+
+<body>
+<div id="tanchu"></div>
+<div class="pageContent">
+    <div class="left-menu">
+        <a class="logo-box">
+                <span class="logo-img">
+                </span>
+        </a>
+        <ul class="menu-list f16">
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-home">&nbsp;</i>主页</a>
+            </li>
+            <li class="current">
+                <a href="" class="">
+                    <i class="icon-group">&nbsp;</i>教研群组</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-teachManage">&nbsp;</i>教学管理</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-import">&nbsp;</i>数据录入</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-homeWork">&nbsp;</i>家庭作业</a>
+            </li>
+        </ul>
+        <ul class="bottom-menu menu-list f16">
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-add">&nbsp;</i>收藏</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-setting">&nbsp;</i>设置</a>
+            </li>
+            <li class="">
+                <a href="" class="">
+                    <i class="icon-back">&nbsp;</i>返回启动页</a>
+            </li>
+        </ul>
+    </div>
+    <div class="rightPage">
+        <div class="page-head">
+            <div class="bread-nav-box txt_w">
+                <a href="javascript:;">
+                    <b>教学管理</b>
+                </a> >
+                <a href="javascript:;">
+                    <b>中考成绩</b>
+                </a>
+            </div>
+            <div class="head-menu">
+                <ul class="head-menu-ul f16">
+                    <li class="head-menu-item">
+                        <a href="javascript:;" class="txt_w">退出</a>
+                    </li>
+                    <li class="head-menu-item">
+                        <a href="javascript:;" class="txt_w">账户信息
+                            <i class="icon-hehe"></i>
+                        </a>
+                    </li>
+                    <li class="head-menu-item">
+                        <a href="javascript:;" class="txt_w">欢迎页</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="setHomeWork-wrapper zhongkao">
+                <div class="hwork-head-menu">
+                    <span href="javascript:void(0)" class="btn grayBtn current">单项成绩</span>
+                    <span href="javascript:void(0)" class="btn grayBtn">测试成绩</span>
+                    <span href="javascript:void(0)" class="btn grayBtn">中考模拟成绩</span>
+                    <span href="javascript:void(0)" class="btn grayBtn">统计</span>
+                    <span href="javascript:void(0)" class="btn grayBtn">设置</span>
+                    <span class="btn yellowBtn f_r mt10 mr50 ljchengj-daochu">导出</span>
+                    <span class="btn yellowBtn f_r mt10 mr20  inport-tizhi">体测成绩导入</span>
+                    <span class="btn mybtn themeBtn f_r mt10">
+                            <a href="javascrip:;" class="zk-download">
+                                <i class="icon-download">&nbsp;</i>
+                                模板下载
+                            </a>
+                        </span>
+
+                </div>
+                <div class="s-menu">
+                    <!-- 单项多次成绩 -->
+                    <div class="class-select dxdc current clearfix">
+
+                        <div class="form-inline clearfix">
+
+                            <div class="col-15-16 year-link-group link-group ">
+                                <a href="javascript:void(0)" class="no-padding btn grayBtn">计算全部成绩</a>
+                                <span class="l_h50 ">成绩未计算，点击“计算全部成绩”下达任务，计算已配置年级成绩</span>
+                            </div>
+                        </div>
+
+                        <!-- 查询按钮 -->
+                        <!-- <div class="form-inline clearfix">
+                            <div class="col-1-16 label-name" style="visibility: hidden">分段</div>
+                            <div class="col-15-16 year-link-group link-group multi">
+                                <a class="search-all btn yellowBtn mt10">查询</a>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="zk-table mt20 clearfix s-menu">
+                <!-- 单项多次成绩 table-->
+                <div class="table-content ">
+                    <div class="btn-group hwork-head-menu">
+                        <a  class="btn clip_div active  now_year" style="z-index: 2">2019-2020学年</a>
+                        <a  class="btn clip_div  ago_year">2018-2019学年</a>
+                        <a  class="btn clip_div  ago_year">2017-2018学年</a>
+                    </div>
+                    <div class="now_data" style="display: block">
+                        <div class="mt10 clearfix setZhi">
+                            <div class="s_Zgrade">
+                                <div class="btn grayBtn grade_btn">
+                                    七年级上学期
+                                </div>
+                                <div class="table-content mt20">
+                                    <div class="table-box l_h30" style="display: block">
+                                        <div class="table-row l_h20">
+                                            <div class="col-3-16">&nbsp;</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                        </div>
+                                        <div class="table-row mt10">
+                                            <div class="col-3-16">考勤标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+                                        <div class="table-row ">
+                                            <div class="col-3-16">作业标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_Zgrade">
+                                <div class="btn grayBtn grade_btn">
+                                    七年级下学期
+                                </div>
+                                <div class="table-content mt20">
+                                    <div class="table-box l_h30" style="display: block">
+                                        <div class="table-row l_h20">
+                                            <div class="col-3-16">&nbsp;</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                        </div>
+                                        <div class="table-row mt10">
+                                            <div class="col-3-16">考勤标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+                                        <div class="table-row ">
+                                            <div class="col-3-16">作业标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_Zbtn">
+                                <div class="peizhi_posi">
+                                    <a href="javascript:void(0)" class=" btn grayBtn">保存配置</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt10 clearfix setZhi">
+                            <div class="s_Zgrade">
+                                <div class="btn grayBtn grade_btn">
+                                    八年级上学期
+                                </div>
+                                <div class="table-content mt20">
+                                    <div class="table-box l_h30" style="display: block">
+                                        <div class="table-row l_h20">
+                                            <div class="col-3-16">&nbsp;</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                        </div>
+                                        <div class="table-row mt10">
+                                            <div class="col-3-16">考勤标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+                                        <div class="table-row ">
+                                            <div class="col-3-16">作业标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_Zgrade">
+                                <div class="btn grayBtn grade_btn">
+                                    八年级下学期
+                                </div>
+                                <div class="table-content mt20">
+                                    <div class="table-box l_h30" style="display: block">
+                                        <div class="table-row l_h20">
+                                            <div class="col-3-16">&nbsp;</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                        </div>
+                                        <div class="table-row mt10">
+                                            <div class="col-3-16">考勤标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+                                        <div class="table-row ">
+                                            <div class="col-3-16">作业标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_Zbtn">
+                                <div class="peizhi_posi">
+                                    <a href="javascript:void(0)" class=" btn grayBtn">保存配置</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt10 clearfix setZhi">
+                            <div class="s_Zgrade">
+                                <div class="btn grayBtn grade_btn">
+                                    九年级上学期
+                                </div>
+                                <div class="table-content mt20">
+                                    <div class="table-box l_h30" style="display: block">
+                                        <div class="table-row l_h20">
+                                            <div class="col-3-16">&nbsp;</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                        </div>
+                                        <div class="table-row mt10">
+                                            <div class="col-3-16">考勤标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+                                        <div class="table-row ">
+                                            <div class="col-3-16">作业标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_Zgrade">
+                                <div class="btn grayBtn grade_btn">
+                                    九年级下学期
+                                </div>
+                                <div class="table-content mt20">
+                                    <div class="table-box l_h30" style="display: block">
+                                        <div class="table-row l_h20">
+                                            <div class="col-3-16">&nbsp;</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                        </div>
+                                        <div class="table-row mt10">
+                                            <div class="col-3-16">考勤标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+                                        <div class="table-row ">
+                                            <div class="col-3-16">作业标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_Zbtn">
+                                <div class="peizhi_posi">
+                                    <a href="javascript:void(0)" class=" btn grayBtn">保存配置</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ago_data" style="display: none">
+                        <div class="mt10 clearfix setZhi">
+                            <div class="s_Zgrade">
+                                <div class="btn grayBtn grade_btn">
+                                    七年级上学期
+                                </div>
+                                <div class="table-content mt20">
+                                    <div class="table-box l_h30" style="display: block">
+                                        <div class="table-row l_h20">
+                                            <div class="col-3-16">&nbsp;</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                        </div>
+                                        <div class="table-row mt10">
+                                            <div class="col-3-16">考勤标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+                                        <div class="table-row ">
+                                            <div class="col-3-16">作业标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_Zgrade">
+                                <div class="btn grayBtn grade_btn">
+                                    七年级下学期
+                                </div>
+                                <div class="table-content mt20">
+                                    <div class="table-box l_h30" style="display: block">
+                                        <div class="table-row l_h20">
+                                            <div class="col-3-16">&nbsp;</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                        </div>
+                                        <div class="table-row mt10">
+                                            <div class="col-3-16">考勤标准</div>
+                                            <div class="col-3-16"><input placeholder="100" type="text" readonly="readonly"></div>
+                                            <div class="col-3-16"><input   placeholder="100" readonly="readonly" type="text" ></div>
+                                            <div class="col-3-16"><input placeholder="100" readonly="readonly" type="text"></div>
+                                            <div class="col-3-16"><input placeholder="100" readonly="readonly" type="text"></div>
+                                        </div>
+                                        <div class="table-row ">
+                                            <div class="col-3-16">作业标准</div>
+                                            <div class="col-3-16"><input placeholder="100" readonly="readonly" type="text"></div>
+                                            <div class="col-3-16"><input placeholder="100" readonly="readonly" type="text"></div>
+                                            <div class="col-3-16"><input placeholder="100" readonly="readonly" type="text"></div>
+                                            <div class="col-3-16"><input placeholder="100" readonly="readonly" type="text"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_Zbtn">
+                                <div class="peizhi_posi">
+                                    <a href="javascript:void(0)" class=" btn grayBtn">保存配置</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt10 clearfix setZhi">
+                            <div class="s_Zgrade">
+                                <div class="btn grayBtn grade_btn">
+                                    八年级上学期
+                                </div>
+                                <div class="table-content mt20">
+                                    <div class="table-box l_h30" style="display: block">
+                                        <div class="table-row l_h20">
+                                            <div class="col-3-16">&nbsp;</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                        </div>
+                                        <div class="table-row mt10">
+                                            <div class="col-3-16">考勤标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+                                        <div class="table-row ">
+                                            <div class="col-3-16">作业标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_Zgrade">
+                                <div class="btn grayBtn grade_btn">
+                                    八年级下学期
+                                </div>
+                                <div class="table-content mt20">
+                                    <div class="table-box l_h30" style="display: block">
+                                        <div class="table-row l_h20">
+                                            <div class="col-3-16">&nbsp;</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                        </div>
+                                        <div class="table-row mt10">
+                                            <div class="col-3-16">考勤标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+                                        <div class="table-row ">
+                                            <div class="col-3-16">作业标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_Zbtn">
+                                <div class="peizhi_posi">
+                                    <a href="javascript:void(0)" class=" btn grayBtn">保存配置</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt10 clearfix setZhi">
+                            <div class="s_Zgrade">
+                                <div class="btn grayBtn grade_btn">
+                                    九年级上学期
+                                </div>
+                                <div class="table-content mt20">
+                                    <div class="table-box l_h30" style="display: block">
+                                        <div class="table-row l_h20">
+                                            <div class="col-3-16">&nbsp;</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                        </div>
+                                        <div class="table-row mt10">
+                                            <div class="col-3-16">考勤标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+                                        <div class="table-row ">
+                                            <div class="col-3-16">作业标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_Zgrade">
+                                <div class="btn grayBtn grade_btn">
+                                    九年级下学期
+                                </div>
+                                <div class="table-content mt20">
+                                    <div class="table-box l_h30" style="display: block">
+                                        <div class="table-row l_h20">
+                                            <div class="col-3-16">&nbsp;</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                            <div class="col-3-16">满分<br>100%</div>
+                                        </div>
+                                        <div class="table-row mt10">
+                                            <div class="col-3-16">考勤标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+                                        <div class="table-row ">
+                                            <div class="col-3-16">作业标准</div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                            <div class="col-3-16"><input type="text"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="s_Zbtn">
+                                <div class="peizhi_posi">
+                                    <a href="javascript:void(0)" class=" btn grayBtn">保存配置</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<script src="../plugins/alert.js"></script>
+<script src="../plugins/echart.js"></script>
+<script src="../js/each/zhongkao.js"></script>
+<script>
+    // $('.btn-group').on('click',function () {
+    //     console.log($(this).addClass())
+    // })
+
+
+    $('.now_year').on('click',function () {
+        $('.now_data')[0].style.display = 'block'
+        $('.now_data')[0].style.display = 'block'
+        $('.ago_data')[0].style.display = 'none'
+        $(this).addClass('active')
+        $('.ago_year').removeClass('grayBtn')
+    })
+    $('.ago_year').on('click',function () {
+        $('.now_data')[0].style.display = 'none'
+        $('.ago_data')[0].style.display = 'block'
+        $(this).addClass('grayBtn').siblings().removeClass('grayBtn')
+        $('.now_year').removeClass('active')
+
+    })
+
+</script>
+</body>
+
+</html>
