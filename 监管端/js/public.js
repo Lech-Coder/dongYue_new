@@ -31,12 +31,11 @@ $(function(){
   var openHeight = 0;//打开的累积的高度
   var allSchoolH = 0;//所有学校的合计高度
   var openedNum = 5;
-  $('body').on('click','.studentClass .healthyBox .more',function(){
+  $('body .studentClass .healthyBox .more').on('click',function(){
     var schoolList = $(this).parent().parent().parent().find('.list');//当前点击的学校列表容器
     var schoolNum = schoolList.find('.row').length;//总共有多少学校list
-    
+
     allSchoolH = schoolNum * addHeight;
-    
     if((schoolNum - openedNum) > 0){
       addHeight += 190;//点击一次高度叠加五
       schoolList.css('max-height',(addHeight - 10)+'px');
