@@ -205,10 +205,36 @@
                                         <td>得分</td>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="defen_list">
                                     <!-- 得分列表 -->
                                     <tr>
                                         <td>1</td>
+                                        <td>GD000********0002</td>
+                                        <td>初一（1）班</td>
+                                        <td><a href="#">欧阳</a></td>
+                                        <td>男</td>
+                                        <td>43</td>
+                                        <td>50秒</td>
+                                        <td>20</td>
+                                        <td>3分50秒</td>
+                                        <td>15</td>
+                                        <td>2m</td>
+                                        <td>15</td>
+                                        <td>14m</td>
+                                        <td>15</td>
+                                        <td>20次</td>
+                                        <td>15</td>
+                                        <td>20次</td>
+                                        <td>15</td>
+                                        <td>20次</td>
+                                        <td>15</td>
+                                        <td>9秒</td>
+                                        <td>15</td>
+                                        <td>3分50秒</td>
+                                        <td>15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
                                         <td>GD000********0002</td>
                                         <td>初一（1）班</td>
                                         <td><a href="#">欧阳</a></td>
@@ -259,9 +285,8 @@
                                         <td>3分50秒</td>
                                         <td>15</td>
                                     </tr>
-
                                     <!-- 总分 -->
-                                    <tr class="zongfen">
+                                    <tr class="zongfen zonfenpingjun">
                                         <td colspan="5">总分平均</td>
                                         <td>48</td>
                                         <td colspan="2">18</td>
@@ -275,7 +300,7 @@
                                         <td colspan="2">15</td>
                                     </tr>
                                     <!-- 人数 -->
-                                    <tr class="zongfen">
+                                    <tr class="zongfen ">
                                         <td colspan="5">人数</td>
                                         <td>48</td>
                                         <td colspan="2">18</td>
@@ -291,7 +316,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        
+
                     </div>
                 </div>
                 <!-- 页码 -->
@@ -314,6 +339,20 @@
     </div>
     <script src="../plugins/alert.js"></script>
     <script src="../js/each/zhongkao.js"></script>
+    <script>
+        let item = $('.zonfenpingjun')[0]
+        let list = $('.defen_list')[0]
+        let rows = list.rows.length-2
+        let cells = list.rows[0].cells.length
+        for (let j=5,t=1;j<cells;j=j+2,t++) {
+                var total = 0
+                for (let i=0;i<rows;i++){
+                   total = total+ list.rows[i].cells[j].innerHTML*1
+                }
+                var num = total/rows
+                item.cells[t].innerHTML = num.toFixed(2)
+        }
+    </script>
     <script>
         // 饼状图调用
         Chart.pie({
@@ -444,7 +483,7 @@
         <div class="mid-form form-box back_white animated fadeInDownBig" style="margin-left: -409.797px; margin-top: -11%;">
             <div class="form-head">
 
-                
+
                 <!-- 此处添加一行导出到文件 上面div删除class t_r -->
                 <a href="javascript:;" class="btn themeBtn ml10" style="display:inline-block">导出到文件</a>
                 <!-- 此处添加一行导出到文件 结束 -->
