@@ -6561,7 +6561,7 @@ i {
 }
 .healthyChart .menu {
   width: 100%;
-  min-height: 130px;
+  height: auto;
   background-color: #fff;
   padding: 10px 20px;
 }
@@ -6577,12 +6577,12 @@ i {
 .healthyChart .menu > * .title {
   min-width: 50px;
 }
-.healthyChart .menu > * .box > span {
+.healthyChart .menu > * > span {
   height: 100%;
   margin-right: 20px;
   cursor: pointer;
 }
-.healthyChart .menu > * .box > span.focus {
+.healthyChart .menu > * > span.focus {
   color: #82b64a;
 }
 .healthyDistribute {
