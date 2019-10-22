@@ -9430,6 +9430,21 @@ input[type="button"] {
   height: 350px;
   border-top: 20px solid #e4eaf1;
 }
+.boder_all {
+  border: 1px solid #969696;
+}
+.boder_bt {
+  border-bottom: 1px solid #969696;
+}
+.boder_lf {
+  border-left: 1px solid #969696;
+}
+.boder_rg {
+  border-right: 1px solid #969696;
+}
+.boder_tp {
+  border-top: 1px solid #969696;
+}
 .zk-table {
   background: #fff;
   padding: 10px 50px;
@@ -9556,6 +9571,7 @@ input[type="button"] {
 }
 .zk-table .table-content .ago_year.grayBtn {
   background: #969696;
+  z-index: 10;
 }
 .zk-table .table-content .shupaizi {
   margin: 0px auto;
@@ -9605,6 +9621,9 @@ input[type="button"] {
 }
 #lh_table {
   line-height: 20px;
+}
+.pinfen_table tr td {
+  padding: 0 15px;
 }
 .color-table {
   overflow-x: auto;

@@ -161,8 +161,8 @@
                         <table border="1px" id="sortTest" class="new_cscj">
                             <thead>
                             <tr>
-                                <td >序号</td>
-                                <td >学籍号</td>
+                                <!--<td >序号</td>-->
+                                <td >学号</td>
                                 <td >班级</td>
                                 <td>姓名</td>
                                 <td >性别</td>
@@ -178,7 +178,7 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td>0</td>
+                                <!--<td>0</td>-->
                                 <td>GD000********0002</td>
                                 <td>初一（1）班</td>
                                 <td><a href="#">欧阳</a></td>
@@ -192,7 +192,7 @@
                                 <td>120</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <!--<td>2</td>-->
                                 <td>GD000********0002</td>
                                 <td>初一（1）班</td>
                                 <td><a href="#">欧阳</a></td>
@@ -207,7 +207,7 @@
 
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <!--<td>3</td>-->
                                 <td>GD000********0002</td>
                                 <td>初一（1）班</td>
                                 <td><a href="#">欧阳</a></td>
@@ -221,7 +221,7 @@
                                 <td>120</td>
                             </tr>
                             <tr>
-                                <td>4</td>
+                                <!--<td>4</td>-->
                                 <td>GD000********0002</td>
                                 <td>初一（1）班</td>
                                 <td><a href="#">欧阳</a></td>
@@ -235,7 +235,7 @@
                                 <td>120</td>
                             </tr>
                             <tr>
-                                <td>5</td>
+                                <!--<td>5</td>-->
                                 <td>GD000********0002</td>
                                 <td>初一（1）班</td>
                                 <td><a href="#">欧阳</a></td>
@@ -249,7 +249,7 @@
                                 <td>436</td>
                             </tr>
                             <tr>
-                                <td>6</td>
+                                <!--<td>6</td>-->
                                 <td>GD000********0002</td>
                                 <td>初一（1）班</td>
                                 <td><a href="#">欧阳</a></td>
@@ -303,37 +303,37 @@
 </div>
 <script src="../plugins/alert.js"></script>
 <script src="../plugins/echart.js"></script>
-<script src="../js/each/zhongkao.js"></script>
+<!--<script src="../js/each/zhongkao.js"></script>-->
 <script>
 
     var item = $('.new_cscj')[0]
     for (let i=1;i<item.rows.length;i++){
 
         //球类 三个
-        let  a =item.rows[i].cells[5].innerHTML*1,
-            b=item.rows[i].cells[6].innerHTML*1,
-            c=item.rows[i].cells[7].innerHTML*1
+        let  a =item.rows[i].cells[4].innerHTML*1,
+            b=item.rows[i].cells[5].innerHTML*1,
+            c=item.rows[i].cells[6].innerHTML*1
         let  arr =[a,b,c]
         let num  =maxNum(arr)
         switch (true) {
 
-            case a>=num:item.rows[i].cells[5].style.background = '#82b64a';break;
-            case b>=num:item.rows[i].cells[6].style.background = '#82b64a';break;
-            case c>=num:item.rows[i].cells[7].style.background = '#82b64a';break;
+            case a>=num:item.rows[i].cells[4].style.background = '#82b64a';break;
+            case b>=num:item.rows[i].cells[5].style.background = '#82b64a';break;
+            case c>=num:item.rows[i].cells[6].style.background = '#82b64a';break;
         }
 
         //两个
-        let d=item.rows[i].cells[8].innerHTML*1,e=item.rows[i].cells[9].innerHTML*1
+        let d=item.rows[i].cells[7].innerHTML*1,e=item.rows[i].cells[8].innerHTML*1
         let arr_t = [d,e]
         let num_2 = maxNum(arr_t)
         switch (true) {
-            case d>=num_2:item.rows[i].cells[8].style.background = '#82b64a';break;
-            case e>=num_2:item.rows[i].cells[9].style.background = '#82b64a';break;
+            case d>=num_2:item.rows[i].cells[7].style.background = '#82b64a';break;
+            case e>=num_2:item.rows[i].cells[8].style.background = '#82b64a';break;
         }
 
 
+        item.rows[i].cells[9].style.background = '#82b64a'
         item.rows[i].cells[10].style.background = '#82b64a'
-        item.rows[i].cells[11].style.background = '#82b64a'
     }
 
 

@@ -59,7 +59,7 @@ function grade_tongji(dom,oridata,grade,grade_class) {
                 type : 'value',
                 splitArea : {show : true},
                 axisLabel: {
-                    formatter: '{value}%',
+                    formatter: '{d}%',
                 }
             }
         ],
@@ -99,7 +99,7 @@ function grade_tongji(dom,oridata,grade,grade_class) {
                 center:['17%','50%'],
                 label: {
                     normal: {
-                        formatter: '{c}',
+                        formatter: '{d}%',
                         position: 'inside',
                         textStyle:{
                             fontSize:16
