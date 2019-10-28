@@ -6137,7 +6137,7 @@ input[type="button"] {
   top: 50px;
   width: 100%;
   position: absolute;
-  height: 700px;
+  height: 100%;
   left: 15%;
   overflow: scroll;
 }
@@ -6229,7 +6229,7 @@ input[type="button"] {
 }
 .healthyChart {
   padding: 50px;
-  height: 700px;
+  height: 100%;
   background: #e4eaf1;
   width: 100%;
 }
