@@ -5975,17 +5975,18 @@ i {
 .healthyList .choose.menu > * > span {
   height: 100%;
   line-height: 36px;
+  margin-right: 20px;
   display: inline-block;
 }
 .healthyList .choose.menu > * .title {
   min-width: 50px;
 }
-.healthyList .choose.menu > * .box > span {
+.healthyList .choose.menu > * > span {
   height: 100%;
   margin-right: 20px;
   cursor: pointer;
 }
-.healthyList .choose.menu > * .box > span.focus {
+.healthyList .choose.menu > * > span.focus {
   color: #82b64a;
 }
 .healthyList .healthyBox {
@@ -6038,7 +6039,7 @@ i {
 .healthyList .healthyBox > .center .row {
   height: 38px;
   width: 100%;
-  word-wrap: none;
+  word-wrap: normal;
   line-height: 38px;
 }
 .healthyList .healthyBox > .center .row > span {
@@ -6133,7 +6134,7 @@ i {
 .healthyList .healthyBox_JiaoWuTongJi-x > .center .row {
   height: 38px;
   width: 100%;
-  word-wrap: none;
+  word-wrap: normal;
   line-height: 38px;
 }
 .healthyList .healthyBox_JiaoWuTongJi-x > .center .row > span {
@@ -6221,7 +6222,7 @@ i {
 .healthyList .healthyBox_ZuoYeTongJi > .center .row {
   height: 38px;
   width: 100%;
-  word-wrap: none;
+  word-wrap: normal;
   line-height: 38px;
 }
 .healthyList .healthyBox_ZuoYeTongJi > .center .row > span {
@@ -6258,6 +6259,32 @@ i {
 }
 .healthyList .healthyBox_ZuoYeTongJi .see-more a {
   color: #7dba64;
+}
+.healthyList .menu {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 10px 20px;
+}
+.healthyList .menu > * {
+  min-height: 36px;
+  display: block;
+}
+.healthyList .menu > * > span {
+  height: 100%;
+  line-height: 36px;
+  display: inline-block;
+}
+.healthyList .menu > * .title {
+  min-width: 50px;
+}
+.healthyList .menu > * > span {
+  height: 100%;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.healthyList .menu > * > span.focus {
+  color: #82b64a;
 }
 .healthyChart {
   position: absolute;

@@ -1967,12 +1967,13 @@ i{
         >span{
           height: 100%;
           line-height: 36px;
+          margin-right: 20px;
           display: inline-block;
         }
         .title{
           min-width: 50px;
         }
-        .box{
+
           >span{
             height: 100%;
             margin-right: 20px;
@@ -1981,7 +1982,7 @@ i{
               color: @themeColor;
             }
           }
-        }
+
       }
     }
   }
@@ -2037,7 +2038,7 @@ i{
       .row{
         height: 38px;
         width: 100%;
-        word-wrap: none;
+        word-wrap: normal;
         line-height: 38px;
         >span{
           display: block;
@@ -2137,7 +2138,7 @@ i{
       .row{
         height: 38px;
         width: 100%;
-        word-wrap: none;
+        word-wrap: normal;
         line-height: 38px;
         >span{
           display: block;
@@ -2229,7 +2230,7 @@ i{
       .row{
         height: 38px;
         width: 100%;
-        word-wrap: none;
+        word-wrap: normal;
         line-height: 38px;
         >span{
           display: block;
@@ -2266,6 +2267,34 @@ i{
       a{
         color: #7dba64;
       }
+    }
+  }
+  .menu{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 10px 20px;
+    >*{
+      min-height: 36px;
+      display: block;
+      >span{
+        height: 100%;
+        line-height: 36px;
+        display: inline-block;
+      }
+      .title{
+        min-width: 50px;
+      }
+
+      >span{
+        height: 100%;
+        margin-right: 20px;
+        cursor: pointer;
+        &.focus{
+          color: @themeColor;
+        }
+      }
+
     }
   }
 }

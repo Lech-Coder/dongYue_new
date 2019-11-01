@@ -31,7 +31,7 @@ $(function(){
   var openHeight = 0;//打开的累积的高度
   var allSchoolH = 0;//所有学校的合计高度
   var openedNum = 5;
-  $('body .studentClass .healthyBox .more').on('click',function(){
+  $('body').on('click','.studentClass .healthyBox .more',function(){
     var schoolList = $(this).parent().parent().parent().find('.list');//当前点击的学校列表容器
     var schoolNum = schoolList.find('.row').length;//总共有多少学校list
 
