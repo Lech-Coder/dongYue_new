@@ -1664,6 +1664,12 @@ textarea {
 .dataExport:hover #gradeData_export {
   display: block;
 }
+.school_tizhireport {
+  display: none;
+}
+.tizhireport:hover .school_tizhireport {
+  display: block;
+}
 .bread-nav-box {
   display: inline-block;
   width: 380px;
