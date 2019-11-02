@@ -28,15 +28,15 @@
                 <div class="stu-name" font="18">张义近</div>
                 <div class="choose-box">
                     <div class="c-item active">优秀</div>
-                    <div class="c-item">一般</div>
+                    <div class="c-item ">一般</div>
                     <div class="c-item">待改进</div>
                 </div>
                 <textarea class="ping-jia-box-tarea" name="" id="" cols="30" rows="10"></textarea>
                 <div class="pix-box clearfix">
-                    <img class="img-size" src="../img/girl.png" alt="" srcset="">
+                    <img id="atlas-img" class="img-size" src="../img/girl.png" alt="" srcset="">
                     <div class="img-size add-img">
                         <i class="icon-sczj"></i>
-                        <input class="up-img" type="file" name="" id="" accept="image/*">
+                        <input class="up-img" type="file" name="" id="" onchange="viewImage('atlas-img')">
                     </div>
                 </div>
                 <br><br>
@@ -61,7 +61,7 @@
             <span>我的</span>
         </a>
     </footer>
-    <script src="../js/each/kaoQin.js"></script>
+    <script src="../js/each/ketangpingjia.js"></script>
 
 </body>
 
