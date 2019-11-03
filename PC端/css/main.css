@@ -6141,11 +6141,10 @@ input[type="button"] {
 }
 .xiugai .xiugai-right-section {
   top: 50px;
-  width: 100%;
+  width: 85%;
   position: absolute;
   height: 100%;
   left: 15%;
-  overflow: scroll;
 }
 .xiugai .imgBox {
   cursor: pointer;
