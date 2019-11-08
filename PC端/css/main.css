@@ -1667,6 +1667,12 @@ textarea {
 .school_tizhireport {
   display: none;
 }
+.school_tizhireport li a {
+  width: 170px;
+  height: 38px;
+  color: #fff;
+  display: inline-block;
+}
 .tizhireport:hover .school_tizhireport {
   display: block;
 }

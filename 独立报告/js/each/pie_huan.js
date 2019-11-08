@@ -359,6 +359,7 @@ function simple_line(dom,type_name,boy_data,girl_data,x_line_data) {
         tooltip: {
             trigger: 'axis'
         },
+
         legend: {
             data:['男生','女生']
         },
