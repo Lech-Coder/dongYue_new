@@ -345,6 +345,11 @@ function simple_bar(dom,grade,bdata,PE_type) {
     resizeChart.push(myChart)
 }
 function simple_line(dom,type_name,boy_data,girl_data,x_line_data) {
+    var min = Math.min.apply(null,boy_data)
+    if (min>Math.min.apply(null,girl_data)) {
+        min = Math.min.apply(null,girl_data)
+    }
+
     var myChart = echarts.init(dom);
     option = {
         title: {
@@ -372,7 +377,8 @@ function simple_line(dom,type_name,boy_data,girl_data,x_line_data) {
             }
         },
         yAxis: {
-            type: 'value'
+            type: 'value',
+            min:Math.floor(min*0.8)
         },
         series: [
             {
