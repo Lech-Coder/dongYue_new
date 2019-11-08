@@ -345,9 +345,10 @@ function simple_bar(dom,grade,bdata,PE_type) {
     resizeChart.push(myChart)
 }
 function simple_line(dom,type_name,boy_data,girl_data,x_line_data) {
-    var min = Math.min.apply(null,boy_data)
-    if (min>Math.min.apply(null,girl_data)) {
-        min = Math.min.apply(null,girl_data)
+    var min = 0
+    var arr_ = boy_data.concat(girl_data)
+    if (boy_data.length>0) {
+        min=Math.min.apply(null,arr_)
     }
 
     var myChart = echarts.init(dom);
