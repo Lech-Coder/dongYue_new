@@ -670,6 +670,7 @@
             $('#chat').remove();//去除人工客服
             $('.top-option').remove();//去除顶部按钮
             $('body').addClass('print'); //添加调整后的样式
+            $('.right-section').attr('style', "")
             // resizeLineChart.resize();
             resizeChart1.resize();
             resizeChart2.resize();
@@ -681,21 +682,21 @@
                 rechart[i].resize()
             }
             }
-        setTimeout(function () {
-            window.onresize = function () {
-                //雷达图
-                for (let i = 0; i < resizeRadar.length; i++) {
-                    resizeRadar[i].resize()
+            setTimeout(function () {
+                window.onresize = function () {
+                    //雷达图
+                    for (let i = 0; i < resizeRadar.length; i++) {
+                        resizeRadar[i].resize()
+                    }
+                    //出勤
+                    for (let i=0;i<rechart.length;i++){
+                        rechart[i].resize()
+                    }
+                    resizeChart2.resize();
+                    resizeChart1.resize();
+                    //体质指标四个柱图
                 }
-                //出勤
-                for (let i=0;i<rechart.length;i++){
-                    rechart[i].resize()
-                }
-                resizeChart2.resize();
-                resizeChart1.resize();
-                //体质指标四个柱图
-            }
-        },200)
+            },200)
     </script>
 </body>
 
