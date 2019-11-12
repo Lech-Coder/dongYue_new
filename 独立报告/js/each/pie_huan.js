@@ -347,7 +347,7 @@ function simple_bar(dom,grade,bdata,PE_type) {
 function simple_line(dom,type_name,boy_data,girl_data,x_line_data) {
     var min = 0
     var arr_ = boy_data.concat(girl_data)
-    if (boy_data.length>0) {
+    if (arr_.length>0) {
         min=Math.min.apply(null,arr_)
     }
 

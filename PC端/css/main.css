@@ -5745,6 +5745,11 @@ input[type="button"] {
 .setHomeWork-wrapper .hwork-head-menu > span.current {
   background: #82b64a;
 }
+.setHomeWork-wrapper .hwork-head-menu > span > a {
+  height: 100%;
+  width: 100%;
+  color: white;
+}
 .setHomeWork-wrapper .hwork-head-menu .inport-tizhi,
 .setHomeWork-wrapper .hwork-head-menu .ljchengj-daochu {
   line-height: 20px;
