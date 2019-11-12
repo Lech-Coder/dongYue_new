@@ -670,7 +670,16 @@
             $('#chat').remove();//去除人工客服
             $('.top-option').remove();//去除顶部按钮
             $('body').addClass('print'); //添加调整后的样式
-            $('.right-section').attr('style', "")
+
+
+
+            // === 去除滚动条插件样式 begin =====
+            $('.right-section').attr('style', "") 
+            $('#mCSB_1_container').removeAttr('id')
+            $('#mCSB_1_scrollbar_vertical').remove()
+            // === 去除滚动条插件样式 end =====
+
+
             // resizeLineChart.resize();
             resizeChart1.resize();
             resizeChart2.resize();
