@@ -324,7 +324,7 @@ function simple_bar(dom,grade,bdata,PE_type) {
                 },
                 axisLabel:{
                     rotate:40,
-                    fontSize:16
+                    fontSize:12
                 }
             }
         ],
