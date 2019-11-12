@@ -198,9 +198,19 @@ Chart.bar = function (options) {
                     color:'#35bdfa',
                 }
             },
+
             barWidth:'26px',
             type: 'bar',
             data: opts.data,
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top',
+                    textStyle:{
+                        color:'#000'
+                    }
+                }
+            }
         },
             {
                 itemStyle:{
