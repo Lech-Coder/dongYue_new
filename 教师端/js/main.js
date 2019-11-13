@@ -5,7 +5,7 @@ var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?c27e356c1927cccc35e6e41dbac328de";
-  var s = document.getElementsByTagName("script")[0]; 
+  var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
 
@@ -356,13 +356,16 @@ $.fn.setHeartLine = function (opt) {
 //验证是否输入数字， 为需要验证的地方添加 just-number class
 $(function(){
   $('body').on('input propertychange', 'input[type="number"]', function(){
-    var numValue = $(this).val();  
-    // console.log($(this))
-    if((/^([0-9]*)$/.test( numValue )) && numValue >= 0 && numValue != ''){
-    }else{  
+    var numValue = $(this).val();
+    var len =0
+    if (String(numValue).indexOf('.')>0) {
+       len= String(numValue).length-(String(numValue).indexOf('.')+1)   //获取小数点位置
+    }
+    if(len<2&&numValue >= 0 && numValue != ''){
+    }else{
       $.warning({words:'请输入正确的值'})
       $(this).val('');
-    }  
+    }
   })
   //阻止点击事件
   $('.ban-click,.ban-click *').attr('onclick','return false');//去除绑定事件
