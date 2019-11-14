@@ -11,13 +11,13 @@ function pie_shili(div,point,data) {
             x: 'center',
             y: 'center',
             textStyle: {
-                fontSize:30,
+                fontSize:20,
                 fontWeight:'normal',
                 color: '#ff8175'
             },
             subtextStyle: {
                 color: '#ff8175',
-                fontSize: 30
+                fontSize: 20
             },
         },
         color:['#ff8175','#37a2da'],
@@ -37,7 +37,7 @@ function pie_shili(div,point,data) {
                     },
 
                     textStyle: {
-                        fontSize: '30',
+                        fontSize: '20',
                         fontWeight: 'bold'
                     }
 
