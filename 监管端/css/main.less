@@ -1968,20 +1968,24 @@ i{
           height: 100%;
           line-height: 36px;
           margin-right: 20px;
-          display: inline-block;
+
         }
         .title{
           min-width: 50px;
         }
 
+        .box{
           >span{
             height: 100%;
             margin-right: 20px;
             cursor: pointer;
+            display: inline-block;
             &.focus{
               color: @themeColor;
             }
           }
+        }
+
 
       }
     }
@@ -2679,20 +2683,22 @@ i{
       >span{
         height: 100%;
         line-height: 36px;
-        display: inline-block;
       }
       .title{
         min-width: 50px;
       }
-
+      .box{
         >span{
           height: 100%;
           margin-right: 20px;
+          display: inline-block;
           cursor: pointer;
           &.focus{
             color: @themeColor;
           }
         }
+      }
+
 
     }
   }
