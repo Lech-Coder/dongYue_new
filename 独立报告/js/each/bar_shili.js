@@ -10,9 +10,9 @@ function bar_shili(div,xdata,ydata) {
         },
         grid: {
                 left:'5%',
-                top:'5%',
-                bottom:'10%',
-                right:'10%',
+                top:'10%',
+                bottom:'5%',
+                right:'5%',
             containLabel: true
         },
         xAxis : [
@@ -35,7 +35,7 @@ function bar_shili(div,xdata,ydata) {
         series : [
             {
                 type:'bar',
-                barWidth: '50px',
+                barWidth: '30px',
                 data:ydata,
                 itemStyle: {
                     normal: {
@@ -58,4 +58,47 @@ function bar_shili(div,xdata,ydata) {
     myChart.setOption(option, true);
 
     return myChart
+}
+function bar_yujin(dom,bdata) {
+    var myChart = echarts.init(dom);
+    var color_y = ['#115c81','#e3b200','#ff773e']
+    option = {
+        tooltip : {
+            trigger: 'axis',
+        },
+        grid: {
+            left: '5%',
+            right: '5%',
+            bottom: '5%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ['一级预警','二级预警','三级预警'],
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                type:'bar',
+                barWidth: '25%',
+                itemStyle: {
+                    normal: {
+                        color: function(params) {
+                            var num =color_y.length
+                            return color_y[params.dataIndex%num]
+                        },
+                    }
+                },
+                data:bdata
+            }
+        ]
+    };
+    myChart.setOption(option, true);
+    resizeChart.push(myChart)
 }

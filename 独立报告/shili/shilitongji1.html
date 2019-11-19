@@ -130,6 +130,38 @@
                             <div class="tongji_chart" id="grade_tongji_bar"></div>
                         </div>
                     </div>
+                    <!--新增视力预警分布-->
+                    <div class="clearfix mt20" >
+                        <div class="banjipingjun">
+                            <h1>视力预警</h1>
+                            <div class="tongji_chart" id="yujin_one"></div>
+                        </div>
+
+                        <div class="yujin_div">
+
+                            <div class="label_info" >
+                                <div class="tooltip_kuai kuai_one"></div>
+                                <div  class="yujin_info " >
+                                    <span>一级预警：视力正常但趋于发生轻度近视的学生人群</span>
+                                </div>
+                            </div>
+                            <div class="label_info">
+                                <div class="tooltip_kuai kuai_two">
+                                </div>
+                                <div class="yujin_info">
+                                    <span>二级预警：已经发生轻度近视的学生人群，需要采取有效防止视力进一步下降</span>
+                                </div>
+                            </div>
+                            <div class="label_info">
+                                <div class="tooltip_kuai kuai_three">
+                                </div>
+                                <div class="yujin_info">
+                                    <span>三级预警：已经发生中度近视且在重度近视群体中视力测试值趋近于重度近视的学生人群，需要学校/教师引起重视，防止出现眼底病变</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--新增预警分布end-->
 
                 </div>
 
@@ -159,10 +191,19 @@
                             <div class="tongji_chart" id="bianhuaqushi"></div>
                         </div>
                         <div class="banjitongji">
-                            <div class="title">
-                                <h2>班级近视率对比</h2>
+                            <div class="yujin_fenbu">
+                                <div class="title">
+                                    <h2>视力预警分布</h2>
+                                </div>
+                                <div class="jinshi_fenbu" id="yujinfenbu_one"></div>
                             </div>
-                            <div class="banjitongji_chart" id="jinshilvduibi_1"></div>
+                            <div class="jinshi_fenbu">
+                                <div class="title">
+                                    <h2>班级近视率对比</h2>
+                                </div>
+                                <div class="jinshi_fenbu" id="jinshilvduibi_1"></div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -226,6 +267,15 @@
     pie_shili($('#jinshilv')[0],point,jishi_data)
     line_shili($('#bianhuaqushi')[0],xdata,jishilv,shilibuliang)
     bar_shili($('#jinshilvduibi_1')[0],grade_one,value_one)
+
+    //预警
+    var yujin_data = [110,190,130]
+    bar_yujin($('#yujin_one')[0],yujin_data)
+
+    bar_yujin($('#yujinfenbu_one')[0],yujin_data)
+
+
+
 </script>
 </body>
 
