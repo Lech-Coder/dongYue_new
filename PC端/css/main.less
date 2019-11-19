@@ -99,6 +99,12 @@ textarea{
 .bg-pink{
     background: @pinkColor !important;
 }
+@media print {
+    .pageBreak
+    {
+        page-break-after: always; /*强制换页的关键*/
+    }
+}
 
 .pageContent {
     min-width: @pageWidth;
@@ -6277,6 +6283,40 @@ input[type="button"] {
                     width: 80%;
                     background-color: @themeColor;
                 }
+            }
+        }
+    }
+    #new_list{
+        .roww {
+            // height: 38px;
+            width: 100%;
+            line-height: 38px;
+            >span {
+                display: inline-block;
+                height: 40px;
+            }
+            &.sp {
+                //color: #A7A7A7;
+                font-size: 14px;
+            }
+            &:nth-child(odd) {
+                background-color: #F5F5F5;
+            }
+            &:nth-child(even) {
+                background-color: #fff;
+            }
+            .num {
+                width: 10%;
+                text-align: center;
+            }
+            .school,
+            .category {
+                width: 12.5%;
+                text-align: center;
+            }
+            .persent {
+                text-align: center;
+                width: 12.5%;
             }
         }
     }

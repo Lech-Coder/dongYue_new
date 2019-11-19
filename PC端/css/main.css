@@ -1302,6 +1302,12 @@ textarea {
 .bg-pink {
   background: #fd7aa4 !important;
 }
+@media print {
+  .pageBreak {
+    page-break-after: always;
+    /*强制换页的关键*/
+  }
+}
 .pageContent {
   min-width: 1200px;
   height: 100%;
@@ -6762,6 +6768,36 @@ input[type="button"] {
   float: left;
   width: 80%;
   background-color: #82b64a;
+}
+.healthyBox #new_list .roww {
+  width: 100%;
+  line-height: 38px;
+}
+.healthyBox #new_list .roww > span {
+  display: inline-block;
+  height: 40px;
+}
+.healthyBox #new_list .roww.sp {
+  font-size: 14px;
+}
+.healthyBox #new_list .roww:nth-child(odd) {
+  background-color: #F5F5F5;
+}
+.healthyBox #new_list .roww:nth-child(even) {
+  background-color: #fff;
+}
+.healthyBox #new_list .roww .num {
+  width: 10%;
+  text-align: center;
+}
+.healthyBox #new_list .roww .school,
+.healthyBox #new_list .roww .category {
+  width: 12.5%;
+  text-align: center;
+}
+.healthyBox #new_list .roww .persent {
+  text-align: center;
+  width: 12.5%;
 }
 .video-play {
   background: #000;

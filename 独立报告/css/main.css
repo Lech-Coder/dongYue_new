@@ -3006,7 +3006,7 @@ div[class^="col"]:before > span.textArea {
   color: gray !important;
 }
 .excel-table30 {
-  line-height: 29.5px;
+  line-height: 30px;
 }
 .excel-table30 .table-item {
   margin: 5px 0;
@@ -3050,6 +3050,12 @@ div[class^="col"]:before > span.textArea {
 }
 .process-tip > div:not(:first-child) {
   margin-left: 5%;
+}
+@media print {
+  .pageBreak {
+    page-break-after: always;
+    /*强制换页的关键*/
+  }
 }
 .process-item {
   background: #969696;
@@ -10067,7 +10073,7 @@ input[type="button"] {
 .mao_url {
   width: 150px;
   position: fixed;
-  left: 3%;
+  left: 1%;
   top: 10%;
 }
 .mao_url ul li {

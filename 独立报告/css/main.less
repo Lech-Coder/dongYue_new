@@ -2047,7 +2047,7 @@ div[class^="col"]:before {
     }
 }
 .excel-table30 {
-    line-height: 29.5px;
+    line-height: 30px;
     .table-item {
         margin: 5px 0;
         >div {
@@ -2099,6 +2099,12 @@ div[class^="col"]:before {
     }
 }
 
+@media print {
+    .pageBreak
+    {
+        page-break-after: always; /*强制换页的关键*/
+    }
+}
 .process-item {
     background: @grayColor;
     float: left;
@@ -9866,7 +9872,7 @@ input[type="button"] {
 .mao_url{
     width: 150px;
     position: fixed;
-    left:3%;
+    left:1%;
     top: 10%;
     ul{
         li{
