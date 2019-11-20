@@ -9959,6 +9959,295 @@ input[type="button"] {
   color: #a8a8a8;
   cursor: pointer;
 }
+.yujingBox {
+  margin-top: 30px;
+  padding: 10px;
+  background: white;
+  clear: both;
+}
+.yujingBox .clearfix {
+  width: 100%;
+}
+.yujingBox .clearfix .school_name {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.yujingBox .clearfix .school_name h1 {
+  float: left;
+}
+.yujingBox .clearfix .school_name .school_address {
+  width: 80%;
+  float: left;
+  padding: 10px;
+  height: 20px;
+}
+.yujingBox .clearfix .school_name li {
+  float: left;
+  margin-left: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.yujingBox .clearfix .school_name li.focus {
+  color: #82b64a;
+}
+.yujingBox .clearfix .nei_rong {
+  width: 100%;
+}
+.yujingBox .clearfix .nei_rong p {
+  font-size: 16px;
+}
+.yujingBox .clearfix .nei_rong .single_healthy_line {
+  width: 100%;
+}
+.yujingBox .clearfix .nei_rong .chart_z {
+  width: 100%;
+}
+.yujingBox .clearfix .nei_rong .chart_z .chart_pi {
+  width: 25%;
+  float: left;
+}
+.yujingBox .clearfix .nei_rong .paimary_info_line {
+  width: 65%;
+  float: right;
+}
+.yujingBox .clearfix .nei_rong .paimary_info_table {
+  width: 35%;
+  float: left;
+  padding: 40px 0 0 40px;
+}
+.yujingBox .clearfix .nei_rong .paimary_info_table table {
+  width: 100%;
+}
+.yujingBox .clearfix .nei_rong .paimary_info_table table tr {
+  height: 40px;
+  line-height: 40px;
+}
+.yujingBox .clearfix .nei_rong .paimary_info_table .back_gray {
+  background: #c0c0c0;
+}
+.yujingBox .clearfix .nei_rong .paimary_info_table h1 {
+  display: inline;
+}
+.yujingBox .clearfix .nei_rong .nei_rong_l {
+  width: 65%;
+  float: left;
+}
+.yujingBox .clearfix .nei_rong .nei_rong_r {
+  width: 35%;
+  float: right;
+}
+.yujingBox .clearfix .nei_rong .nei_rong_r .parper_address {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.yujingBox .clearfix .nei_rong .ul_address {
+  margin: 0 auto;
+}
+.yujingBox .clearfix .nei_rong .ul_address li {
+  font-size: 16px;
+}
+.yujingBox .clearfix .nei_rong .yujin_chart_grade,
+.yujingBox .clearfix .nei_rong .yujin_chart_class {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.yujingBox .clearfix .nei_rong .xiangmu_data,
+.yujingBox .clearfix .nei_rong .single_chart_line,
+.yujingBox .clearfix .nei_rong .single_chart_bar {
+  width: 50%;
+  float: left;
+}
+.yujingBox .clearfix .nei_rong .xiangmu_data .bar_chart,
+.yujingBox .clearfix .nei_rong .single_chart_line .bar_chart,
+.yujingBox .clearfix .nei_rong .single_chart_bar .bar_chart,
+.yujingBox .clearfix .nei_rong .xiangmu_data .xiangmu_chart,
+.yujingBox .clearfix .nei_rong .single_chart_line .xiangmu_chart,
+.yujingBox .clearfix .nei_rong .single_chart_bar .xiangmu_chart {
+  width: 100%;
+}
+.yujingBox .clearfix .nei_rong .row {
+  height: 40px;
+  margin-top: 20px;
+  clear: both;
+}
+.yujingBox .clearfix .nei_rong .row .name {
+  height: 100%;
+  line-height: 40px;
+  margin-right: 2%;
+  display: inline-block;
+  float: left;
+}
+.yujingBox .clearfix .nei_rong .row .limit {
+  height: 100%;
+  width: 48%;
+  display: inline-block;
+  float: left;
+  margin-right: 18px;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span {
+  height: 100%;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  float: left;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span.color_1 {
+  background-Color: #8BC34A;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span.color_2 {
+  background-Color: #B3DB5E;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span.color_3 {
+  background-Color: #EAED42;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span.color_4 {
+  background-Color: #ED8A42;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span.color_5 {
+  background-Color: #02A7F0;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span.color_6 {
+  background-Color: #C280FF;
+}
+.yujingBox .clearfix .nei_rong .row .limit > p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+.yujingBox .clearfix .nei_rong .row .limit > p > span {
+  margin-left: 3px;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai {
+  width: 35%;
+  float: left;
+  height: 40px;
+  text-align: center;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai {
+  height: 100%;
+  width: 20%;
+  display: inline-block;
+  float: left;
+  margin-right: 18px;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > span {
+  height: 100%;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  float: left;
+  color: white;
+  font-size: 14px;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > span.color_1 {
+  background-Color: #ef9958;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > span.color_2 {
+  background-Color: #1e8f8f;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > span.color_3 {
+  background-Color: #02a7f1;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > span.color_4 {
+  background-Color: #c381ff;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > p > span {
+  margin-left: 3px;
+}
+.yujingBox .clearfix .nei_rong .row .sex {
+  width: 31%;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+}
+.yujingBox .clearfix .nei_rong .row .sex > div {
+  width: 25%;
+  display: inline-block;
+  flolat: left;
+  height: 40px;
+}
+.yujingBox .clearfix .nei_rong .row .sex > div > span {
+  height: 40px;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: text-bottom;
+}
+.yujingBox .clearfix .nei_rong .row .sex > span {
+  height: 40px;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: text-bottom;
+}
+.yujingBox .clearfix .nei_rong .row .sex .youliang {
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  color: #fff;
+  float: left;
+  width: 80%;
+  background-color: #82b64a;
+}
+.yujingBox .clearfix .class_address {
+  border: 1px black solid;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 16px;
+}
+.yujingBox .clearfix .pingding_table {
+  text-align: center;
+  margin: 0 auto;
+}
+.yujingBox .clearfix .yujin_div {
+  float: left;
+  width: 50%;
+  height: 300px;
+}
+.yujingBox .clearfix .yujin_div .label_info {
+  width: 100%;
+  height: 25px;
+  margin-top: 55px;
+  padding: 0 0 0 20px;
+}
+.yujingBox .clearfix .yujin_div .label_info .tooltip_kuai {
+  width: 25px;
+  height: 25px;
+  float: left;
+}
+.yujingBox .clearfix .yujin_div .label_info .tooltip_kuai.kuai_one {
+  background: #115c81;
+}
+.yujingBox .clearfix .yujin_div .label_info .tooltip_kuai.kuai_two {
+  background: #e3b200;
+}
+.yujingBox .clearfix .yujin_div .label_info .tooltip_kuai.kuai_three {
+  background: #ff773e;
+}
+.yujingBox .clearfix .yujin_div .label_info .yujin_info {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.yujingBox .banjipingjun {
+  width: 50%;
+  height: 300px;
+  float: left;
+}
+.yujingBox .banjipingjun p {
+  font-size: 20px;
+}
+.yujingBox .banjipingjun .tongji_chart {
+  width: 100%;
+  height: 90%;
+}
 .zhihuiBox {
   margin-top: 20px;
   background: white;
