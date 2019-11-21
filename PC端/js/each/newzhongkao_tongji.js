@@ -33,7 +33,8 @@ function grade_tongji(dom,oridata,grade,grade_class) {
             trigger: 'axis',
             axisPointer : { // 坐标轴指示器，坐标轴触发有效
                 type : 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-            }
+            },
+            // formatter: "{b}: {value}%"
         },
         color:['#83b749','#00a9f0','#f59b1e','#d8d8d8'],
         legend: {
@@ -59,7 +60,7 @@ function grade_tongji(dom,oridata,grade,grade_class) {
                 type : 'value',
                 splitArea : {show : true},
                 axisLabel: {
-                    formatter: '{d}%',
+                    formatter: '{value}%',
                 }
             }
         ],
