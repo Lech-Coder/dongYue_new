@@ -1794,6 +1794,14 @@ textarea {
 .right-section .fansi-box .bottom .fr .icon-lianjie {
   margin-left: 10px;
 }
+.right-section .search_lable {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+.right-section .search_lable .search_lable_info {
+  display: none;
+}
 .zuo-ye-xiang-qing {
   background: #e4eaf1;
 }
