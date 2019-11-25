@@ -69,7 +69,6 @@ $(document).on('click','.inside-wrapper .table-excel .control .all_Select',funct
     });
 });
 
-
 // 点击退休转班方框
 $(document).on('click','.inside-wrapper .table-excel .control .icon-gou-nocked',function(){
   $(this).removeClass('icon-gou-nocked').addClass('icon-gou-cked');

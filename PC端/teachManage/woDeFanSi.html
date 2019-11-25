@@ -77,7 +77,7 @@
             </div>
             <div class="search-box clearfix mb20">
                 <div class=" search_lable">
-                    <span>全部</span>
+                    <a class = "click_all">全部</a>
                     <span class="search_lable_info">|</span>
                     <span class="search_lable_info">为你查找到 <span class="select_num">12</span> 条记录</span>
                 </div>
@@ -248,8 +248,13 @@
         var num = 0     //反思数量
         $('.search_lable_info').show()
         $("[name='select_in']").val()   //获取input的值
-
         $('.select_num')[0].innerText = num   //修改页面上数量
+    })
+    //全部
+    $(".click_all").on('click',function () {
+        var all_fansi = 4545
+        $('.search_lable_info').show()
+        $('.select_num')[0].innerText = all_fansi   //修改页面上数量
     })
 </script>
 </body>
