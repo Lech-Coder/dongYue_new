@@ -53,10 +53,18 @@ $('.bjxx .change-btn').click(function(){
 });
 
 //点击全选
-$(document).on('click','.inside-wrapper .table-excel .control .all_Select',function(){
+var all_select = 0
+$(document).on('click','.inside-wrapper .table-excel .control .all_Select',function(d,i){
+    all_select++
     $('.inside-wrapper .table-excel .control i').each(function (i,d) {
-        if (d.className.indexOf('icon-gou-nocked')>-1){
-            $(this).removeClass('icon-gou-nocked').addClass('icon-gou-cked');
+        if (all_select%2==1) {
+            if (d.className.indexOf('icon-gou-nocked')>-1){
+                $(this).removeClass('icon-gou-nocked').addClass('icon-gou-cked');
+            }
+        }else{
+            if (d.className.indexOf('icon-gou-cked')>-1){
+                $(this).removeClass('icon-gou-cked').addClass('icon-gou-nocked');
+            }
         }
     });
 });
