@@ -7,26 +7,26 @@ function pie_huanxin(div,data) {
             trigger: 'item',
             formatter: "{a} <br/>{b}: {c} ({d}%)"
         },
-        // grid: {
-        //     left:'5%',
-        //     top:'5%',
-        //     bottom:'10%',
-        //     right:'10%',
-        //     containLabel: true
-        // },
+        grid: {
+            left:'5%',
+            top:'5%',
+            bottom:'5%',
+            right:'5%',
+            containLabel: true
+        },
         title: {
             text: '男生近视率32%',
             subtext:'女生近视率35%',
             x: 'center',
             y: 'center',
             textStyle: {
-                fontSize:24,
+                fontSize:18,
                 fontWeight:'normal',
                 color: '#37a2da'
             },
             subtextStyle: {
                 color: '#ff8175',
-                fontSize: 24
+                fontSize: 18
             },
         },
 
