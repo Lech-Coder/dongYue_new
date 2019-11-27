@@ -6390,6 +6390,79 @@ nav > a.focus:after {
   position: absolute;
   right: 0.467rem;
 }
+.class_xinlv .nav {
+  height: 0.7rem;
+  width: 100%;
+  display: block;
+  line-height: 0.5rem;
+  padding: 0 0.467rem;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+.class_xinlv .nav span {
+  float: left;
+  font-size: 16px;
+}
+.class_xinlv .nav .class_name {
+  float: right;
+  margin-right: 1.5rem;
+}
+.class_xinlv .btnBox .top {
+  height: 4rem;
+  background-color: #c0daa4;
+}
+.class_xinlv .btnBox .top .relativeBox {
+  height: 50%;
+  padding: 0 0.467rem;
+}
+.class_xinlv .btnBox .top .relativeBox > a > i {
+  margin-left: 0.3rem;
+}
+.class_xinlv .btnBox .top .relativeBox > a span {
+  color: white;
+}
+.class_xinlv .btnBox .top .relativeBox > a img {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 0.1rem;
+  color: blue;
+}
+.class_xinlv .btnBox .xinlv_chart {
+  height: 8rem;
+  width: 100%;
+}
+.class_xinlv .xinlv_letter {
+  width: 100%;
+  height: 1rem;
+  margin-top: 3rem;
+  font-size: 16px;
+  color: #aaaaaa;
+}
+.class_xinlv .xinlv_letter span {
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+}
+.class_xinlv .helpBox .help {
+  height: 1.2rem;
+  display: block;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+.class_xinlv .helpBox .help .relativeBox {
+  height: 100%;
+  padding: 0 0.467rem;
+  position: relative;
+}
+.class_xinlv .helpBox .help .relativeBox span:nth-child(2) {
+  position: absolute;
+  right: 0.934rem;
+}
+.class_xinlv .helpBox .help .relativeBox i {
+  position: absolute;
+  right: 0.467rem;
+}
 .training-btn {
   height: 1.2rem;
   line-height: 1.2rem;
@@ -7100,7 +7173,7 @@ nav > a.focus:after {
   padding-bottom: 1rem;
 }
 .form-submit.new {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 .form-submit a {
   display: block;
@@ -7172,7 +7245,7 @@ nav > a.focus:after {
   box-shadow: 2px 2px 5px #999;
 }
 .children-wrapper .add-children > a .icon-tianjia {
-  margin-right: .133rem;
+  margin-right: 0.133rem;
 }
 .children-ul > li {
   height: 3.467rem;
@@ -8450,7 +8523,7 @@ nav > a.focus:after {
 .xingqu-content .study-space .study-content .shipin-item {
   width: 4.37333333rem;
   height: 3.44rem;
-  margin-right: .4rem;
+  margin-right: 0.4rem;
   flex-shrink: 0;
 }
 .xingqu-content .study-space .study-content .shipin-item .shipin-img {
@@ -8557,7 +8630,7 @@ nav > a.focus:after {
 .login-tishi {
   margin-top: -0.7rem;
   padding: 0 0.6rem;
-  line-height: .6rem;
+  line-height: 0.6rem;
   color: #999999;
 }
 .ke-cheng-mu-biao {
@@ -8567,8 +8640,8 @@ nav > a.focus:after {
 .ke-cheng-mu-biao .set-box {
   width: 100%;
   min-height: 6.66666667rem;
-  border-radius: .2rem;
-  margin-bottom: .5rem;
+  border-radius: 0.2rem;
+  margin-bottom: 0.5rem;
   padding: 0.53333333rem 0.4rem;
   box-sizing: border-box;
   position: relative;
@@ -8589,7 +8662,7 @@ nav > a.focus:after {
 }
 .ke-cheng-mu-biao .set-box .star-content .icon-wujiaoxing {
   font-size: 0.8rem;
-  margin: 0 .1rem;
+  margin: 0 0.1rem;
 }
 .ke-cheng-mu-biao .set-box .star-content.teacher {
   height: 0.8rem;
@@ -8598,7 +8671,7 @@ nav > a.focus:after {
 }
 .ke-cheng-mu-biao .set-box .star-content.teacher .icon-wujiaoxing {
   font-size: 0.26666667rem;
-  margin: 0 .1rem;
+  margin: 0 0.1rem;
 }
 .ke-cheng-mu-biao .set-box > textarea {
   width: 100%;
@@ -8610,7 +8683,7 @@ nav > a.focus:after {
 }
 .ke-cheng-mu-biao .set-box.new > textarea {
   border: solid 0.01333333rem #999;
-  padding: .2rem;
+  padding: 0.2rem;
   width: 100%;
   height: 3.2rem;
   color: #000;
@@ -8622,7 +8695,7 @@ nav > a.focus:after {
   width: 100%;
   height: 1.09333333rem;
   margin-top: 0.4rem;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8657,7 +8730,7 @@ nav > a.focus:after {
 .tanchuang .mubiao-content {
   padding: 1.33333333rem 0.53333333rem;
   width: 100%;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   position: relative;
 }
 .tanchuang .mubiao-content .jieshao-guanbi {
@@ -8707,7 +8780,7 @@ nav > a.focus:after {
 }
 .huo-jiang-ji-lu .pic-content {
   margin-top: 0.26666667rem;
-  padding: .2rem;
+  padding: 0.2rem;
   border: 0.01333333rem solid #dedede;
 }
 .huo-jiang-ji-lu .pic-content .pic-title {
@@ -8717,13 +8790,13 @@ nav > a.focus:after {
 .huo-jiang-ji-lu .pic-content .pic-title input {
   border: 0.01333333rem solid #dedede;
   width: 100%;
-  line-height: .8rem;
-  text-indent: .2rem;
+  line-height: 0.8rem;
+  text-indent: 0.2rem;
 }
 .huo-jiang-ji-lu .pic-content .projects-box {
   position: relative;
-  margin-top: .2rem;
-  height: .7rem;
+  margin-top: 0.2rem;
+  height: 0.7rem;
   overflow: hidden;
 }
 .huo-jiang-ji-lu .pic-content .projects-box .item-box {
@@ -8733,9 +8806,9 @@ nav > a.focus:after {
 .huo-jiang-ji-lu .pic-content .projects-box .see-more {
   float: left;
   display: block;
-  margin-right: .1rem;
-  margin-bottom: .1rem;
-  padding: .1rem .2rem;
+  margin-right: 0.1rem;
+  margin-bottom: 0.1rem;
+  padding: 0.1rem 0.2rem;
   background: #f1f1f1;
 }
 .huo-jiang-ji-lu .pic-content .projects-box .pjc-item.active,
@@ -8766,13 +8839,13 @@ nav > a.focus:after {
   float: left;
 }
 .huo-jiang-ji-lu .pic-content .pic-box .shanchu-box .shanchu {
-  margin-top: .2rem;
+  margin-top: 0.2rem;
   position: absolute;
   right: 0;
   top: 0;
-  width: .5rem;
-  height: .5rem;
-  line-height: .5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
   background: rgba(0, 0, 0, 0.233);
   color: #fff;
   text-align: center;
@@ -8801,7 +8874,7 @@ nav > a.focus:after {
 .huo-jiang-ji-lu .pic-content .pic-box .img-item {
   float: left;
   width: 32%;
-  margin-top: .2rem;
+  margin-top: 0.2rem;
   height: 2rem;
   flex-shrink: 0;
   margin-left: 2%;
@@ -8825,9 +8898,10 @@ nav > a.focus:after {
   position: absolute;
   width: 2rem;
   transform: rotate(-30deg);
-  opacity: .8;
+  opacity: 0.8;
   right: 0;
 }
 .huo-jiang-ji-lu .pic-content.add-record-content {
   display: none;
 }
+/*# sourceMappingURL=studentMain.css.map */
