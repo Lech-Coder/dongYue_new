@@ -135,10 +135,10 @@ textarea{
     .fansi_show_button{
         /*background: red;*/
         width: 100%;
-        height: 50px;
+        height: 40px;
     }
     .fansi_show_button p{
-        font-size: 16px;
+        font-size: 14px;
         font-weight: bold;
         float: left;
     }
@@ -151,20 +151,34 @@ textarea{
     #toggle-button{
         display: none;
     }
+    #toggle-button2{
+        display: none;
+    }
     .button-label{
         position: relative;
         display: inline-block;
-        width: 50px;
-        height: 25px;
+        width: 35px;
+        height: 15px;
         background-color: #ccc;
         border: 1px solid #ccc;
-        border-radius: 25px;
+        border-radius: 20px;
+        cursor: pointer;
+        float: left;
+    }
+    .button-label2{
+        position: relative;
+        display: inline-block;
+        width: 35px;
+        height: 15px;
+        background-color: rgb(130, 182, 74);
+        border: 1px solid #ccc;
+        border-radius: 20px;
         cursor: pointer;
         float: left;
     }
 
     .text {
-        font-size: 14px;
+        font-size: 11px;
         color: rgb(170, 170, 170);
         float: right;
         /*
@@ -186,13 +200,17 @@ textarea{
         position: absolute;
         top: 0;
         left: 0;
-        width: 25px;
-        height: 25px;
+        width: 15px;
+        height: 15px;
         border-radius: 50%;
         background-color: #fff;
     }
     .button-label .circle{
         left: 0;
+        transition: all 0.3s;/*transition过度，时间为0.3秒*/
+    }
+    .button-label2 .circle{
+        left: 20px;
         transition: all 0.3s;/*transition过度，时间为0.3秒*/
     }
 
@@ -201,7 +219,7 @@ textarea{
     例如：div+p 选择所有紧接着<div>元素之后的<p>元素
     */
     #toggle-button:checked + label .button-label .circle{
-        left: 25px;
+        left: 20px;
     }
     #toggle-button:checked + label  .on{
         display: inline-block;
@@ -214,6 +232,18 @@ textarea{
     }
     /*设置页面end*/
 
+    #toggle-button2:checked + label .button-label2 .circle{
+        left: 0;
+    }
+    #toggle-button2:checked + label  .on{
+        display: inline-block;
+    }
+    #toggle-button2:checked + label  .off{
+        display: none;
+    }
+    #toggle-button2:checked + label .button-label2{
+        background-color: #ccc;
+    }
 }
 
 // 公共页数
