@@ -47,16 +47,17 @@ $(function () {
     $(this).parent().next().find("." + selectAim).addClass("show").siblings().removeClass("show");
   })
 
-  var databar1=[10,20,30,10,20,10]
-  var youxiu1=[30,30,30,30,30,30]
-  var lianghao1=[20,20,20,20,20,20]
-  var jige1=[10,10,10,10,10,10]
+  var databar1=[10,20,30,10]
+  var youxiu1=[30,30,30,30,30,30,10.4,9.8,9.3,8.9,8.6,8.4]
+  var lianghao1=[20,20,20,20,20,20,12.6,12.0,11.5,11.1,10.8,10.6]
+  var jige1=[10,10,10,10,10,10,12.6,12.0,11.5,11.1,10.8,10.6]
+   var  xasix_name =  ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级','初一', '初二chu', '初三chu','高一', '高二', '高三']
 
 
-  setLines($('.tizhi .num1').find(".point"),databar1,youxiu1,lianghao1,jige1,"我的得分");
-  setLines($('.tizhi .num1').find(".grade"),databar1,youxiu1,lianghao1,jige1,"我的成绩");
-  setLines($('.tizhi .num2').find(".point"),databar1,youxiu1,lianghao1,jige1,"我的得分");
-  setLines($('.tizhi .num2').find(".grade"),databar1,youxiu1,lianghao1,jige1,"我的成绩");
+  setLines($('.tizhi .num1').find(".point"),databar1,youxiu1,lianghao1,jige1,"我的得分",xasix_name);
+  setLines($('.tizhi .num1').find(".grade"),databar1,youxiu1,lianghao1,jige1,"我的成绩",xasix_name);
+  setLines($('.tizhi .num2').find(".point"),databar1,youxiu1,lianghao1,jige1,"我的得分",xasix_name);
+  setLines($('.tizhi .num2').find(".grade"),databar1,youxiu1,lianghao1,jige1,"我的成绩",xasix_name);
 
   $(".health-line-item").each(function () {
     $(this).find(">.chart-tab-btn").on("click", ">a", function () {
@@ -66,7 +67,7 @@ $(function () {
     })
   })
 
-  function setLines(wrapper, myData, youxiu, lianghao, jige,linename) {
+  function setLines(wrapper, myData, youxiu, lianghao, jige,linename,xasix_name) {
     var lineOption = {
       tooltip: {
         trigger: 'axis',
@@ -80,7 +81,7 @@ $(function () {
       xAxis: [
         {
           type: 'category',
-          data: ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级'],
+          data: xasix_name,
         }
       ],
       yAxis: [
