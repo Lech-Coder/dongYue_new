@@ -266,20 +266,24 @@ function simple_pie(dom,pdata){
             bottom:'10%',
             right:'10%',
         },
-        color:['#185c80','#1e9ea1','#e2b000','#ff7640'],
+        color:['#185c80','#ff7640','#e2b000','#1e9ea1'],
         tooltip : {
             formatter: "{b} : {d}%"
         },
         series : [
             {
                 type: 'pie',
-                radius : '55%',
+                radius : '50%',
                 center: ['50%', '60%'],
                 label:{
                     normal:{
-                        formatter: "{b}  {d}%",
+                        formatter: "{b}{d}%",
                         fontSize:12,
                     }
+                },
+                labelLine:{
+                    length:3,
+                    length2:3
                 },
                 data:pdata,
                 // itemStyle: {

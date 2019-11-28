@@ -54,7 +54,7 @@ $(function () {
    var  xasix_name =  ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级']
 
 
-  setLines($('.tizhi .num1').find(".point"),databar1,youxiu1,lianghao1,jige1,"我的得分",xasix_name);
+  setLines($('.tizhi .num1').find(".point"),databar1,youxiu1,lianghao1,null,"我的得分",xasix_name);
   setLines($('.tizhi .num1').find(".grade"),databar1,youxiu1,lianghao1,jige1,"我的成绩",xasix_name);
   setLines($('.tizhi .num2').find(".point"),databar1,youxiu1,lianghao1,jige1,"我的得分",xasix_name);
   setLines($('.tizhi .num2').find(".grade"),databar1,youxiu1,lianghao1,jige1,"我的成绩",xasix_name);
@@ -71,9 +71,20 @@ $(function () {
       var  xasix =  ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级','初一', '初二', '初三','高一', '高二', '高三']
       var start_index = xasix.indexOf(xasix_name[0])
       var end_index = xasix.indexOf(xasix_name[xasix_name.length-1])
+    if(!youxiu){
       youxiu= youxiu.slice(start_index,end_index+1)
+    }
+    if(!lianghao){
       lianghao= lianghao.slice(start_index,end_index+1)
+    }
+    console.log(jige)
+    if(jige){
+      console.log('dd')
       jige= jige.slice(start_index,end_index+1)
+    }
+
+
+
 
 
 
