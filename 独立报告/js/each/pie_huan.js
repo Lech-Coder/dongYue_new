@@ -9,7 +9,7 @@ function pie_huanxin(div,data) {
         },
         grid: {
             left:'5%',
-            top:'5%',
+            top:'10%',
             bottom:'5%',
             right:'5%',
             containLabel: true
@@ -17,8 +17,8 @@ function pie_huanxin(div,data) {
         title: {
             text: '男生近视率32%',
             subtext:'女生近视率35%',
-            x: 'center',
-            y: 'center',
+            x: '43%',
+            y: '53%',
             textStyle: {
                 fontSize:18,
                 fontWeight:'normal',
@@ -31,10 +31,8 @@ function pie_huanxin(div,data) {
         },
 
         legend: {
-            orient: 'vertical',
-            x: '2%',
-            y:'5%',
-            height:300,
+            // orient: 'vertical',
+            x: '3%',
             data:changdata(data)
         },
         series: [
@@ -43,50 +41,52 @@ function pie_huanxin(div,data) {
                 name:'近视率',
                 type:'pie',
                 radius: ['40%', '55%'],
-                label: {
-                    normal: {
-                        formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
-                        backgroundColor: '#eee',
-                        borderColor: '#aaa',
-                        borderWidth: 1,
-                        borderRadius: 4,
-                        // shadowBlur:3,
-                        // shadowOffsetX: 2,
-                        // shadowOffsetY: 2,
-                        // shadowColor: '#999',
-                        // padding: [0, 7],
-                        rich: {
-                            a: {
-                                color: '#999',
-                                lineHeight: 22,
-                                align: 'center'
-                            },
-                            // abg: {
-                            //     backgroundColor: '#333',
-                            //     width: '100%',
-                            //     align: 'right',
-                            //     height: 22,
-                            //     borderRadius: [4, 4, 0, 0]
-                            // },
-                            hr: {
-                                borderColor: '#aaa',
-                                width: '100%',
-                                borderWidth: 0.5,
-                                height: 0
-                            },
-                            b: {
-                                fontSize: 16,
-                                lineHeight: 33
-                            },
-                            per: {
-                                color: '#eee',
-                                backgroundColor: '#334455',
-                                padding: [2, 4],
-                                borderRadius: 2
-                            }
-                        }
-                    }
-                },
+                center: ['50%', '60%'],
+                // label: {
+                //     show:false,
+                //     // normal: {
+                //     //     formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                //     //     backgroundColor: '#eee',
+                //     //     borderColor: '#aaa',
+                //     //     borderWidth: 1,
+                //     //     borderRadius: 4,
+                //     //     // shadowBlur:3,
+                //     //     // shadowOffsetX: 2,
+                //     //     // shadowOffsetY: 2,
+                //     //     // shadowColor: '#999',
+                //     //     // padding: [0, 7],
+                //     //     rich: {
+                //     //         a: {
+                //     //             color: '#999',
+                //     //             lineHeight: 22,
+                //     //             align: 'center'
+                //     //         },
+                //     //         // abg: {
+                //     //         //     backgroundColor: '#333',
+                //     //         //     width: '100%',
+                //     //         //     align: 'right',
+                //     //         //     height: 22,
+                //     //         //     borderRadius: [4, 4, 0, 0]
+                //     //         // },
+                //     //         hr: {
+                //     //             borderColor: '#aaa',
+                //     //             width: '100%',
+                //     //             borderWidth: 0.5,
+                //     //             height: 0
+                //     //         },
+                //     //         b: {
+                //     //             fontSize: 16,
+                //     //             lineHeight: 33
+                //     //         },
+                //     //         per: {
+                //     //             color: '#eee',
+                //     //             backgroundColor: '#334455',
+                //     //             padding: [2, 4],
+                //     //             borderRadius: 2
+                //     //         }
+                //     //     }
+                //     // }
+                // },
                 data:data
             }
         ]
