@@ -210,7 +210,10 @@ function bar_duidie(dom,oridata,xdata,ydata) {
         xAxis : [
             {
                 type : 'category',
-                data : ydata
+                data : ydata,
+                axisLabel: {
+                    interval: 0
+                },
             }
         ],
         yAxis : [
@@ -379,8 +382,9 @@ function simple_line(dom,type_name,boy_data,girl_data,x_line_data) {
             boundaryGap: false,
             data: x_line_data,
             axisLabel:{
-                fontSize:16
-            }
+                fontSize:16,
+                interval: 0
+            },
         },
         yAxis: {
             type: 'value',
