@@ -7255,6 +7255,32 @@ i {
   padding: 0 10px;
   clear: both;
 }
+.studentClass .healthyBox .paicha_box .data_paicha {
+  line-height: 40px;
+}
+.studentClass .healthyBox .paicha_box .paicha_info {
+  width: 100%;
+}
+.studentClass .healthyBox .paicha_box .paicha_info .tiao_paicha {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.studentClass .healthyBox .paicha_box .paicha_info .chooseTop {
+  height: 38px;
+  position: relative;
+  float: left;
+  z-index: 999;
+  width: 38%;
+}
+.studentClass .healthyBox .paicha_box .paicha_info .chooseTop .btn_big {
+  display: inline-block;
+  height: 38px;
+  width: 100%;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+}
 .studentClass .healthyBox .top {
   position: relative;
   height: 24px;
