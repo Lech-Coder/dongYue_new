@@ -21,7 +21,10 @@ function bar_shili(div,xdata,ydata) {
                 data : xdata,
                 axisTick: {
                     alignWithLabel: true
-                }
+                },
+                axisLabel: {
+                    interval:0
+                },
             }
         ],
         yAxis : [
