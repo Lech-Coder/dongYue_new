@@ -1,6 +1,8 @@
 var  resizeChart=[]
 
 function pie_huanxin(div,data) {
+
+    console.log($(div)[0].style)
     var myChart = echarts.init(div);
     option = {
         tooltip: {
@@ -36,12 +38,11 @@ function pie_huanxin(div,data) {
             data:changdata(data)
         },
         series: [
-
             {
                 name:'近视率',
                 type:'pie',
                 radius: ['40%', '55%'],
-                center: ['50%', '60%'],
+                center: ['50%', '70%'],
                 // label: {
                 //     show:false,
                 //     // normal: {
@@ -212,6 +213,7 @@ function bar_duidie(dom,oridata,xdata,ydata) {
                 type : 'category',
                 data : ydata,
                 axisLabel: {
+                    fontSize:10,
                     interval: 0
                 },
             }
@@ -382,7 +384,7 @@ function simple_line(dom,type_name,boy_data,girl_data,x_line_data) {
             boundaryGap: false,
             data: x_line_data,
             axisLabel:{
-                fontSize:16,
+                fontSize:12,
                 interval: 0
             },
         },
