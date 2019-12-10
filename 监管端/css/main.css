@@ -4018,6 +4018,9 @@ img {
 .ml25 {
   margin-left: 25px;
 }
+.ml5b {
+  margin-left: 5%;
+}
 .mt5 {
   margin-top: 5px;
 }
@@ -7266,14 +7269,49 @@ i {
   height: 40px;
   line-height: 40px;
 }
-.studentClass .healthyBox .paicha_box .paicha_info .chooseTop {
+.studentClass .healthyBox .paicha_box .paicha_info .tiao_paicha .select_xiangmu {
+  width: 80%;
+  float: left;
+}
+.studentClass .healthyBox .paicha_box .paicha_info .tiao_paicha .select_xiangmu .image-add {
+  width: 5%;
+  height: 40px;
+  color: #252525;
+  position: relative;
+  float: left;
+}
+.studentClass .healthyBox .paicha_box .paicha_info .tiao_paicha .select_xiangmu .image-add::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40px;
+  margin-left: -20px;
+  margin-top: -5px;
+  border-top: 10px solid;
+}
+.studentClass .healthyBox .paicha_box .paicha_info .tiao_paicha .select_xiangmu .image-add::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  margin-left: -5px;
+  margin-top: -20px;
+  border-left: 10px solid;
+}
+.studentClass .healthyBox .paicha_box .paicha_info .tiao_paicha .select-xiangmubtn {
+  width: 20%;
+  float: right;
+}
+.studentClass .healthyBox .paicha_box .paicha_info .chooseTop_2 {
   height: 38px;
   position: relative;
   float: left;
   z-index: 999;
-  width: 38%;
+  width: 45%;
 }
-.studentClass .healthyBox .paicha_box .paicha_info .chooseTop .btn_big {
+.studentClass .healthyBox .paicha_box .paicha_info .chooseTop_2 .btn_big {
   display: inline-block;
   height: 38px;
   width: 100%;

@@ -17,8 +17,7 @@
         $('.leftNav>ul>li').eq(2).addClass('focus')
         $('.leftNav>ul>li>ul>li').removeClass('focus')
         $('.leftNav>ul>li').eq(2).find('li').eq(5).addClass('focus')
-        $('select').children('option').first().hide();
-        // $('select').children('option').eq(1).attr("selected", "selected");
+        // $('select').children('option').first().hide();
       })
 
   </script>
@@ -107,61 +106,83 @@
           <h3>重复数据排查</h3>
         </div>
         <div class="paicha_info mt10">
-          <p>身高/体重/肺活量 数据排查</p>
           <div class="tiao_paicha mt10">
-            <div class="chooseTop">
-              <select class="time btn_big">
-                <option >选择学校</option>
-                <option value="学校1">学校1</option>
-                <option value="学校2">学校2</option>
-                <option value="学校3">学校3</option>
-                <option value="学校4">学校4</option>
-                <option value="学校5">学校5</option>
+            <div class="select_xiangmu">
+              <div class="chooseTop_2">
+                <select class="time btn_big">
+                  <option >选择学校</option>
+                  <option value="学校1">学校1</option>
+                  <option value="学校2">学校2</option>
+                  <option value="学校3">学校3</option>
+                  <option value="学校4">学校4</option>
+                  <option value="学校5">学校5</option>
 
-              </select>
+                </select>
 
+              </div>
+              <div class="chooseTop_2 ml5b">
+                <select class="time btn_big">
+                  <option >选择年级</option>
+                  <option value="年级1">年级1</option>
+                  <option value="年级2">年级2</option>
+                  <option value="年级3">年级3</option>
+                  <option value="年级4">年级4</option>
+                  <option value="年级5">年级5</option>
+                </select>
+              </div>
             </div>
-            <div class="chooseTop ml25">
-              <select class="time btn_big">
-                <option >选择年级</option>
-                <option value="年级1">年级1</option>
-                <option value="年级2">年级2</option>
-                <option value="年级3">年级3</option>
-                <option value="年级4">年级4</option>
-                <option value="年级5">年级5</option>
-              </select>
-            </div>
-            <span class="btn themeBtn ml25">导出</span>
+
           </div>
 
         </div>
-
         <div class="paicha_info mt10">
-          <p>其他项目 数据排查</p>
           <div class="tiao_paicha mt10">
-            <div class="chooseTop">
-              <select class="time btn_big">
-                <option >选择学校</option>
-                <option value="学校1">学校1</option>
-                <option value="学校2">学校2</option>
-                <option value="学校3">学校3</option>
-                <option value="学校4">学校4</option>
-                <option value="学校5">学校5</option>
+            <div class="select_xiangmu">
+              <div class="chooseTop_2">
+               组合项目一
+              </div>
+              <div class="chooseTop_2 ml5b">
+                组合项目二
+              </div>
+            </div>
+          </div>
 
-              </select>
+        </div>
+        <div class="paicha_info mt10  select-choose">
+          <div class="tiao_paicha mt10">
+            <div class="select_xiangmu">
+
+              <div class="chooseTop_2">
+                <select class="time btn_big">
+                  <option >选择项目一</option>
+                  <option value="身高">身高</option>
+                  <option value="体重">体重</option>
+                  <option value="肺活量">肺活量</option>
+                  <option value="50米跑">50米跑</option>
+                  <option value="坐位体前屈">坐位体前屈</option>
+                  <option value="一分钟仰卧起坐">一分钟仰卧起坐</option>
+                  <option value="50米*8往返跑">50米*8往返跑</option>
+                  <option value="立定跳远">立定跳远</option>
+                  <option value="800米跑">800米跑</option>
+                  <option value="1000米跑">1000米跑</option>
+                  <option value="引体向上">引体向上</option>
+                </select>
+              </div>
+              <div class="image-add">
+              </div>
+              <div class="chooseTop_2">
+                <select class="time btn_big">
+                  <option >选择项目二</option>
+                  <option value="身高">身高</option>
+                  <option value="体重">体重</option>
+                  <option value="肺活量">肺活量</option>
+                  <option value="50米跑">50米跑</option>
+                  <option value="坐位体前屈">坐位体前屈</option>
+                </select>
+              </div>
 
             </div>
-            <div class="chooseTop ml25">
-              <select class="time btn_big">
-                <option >选择年级</option>
-                <option value="年级1">年级1</option>
-                <option value="年级2">年级2</option>
-                <option value="年级3">年级3</option>
-                <option value="年级4">年级4</option>
-                <option value="年级5">年级5</option>
-              </select>
-            </div>
-            <span class="btn themeBtn ml25">导出</span>
+              <span class="btn themeBtn">导出</span>
           </div>
 
         </div>
@@ -172,31 +193,40 @@
         </div>
         <div class="paicha_info mt10">
           <div class="tiao_paicha mt10">
-            <div class="chooseTop">
-              <select class="time btn_big">
-                <option >选择学校</option>
-                <option value="学校1">学校1</option>
-                <option value="学校2">学校2</option>
-                <option value="学校3">学校3</option>
-                <option value="学校4">学校4</option>
-                <option value="学校5">学校5</option>
-
-              </select>
-
+            <div class="select_xiangmu">
+              <div class="chooseTop_2" style="width: 95%">
+                <select class="time btn_big">
+                  <option >选择学校</option>
+                  <option value="学校1">学校1</option>
+                  <option value="学校2">学校2</option>
+                  <option value="学校3">学校3</option>
+                  <option value="学校4">学校4</option>
+                  <option value="学校5">学校5</option>
+                </select>
+              </div>
             </div>
-            <div class="chooseTop ml25">
-              <select class="time btn_big">
-                <option >选择年级</option>
-                <option value="年级1">年级1</option>
-                <option value="年级2">年级2</option>
-                <option value="年级3">年级3</option>
-                <option value="年级4">年级4</option>
-                <option value="年级5">年级5</option>
-              </select>
-            </div>
-            <span class="btn themeBtn ml25">导出</span>
           </div>
+        </div>
+        <div class="paicha_info mt10">
+          <div class="tiao_paicha mt10">
+            <div class="select_xiangmu">
+              <div class="chooseTop_2">
+                <select class="time btn_big">
+                  <option >选择年级</option>
+                  <option value="年级1">年级1</option>
+                  <option value="年级2">年级2</option>
+                  <option value="年级3">年级3</option>
+                  <option value="年级4">年级4</option>
+                  <option value="年级5">年级5</option>
+                </select>
+              </div>
+              <div class="chooseTop_2 ml5b t_r">
+                <span class="btn themeBtn ">导出</span>
+              </div>
+            </div>
 
+
+          </div>
         </div>
 
       </div>
