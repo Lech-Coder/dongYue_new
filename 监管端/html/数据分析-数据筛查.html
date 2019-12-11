@@ -182,7 +182,7 @@
               </div>
 
             </div>
-              <span class="btn themeBtn">导出</span>
+              <span class="btn themeBtn grade_dao">导出</span>
           </div>
 
         </div>
@@ -221,7 +221,9 @@
                 </select>
               </div>
               <div class="chooseTop_2 ml5b t_r">
-                <span class="btn themeBtn ">导出</span>
+                <span class="btn themeBtn grade_dao">导出
+
+                </span>
               </div>
             </div>
 
@@ -235,5 +237,19 @@
     </div>
   </div>
 </body>
+<script>
+  $('.grade_dao').on('click',function () {
+    $(this)[0].innerHTML = ""
+    $(this).append(' <img src="../images/load.gif" alt="">')
+    time(this,3000)
+  })
+
+  function time(div,time) {
+    setTimeout(function () {
+      $(div)[0].innerHTML = '导出'
+    },time)
+
+  }
+</script>
 
 </html>

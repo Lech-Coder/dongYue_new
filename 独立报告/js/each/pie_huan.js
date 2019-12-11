@@ -2,7 +2,8 @@ var  resizeChart=[]
 
 function pie_huanxin(div,data) {
 
-    console.log($(div)[0].style)
+    var add = Math.floor((data.length-20)/8) *20
+    console.log($(div)[0].style.height =($(div)[0].clientHeight+add)+"px")
     var myChart = echarts.init(div);
     option = {
         tooltip: {
@@ -42,7 +43,7 @@ function pie_huanxin(div,data) {
                 name:'近视率',
                 type:'pie',
                 radius: ['40%', '55%'],
-                center: ['50%', '70%'],
+                center: ['50%', '60%'],
                 // label: {
                 //     show:false,
                 //     // normal: {

@@ -7319,6 +7319,10 @@ i {
   text-align: center;
   cursor: pointer;
 }
+.studentClass .healthyBox .paicha_box .paicha_info .chooseTop_2 img {
+  width: 30px;
+  height: 30px;
+}
 .studentClass .healthyBox .top {
   position: relative;
   height: 24px;

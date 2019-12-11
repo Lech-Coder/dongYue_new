@@ -23,7 +23,12 @@ function bar_shili(div,xdata,ydata) {
                     alignWithLabel: true
                 },
                 axisLabel: {
-                    interval:0
+                    interval:0,
+                    rotate:30,
+                    fontSize:12,
+                    verticalAlign:'center'
+                    // align:'center',
+                    // margin:20
                 },
             }
         ],
