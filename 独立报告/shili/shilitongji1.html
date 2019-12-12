@@ -235,51 +235,20 @@
     pie_shili($('#school_tongji_pie')[0],point,jishi_data)
 
     var banji_data = [
-        {value:335, name:'一年级1'},
-        {value:310, name:'一年级2'},
-        {value:234, name:'一年级3'},
-        {value:135, name:'一年级4'},
-        {value:335, name:'一年级5'},
-        {value:310, name:'一年级6'},
-        {value:234, name:'一年级7'},
-        {value:135, name:'一年级8'},
-        {value:335, name:'二年级1'},
-        {value:310, name:'二年级2'},
-        {value:234, name:'二年级3'},
-        {value:135, name:'二年级4'},
-        {value:335, name:'三年级1'},
-        {value:310, name:'三年级2'},
-        {value:234, name:'三年级3'},
-        {value:135, name:'三年级4'},
-        {value:335, name:'四年级1'},
-        {value:310, name:'四年级2'},
-        {value:234, name:'四年级3'},
-        {value:135, name:'四年级4'},
-        {value:335, name:'五年级1'},
-        {value:310, name:'五年级2'},
-        {value:234, name:'五年级3'},
-        {value:135, name:'五年级4'},
-        {value:335, name:'六年级1'},
-        {value:310, name:'六年级2'},
-        {value:234, name:'六年级3'},
-        {value:135, name:'六年级4'},
-        {value:234, name:'五年级5'},
-        {value:135, name:'五年级6'},
-        {value:335, name:'七年级1'},
-        {value:310, name:'八年级2'},
-        {value:234, name:'七年级3'},
-        {value:135, name:'七年级4'},
-        {value:135, name:'八年级4'},
-        {value:234, name:'八年级5'},
-        {value:135, name:'八年级6'},
-        {value:335, name:'九年级1'},
-        {value:310, name:'八年级2'},
-        {value:234, name:'九年级3'},
-        {value:135, name:'九年级4'}
     ]
+
+    for(var i = 0;i<80;i++){
+        var v = Math.floor(Math.random()*1000)
+        var n = '一年级'+i
+        banji_data.push({
+            value:v,
+            name:n
+        })
+    }
     pie_huanxin($('#banjitongji_chart')[0],banji_data)
 
-    var grade_one = ['一年级一班', '一年级二班', '一年级三班', '一年级四班', '一年级o班', '一年级wu班', '一年级liu班', '一年级qi班']
+    var grade_one = ['一年级一班', '一年级二班', '一年级三班', '一年级四班', '一年级o班', '一年级wu班'
+        , '一年级liu班', '一年级qi班', '一年级fliu班', '一年级qfi班', '一年级dqi班', '一年级fliau班', '一年d级qfi班']
     var value_one = [0.7, 7.8, 14.3, 29.6, 14.3, 29.6, 14.3, 29.6]
     //一年级
     pie_shili($('#jinshilv')[0],point,jishi_data)
