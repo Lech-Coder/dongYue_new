@@ -497,6 +497,8 @@ function line_sport(div,data_x,data) {
             axisLabel: {
                 formatter: '{value}',
             },
+
+
         },
         series: series
     };
