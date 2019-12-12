@@ -2,8 +2,6 @@ var  resizeChart=[]
 
 function pie_huanxin(div,data) {
 
-    var add = Math.floor((data.length-20)/8) *20
-    console.log($(div)[0].style.height =($(div)[0].clientHeight+add)+"px")
     var myChart = echarts.init(div);
     option = {
         tooltip: {
@@ -21,7 +19,7 @@ function pie_huanxin(div,data) {
             text: '男生近视率32%',
             subtext:'女生近视率35%',
             x: '43%',
-            y: '53%',
+            y: '45%',
             textStyle: {
                 fontSize:18,
                 fontWeight:'normal',
@@ -34,8 +32,13 @@ function pie_huanxin(div,data) {
         },
 
         legend: {
-            // orient: 'vertical',
-            x: '3%',
+            orient: 'vertical',
+            height:300,
+            type:'scroll',
+            x: '5%',
+            y:'5%',
+            borderWidth:1,
+            borderColor:'black',
             data:changdata(data)
         },
         series: [
@@ -43,7 +46,11 @@ function pie_huanxin(div,data) {
                 name:'近视率',
                 type:'pie',
                 radius: ['40%', '55%'],
-                center: ['50%', '60%'],
+                center: ['50%', '50%'],
+                labelLine:{
+                    length:3,
+                    length2:3
+                },
                 // label: {
                 //     show:false,
                 //     // normal: {
@@ -500,4 +507,135 @@ function  data_set(data) {
         le.push(data[i].name)
     }
     return le
+}
+
+//视力统计   班级统计图
+function class_tongji_bar(dom,dataAxis,data) {
+    var myChart = echarts.init(dom);
+    // var dataAxis = [];
+    // var data = [];
+    var yMax = 100;
+    var dataShadow = [];
+    //
+    // for (var i= 0;i<80;i++){
+    //     dataAxis.push("一年级"+i+'班')
+    //     data.push(Math.floor(Math.random()*100))
+    // }
+    for (var i = 0; i < data.length; i++) {
+        dataShadow.push(yMax);
+    }
+
+    console.log(dataAxis.length)
+    option = {
+        title: {},
+        grid: {
+            left:'5%',
+            top:'5%',
+            bottom:'5%',
+            right:'5%',
+            containLabel: true
+        },
+        xAxis: {
+            data: dataAxis,
+            axisLabel: {
+                // inside: true,
+                textStyle: {
+                    color: '#000'
+                },
+                interval:0,
+                formatter:function(val){
+                    return val.split("").join("\n");
+                },
+                fontSize:8
+            },
+
+            axisTick: {
+                show: false
+            },
+            axisLine: {
+                show: false
+            },
+            z: 10
+        },
+        yAxis: {
+            axisLine: {
+                show: false
+            },
+            axisTick: {
+                show: false
+            },
+            axisLabel: {
+                formatter:'{value}%'
+            }
+        },
+        dataZoom: [
+            {
+                type: 'inside'
+            }
+        ],
+        series: [
+            { // For shadow
+                type: 'bar',
+                itemStyle: {
+                    normal: {color: 'rgba(0,0,0,0.05)'}
+                },
+                barGap:'-100%',
+                barCategoryGap:'40%',
+                data: dataShadow,
+                animation: false
+            },
+            {
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                        color: function (d) {
+                            var num = d.data
+                            if (num>=90){
+                                return '#8bc34a';
+                            }else if (80<=num&&num<90){
+                                return '#b3db5e';
+                            }else if (60<=num&&num<80){
+                                return '#eaed42';
+                            }else{
+                                return '#ed8a42';
+                            }
+                        }
+                    },
+                    // emphasis: {
+                    //     color: new echarts.graphic.LinearGradient(
+                    //         0, 0, 0, 1,
+                    //         [
+                    //             {offset: 0, color: '#2378f7'},
+                    //             {offset: 0.7, color: '#2378f7'},
+                    //             {offset: 1, color: '#83bff6'}
+                    //         ]
+                    //     )
+                    // }
+                },
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top',
+                        textStyle: {
+                            fontSize:'70%'
+                        },
+
+                    }
+                },
+                data: data
+            }
+        ]
+    };
+    myChart.setOption(option, true);
+
+    // Enable data zoom when user click bar.
+    var zoomSize = 6;
+    myChart.on('click', function (params) {
+        // console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
+        myChart.dispatchAction({
+            type: 'dataZoom',
+            startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
+            endValue: dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
+        });
+    });
 }

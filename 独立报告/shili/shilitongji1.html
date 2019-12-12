@@ -234,18 +234,31 @@
     var point  = jishi_data[0].value/(jishi_data[0].value+jishi_data[1].value)
     pie_shili($('#school_tongji_pie')[0],point,jishi_data)
 
-    var banji_data = [
-    ]
+    // var banji_data = [
+    // ]
+    //
+    // for(var i = 0;i<80;i++){
+    //     var v = Math.floor(Math.random()*1000)
+    //     var n = '一年级'+i
+    //     banji_data.push({
+    //         value:v,
+    //         name:n
+    //     })
+    // }
+    // pie_huanxin($('#banjitongji_chart')[0],banji_data)
 
-    for(var i = 0;i<80;i++){
-        var v = Math.floor(Math.random()*1000)
-        var n = '一年级'+i
-        banji_data.push({
-            value:v,
-            name:n
-        })
+    var dataAxis = [];
+    var banji_data = [];
+
+    for (var i= 0;i<80;i++){
+        dataAxis.push("一年级"+i+'班')
+        banji_data.push(Math.floor(Math.random()*100))
     }
-    pie_huanxin($('#banjitongji_chart')[0],banji_data)
+
+    class_tongji_bar($('#banjitongji_chart')[0],dataAxis,banji_data)
+
+
+
 
     var grade_one = ['一年级一班', '一年级二班', '一年级三班', '一年级四班', '一年级o班', '一年级wu班'
         , '一年级liu班', '一年级qi班', '一年级fliu班', '一年级qfi班', '一年级dqi班', '一年级fliau班', '一年d级qfi班']
