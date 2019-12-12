@@ -440,6 +440,10 @@ function rose_pie(dom,pdata){
                         fontSize:12,
                     }
                 },
+                labelLine:{
+                    length:3,
+                    length2:3
+                },
                 data:pdata,
                 // itemStyle: {
                 //     emphasis: {
@@ -474,12 +478,12 @@ function line_sport(div,data_x,data) {
             type: 'category',
             data: data_x
         },
-        // grid: {
-        //     left:'10%',
-        //     top:'5%',
-        //     bottom:'10%',
-        //     right:'10%',
-        // },
+        grid: {
+            left:'10%',
+            top:'10%',
+            bottom:'15%',
+            right:'10%',
+        },
         tooltip: {
             trigger: 'axis'
         },
@@ -516,7 +520,7 @@ function class_tongji_bar(dom,dataAxis,data) {
     // var data = [];
     var yMax = 100;
     var dataShadow = [];
-    //
+
     // for (var i= 0;i<80;i++){
     //     dataAxis.push("一年级"+i+'班')
     //     data.push(Math.floor(Math.random()*100))

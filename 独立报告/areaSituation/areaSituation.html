@@ -22,10 +22,9 @@
     <title>智慧校园</title>
 </head>
 
-<body>
-<div class="pageContent">
-    <div class="rightPage">
-        <div class="datelimit">
+<body style="overflow: inherit">
+<div class="pageContent" style="width: 210mm;margin: 0 auto ;">
+
             <div class="healthyChart">
                 <div class="zhihuiBox ">
                     <div class="f16">
@@ -111,7 +110,7 @@
                                 </div>
                             </div>
                             <div class="nei_rong_r">
-                               <h3>学生体质健康各分段占比：</h3>
+                               <h3 class="mt10">学生体质健康各分段占比：</h3>
                                 <div class="health_rose" ></div>
                                 <div class="button_healthy_box" style="text-align: center">
                                     <a class="btn btn-green" >优良率：60%</a>
@@ -358,26 +357,14 @@
 
                 </div>
             </div>
-        </div>
-    </div>
+
 </div>
 
 </body>
 <script src="../js/each/pie_huan.js"></script>
 <script src="../js/each/bar_shili.js"></script>
 <script>
-    //各个图的高度
-    var height=$('.nei_rong_r')[0].clientWidth
-    $('.health_rose')[0].style.height=height*0.8+'px'
-    for (let i=1;i<$('.health_rose').length;i++){
-        $('.health_rose')[i].style.height=height*0.6+'px'
-    }
-    for (let i=0;i<$('.paimary_info_line').length;i++) {
-        $('.paimary_info_line')[i].style.height = height * 0.7 + 'px'
-    }
-    for (let i=0;i<$('.single_healthy_line').length;i++) {
-        $('.single_healthy_line')[i].style.height = height * 0.6 + 'px'
-    }
+
 
 
     var healthy_data=[
