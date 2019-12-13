@@ -596,11 +596,11 @@ function class_tongji_bar(dom,dataAxis,data) {
                     normal: {
                         color: function (d) {
                             var num = d.data
-                            if (num>=90){
+                            if (num<=10){
                                 return '#8bc34a';
-                            }else if (80<=num&&num<90){
+                            }else if (10<num&&num<=20){
                                 return '#b3db5e';
-                            }else if (60<=num&&num<80){
+                            }else if (20<num&&num<=40){
                                 return '#eaed42';
                             }else{
                                 return '#ed8a42';
