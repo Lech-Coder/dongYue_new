@@ -176,7 +176,6 @@
                     </div>
                     </div>
                 </div>
-
                 <!--一年级-->
                 <div class="zhihuiBox">
                     <h1>一年级</h1>
@@ -203,6 +202,42 @@
                                     <h2>班级近视率对比</h2>
                                 </div>
                                 <div class="jinshi_fenbu" id="jinshilvduibi_1"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pageBreak">
+                    <!--如果需要强制换页就在上一页的未尾出加上此代码-->
+                </div>
+                <!--二年级-->
+                <div class="zhihuiBox">
+                    <h1>二年级</h1>
+                    <div class="clearfix">
+                        <div class="banjipingjun">
+                            <h2>近视率</h2>
+                            <div class="tongji_chart" id="jinshilv2"></div>
+                        </div>
+
+                        <div class="banji-chart no-padding">
+                            <h2>变化趋势</h2>
+                            <div class="tongji_chart" id="bianhuaqushi2"></div>
+                        </div>
+                        <!--预警-->
+                        <div class="banjitongji">
+                            <div class="yujin_fenbu">
+                                <div class="title">
+                                    <h2>视力预警分布</h2>
+                                </div>
+                                <div class="jinshi_fenbu" id="yujinfenbu_one2"></div>
+                            </div>
+                            <div class="jinshi_fenbu">
+                                <div class="title">
+                                    <h2>班级近视率对比</h2>
+                                </div>
+                                <div class="jinshi_fenbu" id="jinshilvduibi_2"></div>
                             </div>
 
                         </div>
@@ -268,13 +303,17 @@
     line_shili($('#bianhuaqushi')[0],xdata,jishilv,shilibuliang)
     bar_shili($('#jinshilvduibi_1')[0],grade_one,value_one)
 
+    pie_shili($('#jinshilv2')[0],point,jishi_data)
+    line_shili($('#bianhuaqushi2')[0],xdata,jishilv,shilibuliang)
+    bar_shili($('#jinshilvduibi_2')[0],grade_one,value_one)
+
     //预警
     var yujin_data = [110,190,130]
     bar_yujin($('#yujin_one')[0],yujin_data)
 
     bar_yujin($('#yujinfenbu_one')[0],yujin_data)
 
-
+    bar_yujin($('#yujinfenbu_one2')[0],yujin_data)
 
 </script>
 </body>
