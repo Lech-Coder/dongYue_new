@@ -4256,6 +4256,8 @@ var areaCode={
   }
 }
 $(function(){
+
+
   //省市区名字
 
   //回显数据
@@ -4266,16 +4268,16 @@ $(function(){
   shengCode ? $('.address .sheng>span').text(codeAsArr[0][shengCode]) : ''//回显省
   shengCode && resShiCode ? $('.address .shi>span').text(areaCode[shengCode][resShiCode]) : ''//回显市
   shengCode && resShiCode && resQuCode ? $('.address .qu>span').text(areaCode[resShiCode][resQuCode]) : '' //回显区
-  
+
   var $provinces=$('.sheng .limit')
 	var provincesHtml=''
-	
+
 	var $city=$('.shi .limit')
 	var cityHtml=''
-  
+
 	var $area=$('.qu .limit')
 	var areaHtml=''
-  
+
   var provinces=codeAsArr[0];//省份的对象
   //回显市
   $city.find('li').remove()
@@ -4300,7 +4302,7 @@ $(function(){
   $('.address').delegate('.sheng .limit li','click',provincesClick)
   $('.address').delegate('.shi .limit li','click',cityClick)
   $('.address').delegate('.qu .limit li','click',areaClick)
-	
+
   function provincesClick(){
     var $this=$(this)
     var $sheng=$('.sheng>span')
@@ -4322,7 +4324,7 @@ $(function(){
     }
 		$city.append(cityHtml)
 	}
-	
+
 	function cityClick(){
 		var $this=$(this)
 		var $city=$('.shi>span')
@@ -4332,7 +4334,7 @@ $(function(){
 		var cityCode=$this.attr('cityCode').trim()
 		var province=$('.sheng>span').html().trim();
     var area
-    
+
     $('.qu>span').html('区/县')
 
 		areaHtml=''
@@ -4351,11 +4353,28 @@ $(function(){
 	function areaClick(){
 		var $this=$(this)
 		var $area=$('.qu>span')
-		
+
 		var inner=$this.html().trim()
 		var areaCode=$this.attr('areaCode').trim()
 		$area.html(inner)
 		$area.attr('areaCode',areaCode)
+
+
+      var city = $('.shi>span')[0].innerText
+
+      if (teshudata.city.indexOf(city)>-1){
+        if (teshudata[city].indexOf($area[0].innerText)>-1){
+          $('#choose_export')[0].style.display = 'block'
+        } else {
+          $('#choose_export')[0].style.display = 'none'
+        }
+      }
   }
 
 })
+
+let teshudata = {
+  'city':['成都市'],
+  '成都市':['武侯区']
+}
+
