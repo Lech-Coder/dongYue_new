@@ -8904,4 +8904,7 @@ nav > a.focus:after {
 .huo-jiang-ji-lu .pic-content.add-record-content {
   display: none;
 }
+.no-border {
+  border: none !important;
+}
 /*# sourceMappingURL=studentMain.css.map */
