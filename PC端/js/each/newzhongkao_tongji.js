@@ -1,4 +1,6 @@
 function grade_tongji(dom,oridata,grade,grade_class) {
+
+    dom.style.height=(dom.clientWidth)/4+'px'
     var myChart = echarts.init(dom);
     var data0 = [];
     var data1 = [];
@@ -6,7 +8,9 @@ function grade_tongji(dom,oridata,grade,grade_class) {
     var data3 = [];
     var total;
     for (var i = 0, l = oridata[0].length; i < l; i++) {
-        total = oridata[0][i] + oridata[1][i] + oridata[2][i]+ oridata[2][i];
+        total = oridata[0][i]*1 + oridata[1][i]*1 + oridata[2][i]*1+ oridata[3][i]*1;
+
+        console.log(total)
         data0.push(Math.round(oridata[0][i]/total * 100));
         data1.push(Math.round(oridata[1][i]/total * 100));
         data3.push(Math.round(oridata[3][i]/total * 100));

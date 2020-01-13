@@ -236,12 +236,14 @@
 <script>
     for (let i=0;i<$('.chengjiupeople').length;i++) {
         $('.chengjiupeople')[i].style.height=$('.chengjiupeople')[0].clientWidth+'px'
-        // $('.shupaizi')[i].style.height=$('.chengjiupeople')[0].clientWidth+'px'
+
         half_pie($(".chengjiupeople")[i],20,40,'#28b4f2')   //40代表总人数
     }
-    $('.shupaizi')[0].style.height=$('.chengjiupeople')[0].clientWidth+'px'
-    $('.shupaizi')[1].style.height=$('.chengjiupeople')[0].clientWidth+'px'
-    $('.shupaizi')[2].style.height=$('.chengjiupeople')[0].clientWidth+'px'
+
+    let total_div = $('.defen_zhanbi').length+$('.chengjiupeople').length
+    for (let i=0;i<Math.ceil(total_div/5);i++){
+        $('.shupaizi')[i].style.height=$('.chengjiupeople')[0].clientWidth+'px'
+    }
 
     var data =[
         {value:335, name:'优秀'},

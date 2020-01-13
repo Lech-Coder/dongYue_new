@@ -9697,12 +9697,6 @@ input[type="button"] {
   background: #969696;
   z-index: 10;
 }
-.zk-table .table-content .shupaizi {
-  margin: 0px auto;
-  word-wrap: break-word;
-  letter-spacing: 10px;
-  writing-mode: vertical-lr;
-}
 .zk-table .grade_tongji {
   width: 100%;
 }
@@ -9742,6 +9736,12 @@ input[type="button"] {
   position: absolute;
   bottom: 35px;
   left: 20%;
+}
+.shupaizi {
+  margin: 0px auto;
+  word-wrap: break-word;
+  letter-spacing: 10px;
+  writing-mode: vertical-lr;
 }
 #lh_table {
   line-height: 20px;
