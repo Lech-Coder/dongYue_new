@@ -208,10 +208,11 @@ function bar_duidie(dom,oridata,xdata,ydata) {
             // formatter: "{b}: {c} ({d}%)"
         },
         grid: {
-            left:'10%',
+            left:'5%',
             top:'10%',
-            bottom:'10%',
-            right:'10%',
+            bottom:'3%',
+            right:'5%',
+            containLabel: true
         },
         legend: {
             data:xdata
@@ -222,7 +223,10 @@ function bar_duidie(dom,oridata,xdata,ydata) {
                 data : ydata,
                 axisLabel: {
                     fontSize:10,
-                    interval: 0
+                    interval: 0,
+                    formatter:function(val){
+                        return val.split("").join("\n");
+                    }
                 },
             }
         ],
@@ -384,7 +388,7 @@ function simple_line(dom,type_name,boy_data,girl_data,x_line_data) {
         grid: {
             left: '5%',
             right: '5%',
-            bottom: '10%',
+            bottom: '5%',
             containLabel: true
         },
         xAxis: {
@@ -393,7 +397,10 @@ function simple_line(dom,type_name,boy_data,girl_data,x_line_data) {
             data: x_line_data,
             axisLabel:{
                 fontSize:12,
-                interval: 0
+                interval: 0,
+                formatter:function(val){
+                    return val.split("").join("\n");
+                }
             },
         },
         yAxis: {
