@@ -9737,6 +9737,32 @@ input[type="button"] {
   bottom: 35px;
   left: 20%;
 }
+.zk-table .new_button {
+  height: 40px;
+  line-height: 40px;
+}
+.zk-table .new_button span {
+  display: inline-block;
+}
+.zk-table .new_button span span {
+  margin-left: 25px;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.zk-table .new_button span span.color_y {
+  background-color: #83b749;
+}
+.zk-table .new_button span span.color_l {
+  background-color: #00a9f0;
+}
+.zk-table .new_button span span.color_z {
+  background-color: #f59b1e;
+}
+.zk-table .new_button span span.color_c {
+  background-color: #d8d8d8;
+}
 .shupaizi {
   margin: 0px auto;
   word-wrap: break-word;
