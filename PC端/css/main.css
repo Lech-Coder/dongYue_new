@@ -5904,6 +5904,13 @@ input[type="button"] {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.setHomeWork-wrapper .class-select .new-label-name {
+  line-height: 50px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .setHomeWork-wrapper .class-select .link-group > a {
   float: left;
   width: 13%;
@@ -5920,6 +5927,29 @@ input[type="button"] {
 }
 .setHomeWork-wrapper .class-select .link-group > a:not(:nth-child(7n+1)) {
   margin-left: 1.5%;
+}
+.setHomeWork-wrapper .class-select .new-link-group > a {
+  float: left;
+  width: 13%;
+  line-height: 50px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  overflow: hidden;
+  height: 50px;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #e4eaf1;
+}
+.setHomeWork-wrapper .class-select .new-link-group > a:not(:nth-child(7n+1)) {
+  margin-left: 1.5%;
+}
+.setHomeWork-wrapper .class-select .new-link-group > a p {
+  line-height: 25px;
+  display: inline-block;
+  vertical-align: middle;
 }
 .setHomeWork-wrapper .class-select .search-all {
   padding: 0px;
