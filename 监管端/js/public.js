@@ -27,20 +27,20 @@ $(function(){
 
   var open = false;
   var eachSchoolHeight = 38;//每个学校的高度
-  var addHeight = 190;//初始五行的高度
+  var addHeight = 380;//初始五行的高度
   var openHeight = 0;//打开的累积的高度
   var allSchoolH = 0;//所有学校的合计高度
-  var openedNum = 5;
+  var openedNum = 10;
   $('body').on('click','.studentClass .healthyBox .more',function(){
     var schoolList = $(this).parent().parent().parent().find('.list');//当前点击的学校列表容器
     var schoolNum = schoolList.find('.row').length;//总共有多少学校list
 
     allSchoolH = schoolNum * addHeight;
     if((schoolNum - openedNum) > 0){
-      addHeight += 190;//点击一次高度叠加五
+      addHeight += 380;//点击一次高度叠加五
       schoolList.css('max-height',(addHeight - 10)+'px');
       schoolList.addClass(addHeight - 10);
-      openedNum += 5;
+      openedNum += 10;
     }else{
       schoolList.css('max-height',((schoolNum *  eachSchoolHeight % 5) - 10) + addHeight + 'px');//取余计算出高度展开
       schoolList.addClass('66666');

@@ -103,6 +103,7 @@
                                     <a href="javascript:;" class="btn themeBtn jxgl-jwtj">教务统计</a>
                                     <a ref="javascript:;" class="btn grayBtn jxgl-bjpm">班级成绩排名</a>
                                     <a ref="javascript:;" class="btn grayBtn  jxgl-jspf">教师评分排名</a>
+                                    <a ref="javascript:;" class="btn grayBtn jxgl-bjsl">班级视力排名</a>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +156,7 @@
                                     <a href="#" class="form-link">80</a>
                                 </div>
                             </div>
-                            
+
                         </div>
 
                         <!-- 班级成绩排名 -->
@@ -171,7 +172,7 @@
                                 <div grade="5" class="class-item  ">五年级</div>
                                 <div grade="6" class="class-item  ">六年级</div>
                             </div>
-            
+
                             <div class="table-row f16">
                                 <div class="col-2-16">班级名称</div>
                                 <div class="col-3-16">负责教师</div>
@@ -187,7 +188,7 @@
                                 <div class="col-3-16"></div>
                                 <div class="col-5-16"></div>
                             </div>
-                            
+
                             <div class="table-row back_white table-item txt_b">
                                 <div class="col-2-16">一年级（1）班</div>
                                 <div class="col-3-16">小张</div>
@@ -196,7 +197,7 @@
                                 <div class="col-5-16"></div>
                             </div>
 
-                            
+
                         </div>
 
                         <!-- 教师评分排名 -->
@@ -226,9 +227,51 @@
                                 <div class="col-3-16"></div>
                                 <div class="col-5-16"></div>
                             </div>
-                            
 
-                            
+
+
+                        </div>
+
+                        <!-- 班级视力排名 -->
+                        <div id="jxgl-bjsl" class="table-box excel-table mt20 hidden">
+                            <span>2017-2018</span>学年
+                            <span class="ml5">下学期</span>
+                            <span class="ml5"><small>2018.02-22 ~ 2018.07-15</small></span>
+                            <div class="row jiaoshikaohe clearfix">
+                                <div grade="1" class="class-item  active  ">一年级</div>
+                                <div grade="2" class="class-item  ">二年级</div>
+                                <div grade="3" class="class-item  ">三年级</div>
+                                <div grade="4" class="class-item  ">四年级</div>
+                                <div grade="5" class="class-item  ">五年级</div>
+                                <div grade="6" class="class-item  ">六年级</div>
+                                <div grade="A" class="class-item  ">全校</div>
+                            </div>
+
+                            <div class="table-row f16">
+                                <div class="col-2-16">班级名称</div>
+                                <div class="col-3-16">负责教师</div>
+                                <div class="col-3-16">班级左眼平均视力值</div>
+                                <div class="col-3-16">班级右眼平均视力值</div>
+                                <div class="col-5-16">班级平均视力值</div>
+                            </div>
+
+                            <div class="table-row back_white table-item txt_b">
+                                <div class="col-2-16">一年级（1）班</div>
+                                <div class="col-3-16">小张</div>
+                                <div class="col-3-16">4.6</div>
+                                <div class="col-3-16">4.81</div>
+                                <div class="col-5-16">4.71</div>
+                            </div>
+
+                            <div class="table-row back_white table-item txt_b">
+                                <div class="col-2-16">一年级（1）班</div>
+                                <div class="col-3-16">小张</div>
+                                <div class="col-3-16">4.6</div>
+                                <div class="col-3-16">4.81</div>
+                                <div class="col-5-16">4.71</div>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -241,6 +284,7 @@
                 $('#jxgl-jwtj').addClass('hidden');
                 $('#jxgl-bjpm').addClass('hidden');
                 $('#jxgl-jspf').addClass('hidden');
+                $('#jxgl-bjsl').addClass('hidden');
                 $(this).addClass('themeBtn').siblings().removeClass('themeBtn').addClass('grayBtn')
                 if ($(this).hasClass('jxgl-jwtj')) {
                     $('#jxgl-jwtj').removeClass('hidden');
@@ -248,9 +292,12 @@
                     $('#jxgl-bjpm').removeClass('hidden');
                 } else if ($(this).hasClass('jxgl-jspf')) {
                     $('#jxgl-jspf').removeClass('hidden');
+                }else if ($(this).hasClass('jxgl-bjsl')) {
+                    $('#jxgl-bjsl').removeClass('hidden');
                 }
             })
         </script>
+    </div>
 </body>
 
 </html>

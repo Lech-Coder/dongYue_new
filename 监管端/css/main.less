@@ -1968,20 +1968,24 @@ i{
           height: 100%;
           line-height: 36px;
           margin-right: 20px;
-          display: inline-block;
+
         }
         .title{
           min-width: 50px;
         }
 
+        .box{
           >span{
             height: 100%;
             margin-right: 20px;
             cursor: pointer;
+            display: inline-block;
             &.focus{
               color: @themeColor;
             }
           }
+        }
+
 
       }
     }
@@ -2561,6 +2565,7 @@ i{
               text-align: center;
               float: left;
               &.color_1 {
+
                 background-Color: #8BC34A;
                 position: relative;
                 z-index: 100;
@@ -2605,7 +2610,6 @@ i{
           float: left;
           height: 40px;
           text-align: center;
-
           .limit_gai {
             height: 100%;
             width: 24%;
@@ -2679,20 +2683,22 @@ i{
       >span{
         height: 100%;
         line-height: 36px;
-        display: inline-block;
       }
       .title{
         min-width: 50px;
       }
-
+      .box{
         >span{
           height: 100%;
           margin-right: 20px;
+          display: inline-block;
           cursor: pointer;
           &.focus{
             color: @themeColor;
           }
         }
+      }
+
 
     }
   }
@@ -3198,7 +3204,12 @@ i{
     }
   }
 }
-
+#gradeData_export{
+  display: none;
+}
+.daochu:hover #gradeData_export{
+  display: block;
+}
 // 学生课程课时
 .studentClass{
   position: absolute;
@@ -3334,6 +3345,75 @@ i{
     margin-top: 80px;
     padding: 0 10px;
     clear: both;
+
+    .paicha_box{
+      .data_paicha{
+        line-height: 40px;
+      }
+      .paicha_info{
+        width: 100%;
+        .tiao_paicha{
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          .select_xiangmu{
+            width: 80%;
+            float: left;
+            .image-add{
+              width: 5%;
+              height: 40px;
+              color: #252525;
+              position: relative;
+              float: left;
+            }
+            .image-add::before{
+              content: '';
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              width: 40px;
+              margin-left: -20px;
+              margin-top: -5px;
+              border-top: 10px solid;
+            }
+            .image-add::after {
+              content: '';
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              height: 40px;
+              margin-left: -5px;
+              margin-top: -20px;
+              border-left: 10px solid;
+            }
+          }
+          .select-xiangmubtn{
+            width: 20%;
+            float: right;
+          }
+          }
+        .chooseTop_2 {
+          height: 38px;
+          position: relative;
+          float: left;
+          z-index: 999;
+          width: 45%;
+          .btn_big{
+            display: inline-block;
+            height: 38px;
+            width: 100%;
+            line-height: 38px;
+            text-align: center;
+            cursor: pointer;
+          }
+          img{
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+      }
+    }
     .top{
       position: relative;
       height: 24px;
@@ -3363,11 +3443,29 @@ i{
         top: 7px;
         display: inline-block;
       }
+      .right_new{
+        position: absolute;
+        right: 0%;
+        height: 24px;
+        line-height: 24px;
+        display: inline-block;
+      }
+      #gradeData_export{
+        li{
+
+        }
+        a{
+          color:white;
+          display: inline-block;
+          width: 99px;
+          height: 24px;
+        }
+      }
     }
     .center{
       padding: 0 20px;
       .list{
-        max-height: 180px;
+        max-height: 410px;
         overflow: hidden;
       }
       .row{

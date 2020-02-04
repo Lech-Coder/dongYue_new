@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta HTTP-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/icon.css">
+    <link rel="stylesheet" href="../css/scroll.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../plugins/jquery.slimscroll.js"></script>
+    <script src="../js/pageInit.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <title>体质数据</title>
+    <script>
+    </script>
+</head>
+<body>
+<div class="pageContent">
+    <div class="left-menu">
+        <a class="logo-box">
+        <span class="logo-img">
+        </span>
+        </a>
+        <ul class="menu-list f16">
+            <li class="current"><a href="" class=""><i class="icon-home">&nbsp;</i>主页</a></li>
+            <li class=""><a href="" class=""><i class="icon-group">&nbsp;</i>教研群组</a></li>
+            <li class=""><a href="" class=""><i class="icon-teachManage">&nbsp;</i>教学管理</a></li>
+            <li class=""><a href="" class=""><i class="icon-import">&nbsp;</i>数据录入</a></li>
+            <li class=""><a href="" class=""><i class="icon-homeWork">&nbsp;</i>家庭作业</a></li>
+        </ul>
+        <ul class="bottom-menu menu-list f16">
+            <li class=""><a href="" class=""><i class="icon-add">&nbsp;</i>收藏</a></li>
+            <li class=""><a href="" class=""><i class="icon-setting">&nbsp;</i>设置</a></li>
+            <li class=""><a href="" class=""><i class="icon-back">&nbsp;</i>返回启动页</a></li>
+        </ul>
+    </div>
+    <div class="rightPage">
+        <div class="page-head">
+            <div class="bread-nav-box txt_w">
+                <a href="javascript:;"><b>体质数据</b></a> >
+                <a href="javascript:;"><b>视力数据</b></a>
+            </div>
+            <div class="head-menu">
+                <ul class="head-menu-ul f16">
+                    <li class="head-menu-item"><a href="javascript:;" class="txt_w">退出</a></li>
+                    <li class="head-menu-item"><a href="javascript:;" class="txt_w">账户信息<i class="icon-hehe"></i></a>
+                    </li>
+                    <li class="head-menu-item"><a href="javascript:;" class="txt_w">欢迎页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="table-content">
+                <div class="table-btn-group">
+                    <div class="table-row">
+                        <div class="col-8-16">
+                            <a href="javascript:;" class="btn grayBtn">视力数据</a>
+                            <a href="javascript:;" class="btn grayBtn">视力统计</a>
+                            <a href="javascript:;" class="btn yellowBtn">视力预警</a>
+                        </div>
+                        <div class="col-8-16  margin-bottom20 txt-fr">
+
+                            <!--新增按钮 学校视力报告-->
+                            <a href="javascript:;" class="btn blueBtn">学校视力报告</a>
+
+                            <a href="javascript:;" class="btn blueBtn">视力分析数据导出</a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="yujingBox ">
+
+                    <div class="clearfix mt20" >
+                        <div class="banjipingjun">
+                            <div class="tongji_chart" id="yujin_one"></div>
+                        </div>
+
+                        <div class="yujin_div">
+
+                            <div class="label_info" >
+                                <div class="tooltip_kuai kuai_one"></div>
+                                <div  class="yujin_info " >
+                                    <span>一级预警：视力正常但趋于发生轻度近视的学生人群</span>
+                                </div>
+                            </div>
+                            <div class="label_info">
+                                <div class="tooltip_kuai kuai_two">
+                                </div>
+                                <div class="yujin_info">
+                                    <span>二级预警：已经发生轻度近视的学生人群，需要采取有效防止视力进一步下降</span>
+                                </div>
+                            </div>
+                            <div class="label_info">
+                                <div class="tooltip_kuai kuai_three">
+                                </div>
+                                <div class="yujin_info">
+                                    <span>三级预警：已经发生中度近视且在重度近视群体中视力测试值趋近于重度近视的学生人群，需要学校/教师引起重视，防止出现眼底病变</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clearfix">
+                        <ul class="school_name">
+                            <li class="focus">一年级</li>
+                            <li>二年级</li>
+                            <li>三年级</li>
+                            <li>四年级</li>
+                            <li>五年级</li>
+                            <li>六年级</li>
+                        </ul>
+                    </div>
+                    <div class="clearfix">
+                        <div class="nei_rong" style="display: block">
+                            <div class="yujin_chart_grade"></div>
+                            <div class="yujin_chart_class"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="alert-box animated fadeIn alertType" style="display:none">
+    <div class="alert-box formType animated fadeIn">
+        <div class="alert-div form-box back_white animated fadeInDownBig" style="margin-top: -161.5px;width: 550px">
+            <form id="loadRealia" action="loadRealiaExcel.do" method="post" enctype="multipart/form-realia">
+            </form>
+
+        </div>
+    </div>
+</div>
+<script src="../js/each/yujinChart.js"></script>
+<script>
+
+    for(var i=0;i< $('.nei_rong').length;i++){
+        $('.yujin_chart_grade')[i].style.height=($('.nei_rong')[0].clientWidth)*0.3+'px'
+        $('.yujin_chart_class')[i].style.height=($('.nei_rong')[0].clientWidth)*0.3+'px'
+    }
+
+
+
+    //预警
+    var yujin_data = [110,190,130]
+    var yujin_data2 = [110,120,130]
+    var school_bar =  bar_yujin($('#yujin_one')[0],yujin_data,'全校')
+
+    //各年级
+    var grade_bar=bar_yujin($('.yujin_chart_grade')[0],yujin_data)
+
+    var morebar_data = [
+        ['name', '一级预警', '二级预警', '三级预警'],
+        ['一班', 43.3, 85.8, 93.7],
+        ['二班', 83.1, 73.4, 55.1],
+        ['三班', 86.4, 65.2, 82.5],
+        ['四班', 72.4, 53.9, 39.1],
+        ['五班', 72.4, 53.9, 39.1],
+        ['六班', 72.4, 53.9, 39.1],
+        ['七班', 72.4, 53.9, 39.1]
+    ]
+    var morebar_data2 = [
+        ['name', '一级预警', '二级预警', '三级预警'],
+        ['一班', 43.3, 5.8, 93.7],
+        ['二班', 8.1, 73.4, 55.1],
+        ['三班', 86.4, 5.2, 8.5],
+        ['四班', 72.4, 53.9, 39.1],
+        ['五班', 72.4, 53.9, 45.1],
+        ['六班', 2.4, 53.9, 39.1],
+        ['七班', 72.4, 53.9, 39.1]
+    ]
+   var class_bar = morebar_yujin($('.yujin_chart_class')[0],morebar_data)
+
+    //点击图
+    grade_bar.on('click',function (d) {
+        var grade = d.seriesName   //年级
+        var dengji = d.name       //几级预警
+
+        $('.alert-box').css('display', 'block');
+        $('#loadRealia')[0].innerHTML=''
+        $('#loadRealia').append(' <div class="form-head t_r"><a class="close-btn f18" href="javascript:;">×</a></div>\n' +
+            '                <a class="btn themeBtn ml25" href="">导出文件</a>\n' +
+            '                <div class="table-content" style="width:90%;margin: 0 auto">\n' +
+            '                    <div class="table mt20 clearfix">\n' +
+            '                        <!-- 单项表格 -->\n' +
+            '                        <table border="1px" >\n' +
+            '                            <thead>\n' +
+            '                            <tr>\n' +
+            '                                <td >学号</td>\n' +
+            '                                <td>班级</td>\n' +
+            '                                <td >姓名</td>\n' +
+            '                                <td>性别</td>\n' +
+            '                                <td>左眼视力</td>\n' +
+            '                                <td>右眼视力</td>\n' +
+            '                            </tr>\n' +
+            '                            </thead>\n' +
+            '                            <tbody>\n' +
+            '                            <tr>\n' +
+            '                                <td >1</td>\n' +
+            '                                <td >初一一班</td>\n' +
+            '                                <td >曹睿</td>\n' +
+            '                                <td >男</td>\n' +
+            '                                <td >4.8</td>\n' +
+            '                                <td >4.8</td>\n' +
+            '                            </tr>\n' +
+            '                            <tr>\n' +
+            '                                <td >1</td>\n' +
+            '                                <td >初一一班</td>\n' +
+            '                                <td >曹睿</td>\n' +
+            '                                <td >男</td>\n' +
+            '                                <td >4.8</td>\n' +
+            '                                <td >4.8</td>\n' +
+            '                            </tr>\n' +
+            '                            <tr>\n' +
+            '                                <td >1</td>\n' +
+            '                                <td >初一一班</td>\n' +
+            '                                <td >曹睿</td>\n' +
+            '                                <td >男</td>\n' +
+            '                                <td >4.8</td>\n' +
+            '                                <td >4.8</td>\n' +
+            '                            </tr>\n' +
+            '                            <tr>\n' +
+            '                                <td >1</td>\n' +
+            '                                <td >初一一班</td>\n' +
+            '                                <td >曹睿</td>\n' +
+            '                                <td >男</td>\n' +
+            '                                <td >4.8</td>\n' +
+            '                                <td >4.8</td>\n' +
+            '                            </tr>\n' +
+            '                            <tr>\n' +
+            '                                <td >1</td>\n' +
+            '                                <td >初一一班</td>\n' +
+            '                                <td >曹睿</td>\n' +
+            '                                <td >男</td>\n' +
+            '                                <td >4.8</td>\n' +
+            '                                <td >4.8</td>\n' +
+            '                            </tr>\n' +
+            '                            </tbody>\n' +
+            '                        </table>\n' +
+            '                    </div>\n' +
+            '                </div>')
+
+
+        $(".close-btn").click(function () {
+            $('.alert-box').css('display', 'none');
+        });
+    })
+
+    setTimeout(function () {
+        window.onresize = function () {
+            school_bar.resize()
+            grade_bar.resize()
+            class_bar.resize()
+        }},200)
+
+    $(".school_name focus").trigger("click");
+    $('.school_name li').on('click',function (d) {
+        var index = $(this).index()   //index表示选中的不同年级
+            grade_bar.setOption({
+                series:{
+                    name:index,
+                    data:yujin_data2,
+                }});
+            class_bar.setOption({
+                dataset:{
+                    source:morebar_data2,
+                }},
+            );
+
+        $(this).addClass('focus').siblings().removeClass('focus')
+
+    })
+
+
+
+</script>
+</body>
+</html>

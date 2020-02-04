@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="../../js/flexible/flexible_css.js"></script>
+  <script src="../../js/flexible/flexible.js"></script>
+  <link rel="stylesheet" href="../../css/studentMain.css">
+  <script src="../../js/jquery.js"></script>
+  <script src="../../js/studentMain.js"></script>
+  <script src="../../js/echart/echart.js"></script>
+  <title>健康问答</title>
+</head>
+<body flex="dir:top">
+<header flex-box="0" flex="dir:left" font="18">
+  <a href="javascript:history.go(-1)" flex-box="0">
+    返回
+  </a>
+  <a class="title" flex-box="1" font="14">
+    课程心率
+  </a>
+  <a href="javascript:void(0)" flex-box="0">
+  </a>
+</header>
+<section class="class_xinlv" flex-box="1" class="white-back" flex="dir:top" font="14">
+  <div class="nav" flex="cross:center">
+    <span>2019-10-19 星期二</span>
+    <span class="class_name">课程名称课程名称</span>
+  </div>
+  <div class="btnBox">
+    <div class="top">
+      <div class="relativeBox"  flex="box:mean cross:center main:center">
+        <a href="javascript:void(0)" flex=" cross:center main:center">
+          <span>张毅</span>
+          <img src="../../img/boy_i.png"  alt="">
+        </a>
+        <a href="javascript:void(0)" flex="dir:top cross:center main:center">
+          <span>步数</span>
+          <span>8000</span>
+        </a>
+        <a href="javascript:void(0)" flex="dir:top cross:center main:center">
+          <span>消耗卡路里</span>
+          <span>3000</span>
+        </a>
+      </div>
+      <div class="relativeBox"  flex="box:mean cross:center main:center">
+        <a href="javascript:void(0)" flex="dir:top cross:center main:center">
+          <span>最高心率</span>
+          <span>155</span>
+        </a>
+        <a href="javascript:void(0)" flex="dir:top cross:center main:center">
+          <span>平均心率</span>
+          <span>144</span>
+        </a>
+        <a href="javascript:void(0)" flex="dir:top cross:center main:center">
+          <span>最低心率</span>
+          <span>133</span>
+        </a>
+      </div>
+    </div>
+    <div class="xinlv_chart">
+    </div>
+  </div>
+</section>
+
+<footer flex-box="0" flex="dir:left box:mean" font="12">
+  <a class="focus" href="" flex="main:center cross:center dir:top">
+    <i class="icon-home" font="18"></i>
+    <span>首页</span>
+  </a>
+  <a href="" flex="main:center  dir:top">
+    <i class="icon-uniE939" font="18"></i>
+    <span>问答大厅</span>
+  </a>
+  <a href="" flex="main:center cross:center dir:top">
+    <i class="icon-xsq" font="18"></i>
+    <span>学生圈</span>
+  </a>
+  <a href="" flex="main:center cross:center dir:top">
+    <i class="icon-gerzhongxin" font="18"></i>
+    <span>我的</span>
+  </a>
+</footer>
+<script src="../../js/each/heart_lv.js"></script>
+<script>
+  var xdata = ['10', '14', '18', '22', '2', '6']
+  var data=[
+    {
+      name:'曲线1',
+      data:[10, 11, 13, 17, 21, 24]
+    },{
+      name:'曲线2',
+      data:[15, 24, 26, 30, 32, 35]
+    }
+  ]
+  line_heart($('.xinlv_chart')[0],xdata,data)
+</script>
+</body>
+</html>

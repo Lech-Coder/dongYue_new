@@ -99,6 +99,12 @@ textarea{
 .bg-pink{
     background: @pinkColor !important;
 }
+@media print {
+    .pageBreak
+    {
+        page-break-after: always; /*强制换页的关键*/
+    }
+}
 
 .pageContent {
     min-width: @pageWidth;
@@ -129,10 +135,10 @@ textarea{
     .fansi_show_button{
         /*background: red;*/
         width: 100%;
-        height: 50px;
+        height: 40px;
     }
     .fansi_show_button p{
-        font-size: 16px;
+        font-size: 14px;
         font-weight: bold;
         float: left;
     }
@@ -145,20 +151,34 @@ textarea{
     #toggle-button{
         display: none;
     }
+    #toggle-button2{
+        display: none;
+    }
     .button-label{
         position: relative;
         display: inline-block;
-        width: 50px;
-        height: 25px;
+        width: 35px;
+        height: 15px;
         background-color: #ccc;
         border: 1px solid #ccc;
-        border-radius: 25px;
+        border-radius: 20px;
+        cursor: pointer;
+        float: left;
+    }
+    .button-label2{
+        position: relative;
+        display: inline-block;
+        width: 35px;
+        height: 15px;
+        background-color: rgb(130, 182, 74);
+        border: 1px solid #ccc;
+        border-radius: 20px;
         cursor: pointer;
         float: left;
     }
 
     .text {
-        font-size: 14px;
+        font-size: 11px;
         color: rgb(170, 170, 170);
         float: right;
         /*
@@ -180,13 +200,17 @@ textarea{
         position: absolute;
         top: 0;
         left: 0;
-        width: 25px;
-        height: 25px;
+        width: 15px;
+        height: 15px;
         border-radius: 50%;
         background-color: #fff;
     }
     .button-label .circle{
         left: 0;
+        transition: all 0.3s;/*transition过度，时间为0.3秒*/
+    }
+    .button-label2 .circle{
+        left: 20px;
         transition: all 0.3s;/*transition过度，时间为0.3秒*/
     }
 
@@ -195,7 +219,7 @@ textarea{
     例如：div+p 选择所有紧接着<div>元素之后的<p>元素
     */
     #toggle-button:checked + label .button-label .circle{
-        left: 25px;
+        left: 20px;
     }
     #toggle-button:checked + label  .on{
         display: inline-block;
@@ -208,6 +232,18 @@ textarea{
     }
     /*设置页面end*/
 
+    #toggle-button2:checked + label .button-label2 .circle{
+        left: 0;
+    }
+    #toggle-button2:checked + label  .on{
+        display: inline-block;
+    }
+    #toggle-button2:checked + label  .off{
+        display: none;
+    }
+    #toggle-button2:checked + label .button-label2{
+        background-color: #ccc;
+    }
 }
 
 // 公共页数
@@ -621,8 +657,50 @@ textarea{
             }
         }
     }
+    .search_lable{
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        .search_lable_info{
+            display: none;
+        }
+    }
 }
 
+
+.yujin_div{
+    width:100%;
+    .label_info{
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+        padding: 0 20px;
+        a{
+            color: @blueColor;
+            font-size: 14px;
+        }
+        .tooltip_kuai{
+            float: left;
+            line-height: 50px;
+            &.kuai_one{
+                background: #115c81;
+            }
+            &.kuai_two{
+                background: #e3b200;
+            }
+            &.kuai_three{
+                background: #ff773e;
+            }
+        }
+        .yujin_info{
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-left: 10px;
+        }
+    }
+}
 .zuo-ye-xiang-qing{
     background:#e4eaf1;
     .title{
@@ -4162,7 +4240,6 @@ input[type="button"] {
             margin: 0 auto;
         }
         .pingzhi{
-            width: 50px;
             text-align: center;
             height: 30px;
             line-height: 30px;
@@ -4170,7 +4247,9 @@ input[type="button"] {
         >p {
             float: left;
             line-height: 24px;
-            margin: 0 auto;
+            //margin: 0 auto;
+            width: 60px;
+            text-align: center;
         }
     }
 }
@@ -5260,6 +5339,13 @@ input[type="button"] {
             overflow: hidden;
             text-overflow: ellipsis;
         }
+        .new-label-name{
+            line-height: 50px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
         .link-group {
             >a {
                 float: left;
@@ -5276,6 +5362,31 @@ input[type="button"] {
                 border: 1px solid @lightGray;
                 &:not(:nth-child(7n+1)) {
                     margin-left: 1.5%;
+                }
+            }
+        }
+        .new-link-group {
+            >a {
+                float: left;
+                width: 13%;
+                line-height: 50px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin-bottom: 10px;
+                overflow: hidden;
+                height: 50px;
+                text-align: center;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                border: 1px solid @lightGray;
+                &:not(:nth-child(7n+1)) {
+                    margin-left: 1.5%;
+                }
+                p{
+                    line-height: 25px;
+                    display:inline-block;
+                    vertical-align:middle;
                 }
             }
         }
@@ -6277,6 +6388,40 @@ input[type="button"] {
                     width: 80%;
                     background-color: @themeColor;
                 }
+            }
+        }
+    }
+    #new_list{
+        .roww {
+            // height: 38px;
+            width: 100%;
+            line-height: 38px;
+            >span {
+                display: inline-block;
+                height: 40px;
+            }
+            &.sp {
+                //color: #A7A7A7;
+                font-size: 14px;
+            }
+            &:nth-child(odd) {
+                background-color: #F5F5F5;
+            }
+            &:nth-child(even) {
+                background-color: #fff;
+            }
+            .num {
+                width: 10%;
+                text-align: center;
+            }
+            .school,
+            .category {
+                width: 12.5%;
+                text-align: center;
+            }
+            .persent {
+                text-align: center;
+                width: 12%;
             }
         }
     }
@@ -9370,12 +9515,7 @@ input[type="button"] {
                 z-index: 10;
             }
         }
-        .shupaizi{
-            margin: 0px auto;
-            word-wrap: break-word;
-            letter-spacing: 10px;
-            writing-mode: vertical-lr;
-        }
+
     }
     .grade_tongji{
         width: 100%;
@@ -9421,6 +9561,40 @@ input[type="button"] {
         }
     }
 
+    .new_button{
+        height: 40px;
+        line-height: 40px;
+        span{
+            display: inline-block;
+            span{
+                margin-left: 25px;
+                height: 25px;
+                width: 25px;
+                display:inline-block;
+                vertical-align: middle;
+                &.color_y{
+                    background-color: #83b749;
+                }
+                &.color_l{
+                    background-color: #00a9f0;
+                }
+                &.color_z{
+                    background-color: #f59b1e;
+                }
+                &.color_c{
+                    background-color: #d8d8d8;
+                }
+            }
+        }
+    }
+
+}
+
+.shupaizi{
+    margin: 0px auto;
+    word-wrap: break-word;
+    letter-spacing: 10px;
+    writing-mode: vertical-lr;
 }
 #lh_table{
     line-height: 20px;
@@ -9753,6 +9927,318 @@ input[type="button"] {
         }
     }
 }
+.yujingBox{
+    margin-top: 30px;
+    padding: 10px;
+    background: white;
+    clear: both;
+    .clearfix{
+        width: 100%;
+        .school_name{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            h1{
+                float: left;
+            }
+            .school_address{
+                width: 80%;
+                float: left;
+                padding: 10px;
+                height: 20px;
+            }
+            li{
+                float: left;
+                margin-left: 20px;
+                font-size: 16px;
+                cursor: pointer;
+                &.focus{
+                    color: @themeColor;
+                }
+            }
+
+        }
+        .nei_rong{
+            width: 100%;
+            p {
+                font-size: 16px;
+            }
+            .single_healthy_line{
+                width: 100%;
+            }
+            .chart_z {
+                width: 100%;
+
+                .chart_pi {
+                    width: 25%;
+                    float: left;
+                }
+            }
+            .paimary_info_line{
+                width: 65%;
+                float: right;
+            }
+            .paimary_info_table{
+                width: 35%;
+                float: left;
+                padding: 40px 0 0 40px;
+                table{
+                    width: 100%;
+                    tr{
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                }
+                .back_gray{
+                    background: #c0c0c0;
+                }
+
+                h1{
+                    display: inline;
+                }
+            }
+            .nei_rong_l{
+                width: 65%;
+                float: left;
+            }
+            .nei_rong_r{
+                width: 35%;
+                float: right;
+                .parper_address{
+                    width: 70%;
+                    margin: 0 auto;
+                    padding: 10px;
+                }
+            }
+            .ul_address{
+                margin: 0 auto;
+                li{
+                    font-size: 16px;
+                }
+            }
+            .yujin_chart_grade,
+            .yujin_chart_class{
+                width: 50%;
+                height: 100%;
+                float: left;
+            }
+            .xiangmu_data
+            ,.single_chart_line
+            ,.single_chart_bar{
+                width: 50%;
+                float: left;
+                .bar_chart,.xiangmu_chart{
+                    width: 100%;
+                }
+            }
+
+            .row {
+                height: 40px;
+                margin-top: 20px;
+                clear: both;
+
+                .name {
+                    height: 100%;
+                    line-height: 40px;
+                    margin-right: 2%;
+                    display: inline-block;
+                    float: left;
+                }
+
+                .limit {
+                    height: 100%;
+                    width: 48%;
+                    display: inline-block;
+                    float: left;
+                    margin-right: 18px;
+
+                    > span {
+                        height: 100%;
+                        line-height: 40px;
+                        display: inline-block;
+                        text-align: center;
+                        float: left;
+
+                        &.color_1 {
+                            background-Color: #8BC34A;
+                        }
+
+                        &.color_2 {
+                            background-Color: #B3DB5E;
+                        }
+
+                        &.color_3 {
+                            background-Color: #EAED42;
+                        }
+
+                        &.color_4 {
+                            background-Color: #ED8A42;
+                        }
+
+                        &.color_5 {
+                            background-Color: #02A7F0;
+                        }
+
+                        &.color_6 {
+                            background-Color: #C280FF;
+                        }
+                    }
+
+                    > p {
+                        margin-top: 10px;
+                        font-size: 13px;
+
+                        > span {
+                            margin-left: 3px;
+                        }
+                    }
+                }
+
+                .sex_gai {
+                    width: 35%;
+                    float: left;
+                    height: 40px;
+                    text-align: center;
+
+                    .limit_gai {
+                        height: 100%;
+                        width: 20%;
+                        display: inline-block;
+                        float: left;
+                        margin-right: 18px;
+
+                        > span {
+                            height: 100%;
+                            line-height: 40px;
+                            display: inline-block;
+                            text-align: center;
+                            float: left;
+                            color:white;
+                            font-size: 14px;
+                            &.color_1 {
+                                background-Color: #ef9958;
+                            }
+
+                            &.color_2 {
+                                background-Color: #1e8f8f;
+                            }
+
+                            &.color_3 {
+                                background-Color: #02a7f1;
+                            }
+
+                            &.color_4 {
+                                background-Color: #c381ff;
+                            }
+                        }
+
+                        > p {
+                            margin-top: 10px;
+                            font-size: 13px;
+                            > span {
+                                margin-left: 3px;
+                            }
+                        }
+                    }
+                }
+
+                .sex {
+                    width: 31%;
+                    float: left;
+                    height: 40px;
+                    line-height: 40px;
+
+                    > div {
+                        width: 25%;
+                        display: inline-block;
+                        flolat: left;
+                        height: 40px;
+
+                        > span {
+                            height: 40px;
+                            display: inline-block;
+                            margin-left: 10px;
+                            vertical-align: text-bottom;
+                        }
+                    }
+
+                    > span {
+                        height: 40px;
+                        display: inline-block;
+                        margin-left: 10px;
+                        vertical-align: text-bottom;
+                    }
+
+                    .youliang {
+                        display: inline-block;
+                        height: 40px;
+                        width: 100px;
+                        text-align: center;
+                        color: #fff;
+                        float: left;
+                        width: 80%;
+                        background-color: @themeColor;
+                    }
+                }
+            }
+        }
+        .class_address{
+            border: 1px black solid;
+            width: 90%;
+            margin: 0 auto;
+            font-size: 16px;
+        }
+        .pingding_table{
+            text-align: center;
+            margin: 0 auto;
+        }
+        .yujin_div{
+            float: left;
+            width:50%;
+            height:300px;
+            .label_info{
+                width: 100%;
+                height: 25px;
+                margin-top: 55px;
+                padding: 0 0 0 20px;
+                .tooltip_kuai{
+                    width: 25px;
+                    height: 25px;
+                    float: left;
+                    &.kuai_one{
+                        background: #115c81;
+                    }
+                    &.kuai_two{
+                        background: #e3b200;
+                    }
+                    &.kuai_three{
+                        background: #ff773e;
+                    }
+                }
+                .yujin_info{
+                    height: 25px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+    .banjipingjun{
+        width: 50%;
+        height: 300px;
+        float: left;
+        p{
+            font-size: 20px;
+        }
+        .tongji_chart{
+            width: 100%;
+            height: 90%;
+        }
+    }
+}
+
 
 .zhihuiBox{
     margin-top: 20px;

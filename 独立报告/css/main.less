@@ -2047,7 +2047,7 @@ div[class^="col"]:before {
     }
 }
 .excel-table30 {
-    line-height: 29.5px;
+    line-height: 30px;
     .table-item {
         margin: 5px 0;
         >div {
@@ -2099,6 +2099,12 @@ div[class^="col"]:before {
     }
 }
 
+@media print {
+    .pageBreak
+    {
+        page-break-after: always; /*强制换页的关键*/
+    }
+}
 .process-item {
     background: @grayColor;
     float: left;
@@ -5731,8 +5737,8 @@ input[type="button"] {
                 }
             }
             .eyetable{
-                width: 25%;
-                height: 250px;
+                width: 20%;
+                height: 200px;
                 position: absolute;
                 right: 0px;
                 img{
@@ -9382,6 +9388,10 @@ input[type="button"] {
     background: white;
     clear: both;
     .clearfix{
+        .single_healthy_line{
+            width: 100%;
+            height: 400px;
+        }
         .school_name{
 
             width: 100%;
@@ -9404,8 +9414,12 @@ input[type="button"] {
                 font-size: 16px;
             }
           .single_healthy_line{
-            width: 100%;
+              width: 100%;
           }
+            .health_rose{
+                width: 100%;
+                height: 250px;
+            }
             .chart_z {
                 width: 100%;
 
@@ -9416,12 +9430,14 @@ input[type="button"] {
             }
           .paimary_info_line{
             width: 65%;
+              height: 300px;
             float: right;
           }
           .paimary_info_table{
             width: 35%;
-            float: left;
-            padding: 40px 0 0 40px;
+              float: left;
+              height: 300px;
+            padding: 10px 10px 0 10px;
             table{
               width: 100%;
               tr{
@@ -9630,12 +9646,64 @@ input[type="button"] {
             text-align: center;
             margin: 0 auto;
         }
+        .yujin_div{
+            float: left;
+            width:50%;
+            height:300px;
+            padding-top: 55px;
+            .label_info{
+                width: 100%;
+                height: 25px;
+                margin-top: 55px;
+                padding: 0 0 0 20px;
+                .tooltip_kuai{
+                    width: 25px;
+                    height: 25px;
+                    float: left;
+                    &.kuai_one{
+                        background: #115c81;
+                    }
+                    &.kuai_two{
+                        background: #e3b200;
+                    }
+                    &.kuai_three{
+                        background: #ff773e;
+                    }
+                }
+                .yujin_info{
+                    height: 25px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding-left: 10px;
+                }
+            }
+        }
     }
     .banjitongji{
         width: 100%;
-        height: 500px;
+        height: 400px;
         float: left;
         background: white;
+        .yujin_fenbu{
+            width: 40%;
+            height: 100%;
+            float: left;
+            .jinshi_fenbu{
+                height: 95%;
+                width: 100%;
+            }
+        }
+        .jinshi_fenbu{
+            width: 60%;
+            height: 100%;
+            float: left;
+            .jinshi_fenbu{
+                height: 95%;
+                width: 100%;
+            }
+        }
+
         .title{
             height: 5%;
             position: relative;
@@ -9669,7 +9737,7 @@ input[type="button"] {
       //display: inline-block;
 
       justify-content: space-around;
-      line-height:80px;
+      line-height:60px;
       position: relative;
       border-bottom:1px solid #d7d7d7;
       .text-hide{
@@ -9814,7 +9882,7 @@ input[type="button"] {
 .mao_url{
     width: 150px;
     position: fixed;
-    left:3%;
+    left:1%;
     top: 10%;
     ul{
         li{

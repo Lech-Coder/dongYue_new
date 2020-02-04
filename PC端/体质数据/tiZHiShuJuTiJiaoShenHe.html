@@ -62,7 +62,7 @@
                         <div class="col-8-16 margin-bottom20">
                         </div>
                         <div class="col-8-16 margin-bottom20 t_r">
-                                <a href="javascript:;" class="icon-download btn btn-green">&nbsp;下载模板-小学</a>
+                                <a href="javascript:;" class="icon-download btn btn-green moban_download">&nbsp;下载模板</a>
                                 <a href="javascript:;" class="icon-import btn pinkBtn">&nbsp;数据录入</a>
                                 <a href="javascript:;" class="icon-import btn pinkBtn">&nbsp;历史数据录入</a>
                                 <!-- <a href="javascript:;" class="icon-batchUpdate btn pinkBtn batchUpdate-btn">&nbsp;批量提交审核</a> -->
@@ -1524,13 +1524,64 @@
                             <span class="checkSpan back_white"></span>
                         </label> -->
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="alert-box animated fadeIn alertType" style="display:none">
+    <div class="alert-box formType animated fadeIn">
+        <div class="alert-div form-box back_white animated fadeInDownBig" style="margin-top: -161.5px;">
+            <form id="loadRealia" action="loadRealiaExcel.do" method="post" enctype="multipart/form-realia">
+                <div class="form-head t_r"><a class="close-btn f18" href="javascript:;">×</a></div>
+
+                <div class="yujin_div">
+
+                    <div class="label_info" >
+                        <a href="" class=" col-8-16 tooltip_kuai">
+                            <i class="icon-chengjiguanli" font="30" style="color: #46c2fb;"></i>
+                            <span>1-6年级体质健康模板.xlsx</span>
+                        </a>
+                        <div  class="col-8-16 yujin_info" >
+                            <span>适用于小学学校，包括五年制小学，六年制小学</span>
+                        </div>
+                    </div>
+                    <div class="label_info">
+                        <a href="" class=" col-8-16 tooltip_kuai">
+                            <i class="icon-chengjiguanli" font="30" style="color: #46c2fb;"></i>
+                            <span>7-9年级体质健康模板.xlsx</span>
+                        </a>
+                        <div class="col-8-16 yujin_info">
+                            <span>适用于中学学校，包括三年制初中学校，高中学校</span>
+                        </div>
+                    </div>
+                    <div class="label_info">
+                        <a href="" class=" col-8-16 tooltip_kuai">
+                            <i class="icon-chengjiguanli" font="30" style="color: #46c2fb;"></i>
+                            <span> 1-9年级体质健康模板.xlsx</span>
+                        </a>
+                        <div class="col-8-16 yujin_info">
+                            <span>适用于一贯制学校及部分中学学校，如四年制初中学校（六、七、八、九年级）</span>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
 <script src="../plugins/alert.js"></script>
 <script src="../js/each/tiZhiShuJuTiJiaoShenHe.js"></script>
+
+<script>
+    $('.moban_download').click(function () {
+        $('.alert-box').css('display', 'block');
+        setAlertPosition();
+    })
+    $(".close-btn").click(function () {
+        $('.alert-box').css('display', 'none');
+    });
+</script>
 </body>
 </html>

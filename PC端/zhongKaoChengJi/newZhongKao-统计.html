@@ -144,7 +144,7 @@
                     </div>
                 </div>
             </div>
-            <div class="zk-table mt20 clearfix s-menu">
+            <div class="zk-table mt20 clearfix s-menu table-content">
                 <div class="grade_tongji"></div>
                 <div class="grade_tongji"></div>
                 <div class="grade_tongji"></div>
@@ -159,18 +159,18 @@
 <script src="../js/each/zhongkao.js"></script>
 <script src="../js/each/newzhongkao_tongji.js"></script>
 <script>
-    for(var i=0;i<3;i++){
-        $('.grade_tongji')[i].style.height=($('.grade_tongji')[0].clientWidth)/4+'px'
-    }
+    // for(var i=0;i<3;i++){
+    //     $('.grade_tongji')[i].style.height=($('.grade_tongji')[0].clientWidth)/4+'px'
+    // }
 
     var grade_class= ['(1)班','(2)班','(3)班','(4)班','(5)班','(6)班','(7)班','(8)班']
 
     //oridata
     var oridata = [
-        [120, 132, 101, 134, 90, 230, 210,110],
-        [220, 182, 191, 234, 290, 330, 310,450],
-        [150, 232, 201, 154, 190, 330, 410,420],
-        [150, 232, 201, 154, 190, 330, 410,140]
+        ["0"],
+        ["3"],
+        ["0"],
+        ["12"]
     ];
     grade_tongji( $('.grade_tongji')[0],oridata,'七年级',grade_class)
     grade_tongji( $('.grade_tongji')[1],oridata,'八年级',grade_class)

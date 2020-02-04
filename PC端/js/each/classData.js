@@ -1,4 +1,4 @@
-// 
+//
 $(function(){
   $(".sportItem").on('click','>a',function(){
     var showId=$(this).attr("value");
@@ -45,9 +45,28 @@ $('.bjxx .change-btn').click(function(){
   });
   if(btnVal == '取消'){
     $('.inside-wrapper .table-excel .control i').remove();
+    $('.inside-wrapper .table-excel .control .all_Select').remove();
   }else{
+      $('.inside-wrapper .table-excel thead .control').append('<a class="banji-check all_Select">全选</a>')
     $('.inside-wrapper .table-excel tbody .control').append('<i class="banji-check icon-gou-nocked"></i>');
   }
+});
+
+//点击全选
+var all_select = 0
+$(document).on('click','.inside-wrapper .table-excel .control .all_Select',function(d,i){
+    all_select++
+    $('.inside-wrapper .table-excel .control i').each(function (i,d) {
+        if (all_select%2==1) {
+            if (d.className.indexOf('icon-gou-nocked')>-1){
+                $(this).removeClass('icon-gou-nocked').addClass('icon-gou-cked');
+            }
+        }else{
+            if (d.className.indexOf('icon-gou-cked')>-1){
+                $(this).removeClass('icon-gou-cked').addClass('icon-gou-nocked');
+            }
+        }
+    });
 });
 
 // 点击退休转班方框

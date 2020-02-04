@@ -23,11 +23,11 @@ function simple_pie(dom,pdata){
     // 为echarts对象加载数据
     myChart.setOption(option);
 }
-function half_pie(div,minValue,height_data,little_data,cucolor) {
+function half_pie(div,minValue,totale,cucolor) {
     var myChart = echarts.init(div);
     option = {
         title:{
-            text:minValue,
+            text:minValue+'人',
             x: 'center',
             y: 'center'
         },
@@ -60,7 +60,7 @@ function half_pie(div,minValue,height_data,little_data,cucolor) {
                 },
                 "data": [
                     {
-                        "value": little_data,     //细线数据
+                        "value": totale-minValue,     //细线数据
                         "itemStyle": {
                             "normal": {
                                 // "label": {
@@ -76,7 +76,7 @@ function half_pie(div,minValue,height_data,little_data,cucolor) {
                         }
                     },
                     {
-                        "value": height_data,        //粗线数据
+                        "value": minValue,        //粗线数据
                     }
 
                 ]

@@ -59,10 +59,31 @@
             </div>
 
         </div>
-        <div class="right-section" style="height:100%;">
+        <div class="right-section " style="height:100%;">
+            <div class="search-box clearfix ">
+                <div class="col-9-16 no-padding">
+                    &nbsp;
+                </div>
+                <div class="col-6-16 no-padding ">
+                    <label class="form-search">
+                        <i class="icon-search"></i>
+                        <input name="select_in" type="text" placeholder="请输入搜索内容">
+                    </label>
+                </div>
+                <div class="col-1-16 no-padding">
+                    <a href="javascript:void(0)" class="blockBtn themeBtn search_button">搜索</a>
+                </div>
 
-            <!-- 暂无数据 -->
-            <h2 class="t_c mt20">暂无数据</h2>
+            </div>
+            <div class="search-box clearfix mb20">
+                <div class=" search_lable">
+                    <a class = "click_all">全部</a>
+                    <span class="search_lable_info">|</span>
+                    <span class="search_lable_info">为你查找到 <span class="select_num">12</span> 条记录</span>
+                </div>
+            </div>
+            <!--&lt;!&ndash; 暂无数据 &ndash;&gt;-->
+            <!--<h2 class="t_c mt20">暂无数据</h2>-->
 
             <!-- 一个反思 开始 -->
             <div class="fansi-box">
@@ -90,7 +111,7 @@
                 </div>
             </div>
             <!-- 一个反思 结束 -->
-            
+
             <!-- 一个反思 开始 -->
             <div class="fansi-box">
                 <h3>
@@ -220,6 +241,21 @@
             }
         });
     });
+
+
+    //查询
+    $('.search_button').on('click',function () {
+        var num = 0     //反思数量
+        $('.search_lable_info').show()
+        $("[name='select_in']").val()   //获取input的值
+        $('.select_num')[0].innerText = num   //修改页面上数量
+    })
+    //全部
+    $(".click_all").on('click',function () {
+        var all_fansi = 4545
+        $('.search_lable_info').show()
+        $('.select_num')[0].innerText = all_fansi   //修改页面上数量
+    })
 </script>
 </body>
 </html>

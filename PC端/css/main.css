@@ -1302,6 +1302,12 @@ textarea {
 .bg-pink {
   background: #fd7aa4 !important;
 }
+@media print {
+  .pageBreak {
+    page-break-after: always;
+    /*强制换页的关键*/
+  }
+}
 .pageContent {
   min-width: 1200px;
   height: 100%;
@@ -1332,10 +1338,10 @@ textarea {
 .pageContent .fansi_show_button {
   /*background: red;*/
   width: 100%;
-  height: 50px;
+  height: 40px;
 }
 .pageContent .fansi_show_button p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   float: left;
 }
@@ -1348,19 +1354,33 @@ textarea {
 .pageContent #toggle-button {
   display: none;
 }
+.pageContent #toggle-button2 {
+  display: none;
+}
 .pageContent .button-label {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 25px;
+  width: 35px;
+  height: 15px;
   background-color: #ccc;
   border: 1px solid #ccc;
-  border-radius: 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  float: left;
+}
+.pageContent .button-label2 {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 15px;
+  background-color: #82b64a;
+  border: 1px solid #ccc;
+  border-radius: 20px;
   cursor: pointer;
   float: left;
 }
 .pageContent .text {
-  font-size: 14px;
+  font-size: 11px;
   color: #aaaaaa;
   float: right;
   /*
@@ -1382,8 +1402,8 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: #fff;
 }
@@ -1392,8 +1412,13 @@ textarea {
   transition: all 0.3s;
   /*transition过度，时间为0.3秒*/
 }
+.pageContent .button-label2 .circle {
+  left: 20px;
+  transition: all 0.3s;
+  /*transition过度，时间为0.3秒*/
+}
 .pageContent #toggle-button:checked + label .button-label .circle {
-  left: 25px;
+  left: 20px;
 }
 .pageContent #toggle-button:checked + label .on {
   display: inline-block;
@@ -1403,6 +1428,18 @@ textarea {
 }
 .pageContent #toggle-button:checked + label .button-label {
   background-color: #82b64a;
+}
+.pageContent #toggle-button2:checked + label .button-label2 .circle {
+  left: 0;
+}
+.pageContent #toggle-button2:checked + label .on {
+  display: inline-block;
+}
+.pageContent #toggle-button2:checked + label .off {
+  display: none;
+}
+.pageContent #toggle-button2:checked + label .button-label2 {
+  background-color: #ccc;
 }
 .mydataChoose {
   margin-top: 100px;
@@ -1787,6 +1824,47 @@ textarea {
 }
 .right-section .fansi-box .bottom .fr .icon-lianjie {
   margin-left: 10px;
+}
+.right-section .search_lable {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+.right-section .search_lable .search_lable_info {
+  display: none;
+}
+.yujin_div {
+  width: 100%;
+}
+.yujin_div .label_info {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.yujin_div .label_info a {
+  color: #46c2fb;
+  font-size: 14px;
+}
+.yujin_div .label_info .tooltip_kuai {
+  float: left;
+  line-height: 50px;
+}
+.yujin_div .label_info .tooltip_kuai.kuai_one {
+  background: #115c81;
+}
+.yujin_div .label_info .tooltip_kuai.kuai_two {
+  background: #e3b200;
+}
+.yujin_div .label_info .tooltip_kuai.kuai_three {
+  background: #ff773e;
+}
+.yujin_div .label_info .yujin_info {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 10px;
 }
 .zuo-ye-xiang-qing {
   background: #e4eaf1;
@@ -4870,7 +4948,6 @@ input[type="button"] {
   margin: 0 auto;
 }
 .teacher-msg .teacherGrade .pingzhi {
-  width: 50px;
   text-align: center;
   height: 30px;
   line-height: 30px;
@@ -4878,7 +4955,8 @@ input[type="button"] {
 .teacher-msg .teacherGrade > p {
   float: left;
   line-height: 24px;
-  margin: 0 auto;
+  width: 60px;
+  text-align: center;
 }
 .set-home-work {
   padding: 10px 30px 0 30px;
@@ -5826,6 +5904,13 @@ input[type="button"] {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.setHomeWork-wrapper .class-select .new-label-name {
+  line-height: 50px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .setHomeWork-wrapper .class-select .link-group > a {
   float: left;
   width: 13%;
@@ -5842,6 +5927,29 @@ input[type="button"] {
 }
 .setHomeWork-wrapper .class-select .link-group > a:not(:nth-child(7n+1)) {
   margin-left: 1.5%;
+}
+.setHomeWork-wrapper .class-select .new-link-group > a {
+  float: left;
+  width: 13%;
+  line-height: 50px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  overflow: hidden;
+  height: 50px;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #e4eaf1;
+}
+.setHomeWork-wrapper .class-select .new-link-group > a:not(:nth-child(7n+1)) {
+  margin-left: 1.5%;
+}
+.setHomeWork-wrapper .class-select .new-link-group > a p {
+  line-height: 25px;
+  display: inline-block;
+  vertical-align: middle;
 }
 .setHomeWork-wrapper .class-select .search-all {
   padding: 0px;
@@ -6762,6 +6870,36 @@ input[type="button"] {
   float: left;
   width: 80%;
   background-color: #82b64a;
+}
+.healthyBox #new_list .roww {
+  width: 100%;
+  line-height: 38px;
+}
+.healthyBox #new_list .roww > span {
+  display: inline-block;
+  height: 40px;
+}
+.healthyBox #new_list .roww.sp {
+  font-size: 14px;
+}
+.healthyBox #new_list .roww:nth-child(odd) {
+  background-color: #F5F5F5;
+}
+.healthyBox #new_list .roww:nth-child(even) {
+  background-color: #fff;
+}
+.healthyBox #new_list .roww .num {
+  width: 10%;
+  text-align: center;
+}
+.healthyBox #new_list .roww .school,
+.healthyBox #new_list .roww .category {
+  width: 12.5%;
+  text-align: center;
+}
+.healthyBox #new_list .roww .persent {
+  text-align: center;
+  width: 12%;
 }
 .video-play {
   background: #000;
@@ -9589,12 +9727,6 @@ input[type="button"] {
   background: #969696;
   z-index: 10;
 }
-.zk-table .table-content .shupaizi {
-  margin: 0px auto;
-  word-wrap: break-word;
-  letter-spacing: 10px;
-  writing-mode: vertical-lr;
-}
 .zk-table .grade_tongji {
   width: 100%;
 }
@@ -9634,6 +9766,38 @@ input[type="button"] {
   position: absolute;
   bottom: 35px;
   left: 20%;
+}
+.zk-table .new_button {
+  height: 40px;
+  line-height: 40px;
+}
+.zk-table .new_button span {
+  display: inline-block;
+}
+.zk-table .new_button span span {
+  margin-left: 25px;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.zk-table .new_button span span.color_y {
+  background-color: #83b749;
+}
+.zk-table .new_button span span.color_l {
+  background-color: #00a9f0;
+}
+.zk-table .new_button span span.color_z {
+  background-color: #f59b1e;
+}
+.zk-table .new_button span span.color_c {
+  background-color: #d8d8d8;
+}
+.shupaizi {
+  margin: 0px auto;
+  word-wrap: break-word;
+  letter-spacing: 10px;
+  writing-mode: vertical-lr;
 }
 #lh_table {
   line-height: 20px;
@@ -9922,6 +10086,295 @@ input[type="button"] {
   right: 12px;
   color: #a8a8a8;
   cursor: pointer;
+}
+.yujingBox {
+  margin-top: 30px;
+  padding: 10px;
+  background: white;
+  clear: both;
+}
+.yujingBox .clearfix {
+  width: 100%;
+}
+.yujingBox .clearfix .school_name {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.yujingBox .clearfix .school_name h1 {
+  float: left;
+}
+.yujingBox .clearfix .school_name .school_address {
+  width: 80%;
+  float: left;
+  padding: 10px;
+  height: 20px;
+}
+.yujingBox .clearfix .school_name li {
+  float: left;
+  margin-left: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.yujingBox .clearfix .school_name li.focus {
+  color: #82b64a;
+}
+.yujingBox .clearfix .nei_rong {
+  width: 100%;
+}
+.yujingBox .clearfix .nei_rong p {
+  font-size: 16px;
+}
+.yujingBox .clearfix .nei_rong .single_healthy_line {
+  width: 100%;
+}
+.yujingBox .clearfix .nei_rong .chart_z {
+  width: 100%;
+}
+.yujingBox .clearfix .nei_rong .chart_z .chart_pi {
+  width: 25%;
+  float: left;
+}
+.yujingBox .clearfix .nei_rong .paimary_info_line {
+  width: 65%;
+  float: right;
+}
+.yujingBox .clearfix .nei_rong .paimary_info_table {
+  width: 35%;
+  float: left;
+  padding: 40px 0 0 40px;
+}
+.yujingBox .clearfix .nei_rong .paimary_info_table table {
+  width: 100%;
+}
+.yujingBox .clearfix .nei_rong .paimary_info_table table tr {
+  height: 40px;
+  line-height: 40px;
+}
+.yujingBox .clearfix .nei_rong .paimary_info_table .back_gray {
+  background: #c0c0c0;
+}
+.yujingBox .clearfix .nei_rong .paimary_info_table h1 {
+  display: inline;
+}
+.yujingBox .clearfix .nei_rong .nei_rong_l {
+  width: 65%;
+  float: left;
+}
+.yujingBox .clearfix .nei_rong .nei_rong_r {
+  width: 35%;
+  float: right;
+}
+.yujingBox .clearfix .nei_rong .nei_rong_r .parper_address {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.yujingBox .clearfix .nei_rong .ul_address {
+  margin: 0 auto;
+}
+.yujingBox .clearfix .nei_rong .ul_address li {
+  font-size: 16px;
+}
+.yujingBox .clearfix .nei_rong .yujin_chart_grade,
+.yujingBox .clearfix .nei_rong .yujin_chart_class {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.yujingBox .clearfix .nei_rong .xiangmu_data,
+.yujingBox .clearfix .nei_rong .single_chart_line,
+.yujingBox .clearfix .nei_rong .single_chart_bar {
+  width: 50%;
+  float: left;
+}
+.yujingBox .clearfix .nei_rong .xiangmu_data .bar_chart,
+.yujingBox .clearfix .nei_rong .single_chart_line .bar_chart,
+.yujingBox .clearfix .nei_rong .single_chart_bar .bar_chart,
+.yujingBox .clearfix .nei_rong .xiangmu_data .xiangmu_chart,
+.yujingBox .clearfix .nei_rong .single_chart_line .xiangmu_chart,
+.yujingBox .clearfix .nei_rong .single_chart_bar .xiangmu_chart {
+  width: 100%;
+}
+.yujingBox .clearfix .nei_rong .row {
+  height: 40px;
+  margin-top: 20px;
+  clear: both;
+}
+.yujingBox .clearfix .nei_rong .row .name {
+  height: 100%;
+  line-height: 40px;
+  margin-right: 2%;
+  display: inline-block;
+  float: left;
+}
+.yujingBox .clearfix .nei_rong .row .limit {
+  height: 100%;
+  width: 48%;
+  display: inline-block;
+  float: left;
+  margin-right: 18px;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span {
+  height: 100%;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  float: left;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span.color_1 {
+  background-Color: #8BC34A;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span.color_2 {
+  background-Color: #B3DB5E;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span.color_3 {
+  background-Color: #EAED42;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span.color_4 {
+  background-Color: #ED8A42;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span.color_5 {
+  background-Color: #02A7F0;
+}
+.yujingBox .clearfix .nei_rong .row .limit > span.color_6 {
+  background-Color: #C280FF;
+}
+.yujingBox .clearfix .nei_rong .row .limit > p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+.yujingBox .clearfix .nei_rong .row .limit > p > span {
+  margin-left: 3px;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai {
+  width: 35%;
+  float: left;
+  height: 40px;
+  text-align: center;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai {
+  height: 100%;
+  width: 20%;
+  display: inline-block;
+  float: left;
+  margin-right: 18px;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > span {
+  height: 100%;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  float: left;
+  color: white;
+  font-size: 14px;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > span.color_1 {
+  background-Color: #ef9958;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > span.color_2 {
+  background-Color: #1e8f8f;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > span.color_3 {
+  background-Color: #02a7f1;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > span.color_4 {
+  background-Color: #c381ff;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+.yujingBox .clearfix .nei_rong .row .sex_gai .limit_gai > p > span {
+  margin-left: 3px;
+}
+.yujingBox .clearfix .nei_rong .row .sex {
+  width: 31%;
+  float: left;
+  height: 40px;
+  line-height: 40px;
+}
+.yujingBox .clearfix .nei_rong .row .sex > div {
+  width: 25%;
+  display: inline-block;
+  flolat: left;
+  height: 40px;
+}
+.yujingBox .clearfix .nei_rong .row .sex > div > span {
+  height: 40px;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: text-bottom;
+}
+.yujingBox .clearfix .nei_rong .row .sex > span {
+  height: 40px;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: text-bottom;
+}
+.yujingBox .clearfix .nei_rong .row .sex .youliang {
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  color: #fff;
+  float: left;
+  width: 80%;
+  background-color: #82b64a;
+}
+.yujingBox .clearfix .class_address {
+  border: 1px black solid;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 16px;
+}
+.yujingBox .clearfix .pingding_table {
+  text-align: center;
+  margin: 0 auto;
+}
+.yujingBox .clearfix .yujin_div {
+  float: left;
+  width: 50%;
+  height: 300px;
+}
+.yujingBox .clearfix .yujin_div .label_info {
+  width: 100%;
+  height: 25px;
+  margin-top: 55px;
+  padding: 0 0 0 20px;
+}
+.yujingBox .clearfix .yujin_div .label_info .tooltip_kuai {
+  width: 25px;
+  height: 25px;
+  float: left;
+}
+.yujingBox .clearfix .yujin_div .label_info .tooltip_kuai.kuai_one {
+  background: #115c81;
+}
+.yujingBox .clearfix .yujin_div .label_info .tooltip_kuai.kuai_two {
+  background: #e3b200;
+}
+.yujingBox .clearfix .yujin_div .label_info .tooltip_kuai.kuai_three {
+  background: #ff773e;
+}
+.yujingBox .clearfix .yujin_div .label_info .yujin_info {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.yujingBox .banjipingjun {
+  width: 50%;
+  height: 300px;
+  float: left;
+}
+.yujingBox .banjipingjun p {
+  font-size: 20px;
+}
+.yujingBox .banjipingjun .tongji_chart {
+  width: 100%;
+  height: 90%;
 }
 .zhihuiBox {
   margin-top: 20px;

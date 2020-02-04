@@ -288,7 +288,7 @@ section[flex-box] {
               margin-right: 0.233rem;
             }
           }
-        } 
+        }
         .title{
           height:1rem;
           width:1rem;
@@ -316,7 +316,7 @@ section[flex-box] {
   }
 }
 
-.answerDetails{ 
+.answerDetails{
   overflow: hidden !important;
   .person{
     height:2.89rem;
@@ -404,7 +404,7 @@ section[flex-box] {
           padding-top:0.3rem;
           padding-bottom: 0.3rem;
           padding-left:0.67rem;
-          padding-right:0.67rem;  
+          padding-right:0.67rem;
           line-height: 0.8rem;
           background-color: @themeColor;
           border-top-left-radius:1rem ;
@@ -1180,19 +1180,19 @@ footer.answerFooter{
       right: 0.8rem;
     }
   }
-  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
-    color: #C7C7C7; 
-  } 
-    input:-moz-placeholder, textarea:-moz-placeholder { 
-    color: #C7C7C7; 
-  } 
-    input::-moz-placeholder, textarea::-moz-placeholder { 
-    color: #C7C7C7; 
-  } 
-    input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
-    color: #C7C7C7; 
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #C7C7C7;
   }
-  
+    input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #C7C7C7;
+  }
+    input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #C7C7C7;
+  }
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #C7C7C7;
+  }
+
   .sendBox{
     margin-top: 0.867rem;
     .relativeBox{
@@ -1337,7 +1337,7 @@ footer.answerFooter{
         }
       }
       >span{
-        margin-left: 0.233rem;  
+        margin-left: 0.233rem;
       }
     }
   }
@@ -1977,7 +1977,7 @@ nav{
           &.focus{
             background-color:@themeColor;
           }
-        } 
+        }
       }
     }
   }
@@ -2751,6 +2751,90 @@ nav{
   }
 }
 
+.class_xinlv{
+  .nav{
+    height: 0.7rem;
+    width: 100%;
+    display: block;
+    line-height: 0.5rem;
+    padding:0 0.467rem;
+    font-size: 14px;
+    border-bottom: 1px solid @line;
+    background-color: @white;
+    span{
+      float: left;
+      font-size: 16px;
+    }
+    .class_name{
+      float: right;
+      margin-right: 1.5rem;
+    }
+  }
+  .btnBox{
+    .top{
+      height: 4rem;
+      background-color: #c0daa4;
+      //margin-top: 0.467rem;
+      .relativeBox{
+        height:50%;
+        padding:0 0.467rem;
+        >a{
+          >i{
+            margin-left:  0.3rem;
+          }
+          span{
+            color: white;
+          }
+          img{
+            width: 0.5rem;
+            height: 0.5rem;
+            margin-left: 0.1rem;
+            color: blue;
+          }
+        }
+      }
+    }
+    .xinlv_chart{
+      height: 8rem;
+      width: 100%;
+    }
+
+  }
+  .xinlv_letter{
+    width: 100%;
+    height: 1rem;
+    margin-top: 3rem;
+    font-size: 16px;
+    color: #aaaaaa;
+    span{
+      width: 100%;
+      height: 1rem;
+      text-align: center;
+    }
+  }
+  .helpBox{
+    .help{
+      height: 1.2rem;
+      display: block;
+      border-bottom: 1px solid @line;
+      background-color: @white;
+      .relativeBox{
+        height: 100%;
+        padding:0 0.467rem;
+        position: relative;
+        span:nth-child(2){
+          position: absolute;
+          right:0.934rem;
+        }
+        i{
+          position: absolute;
+          right: 0.467rem;
+        }
+      }
+    }
+  }
+}
+
 // 动作列表
 .training-btn {
   height: 1.2rem;
@@ -3287,7 +3371,7 @@ nav{
             color:#fff;
             display:none;
           }
-          background: @lighterGrey;          
+          background: @lighterGrey;
           .text2{
             display:block;
             padding-left: 0.7rem;
@@ -3346,7 +3430,7 @@ nav{
     width: 100%;
     height: 100%;
     transition: all 0.2s;
-    background: @lighterGrey;              
+    background: @lighterGrey;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
@@ -3892,15 +3976,15 @@ nav{
         border-radius: 10px;
         padding:30/75rem;
         color:#323335;
-        
+
         hr{
           margin: 20/75rem 0;
           padding: 0;
-          height:0px; 
+          height:0px;
           border-top:1px solid #ecedef;
-          border-right:0px; 
-          border-bottom:0px; 
-          border-left:0px; 
+          border-right:0px;
+          border-bottom:0px;
+          border-left:0px;
         }
         .res-name{
           color:#85B351;
@@ -4909,6 +4993,7 @@ nav{
     display: flex;
     justify-content: space-between;
   }
+
   .pic-content{
     margin-top: 20/75rem;
     padding: .2rem;
@@ -5032,4 +5117,8 @@ nav{
       display: none;
     }
   }
+}
+
+.no-border{
+  border: none !important;
 }
