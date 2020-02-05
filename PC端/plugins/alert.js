@@ -1,7 +1,7 @@
 //调整弹窗的定位位置
 function setAlertPosition() {
   var height = $(".alert-div").innerHeight()
-  console.log(height);
+  // console.log(height);
   $(".alert-div").css("margin-top", -(height / 2));
 }
 var Alert = {}
