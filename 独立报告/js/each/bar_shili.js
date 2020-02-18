@@ -73,6 +73,7 @@ function bar_yujin(dom,bdata) {
         grid: {
             left: '5%',
             right: '5%',
+            top:'10%',
             bottom: '13%',
             containLabel: true
         },
