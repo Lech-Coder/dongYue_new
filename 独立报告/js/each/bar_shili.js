@@ -73,7 +73,7 @@ function bar_yujin(dom,bdata) {
         grid: {
             left: '5%',
             right: '5%',
-            bottom: '5%',
+            bottom: '13%',
             containLabel: true
         },
         xAxis : [
