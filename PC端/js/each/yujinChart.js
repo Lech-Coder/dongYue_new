@@ -31,6 +31,10 @@ function bar_yujin(dom,bdata,title) {
                 name:0,
                 type:'bar',
                 barWidth: '25%',
+                label: {
+                    show: true,
+                    position: 'top'
+                },
                 itemStyle: {
                     normal: {
                         color: function(params) {
@@ -73,12 +77,27 @@ function morebar_yujin(dom,bdata) {
             {
                 type: 'bar',
                 barWidth: '10px',
+                label: {
+                    show: true,
+                    position: 'top',
+                    fontSize:'65%'
+                },
             }, {
                 type: 'bar',
                 barWidth: '10px',
+                label: {
+                    show: true,
+                    position: 'top',
+                    fontSize:'65%'
+                },
             }, {
                 type: 'bar',
                 barWidth: '10px',
+                label: {
+                    show: true,
+                    position: 'top',
+                    fontSize:'65%'
+                },
             },
 
         ]
