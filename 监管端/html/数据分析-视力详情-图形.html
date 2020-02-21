@@ -137,9 +137,8 @@
                 <span class="color_1" style="width:20%;">20%</span>
                 <span class="color_2" style="width:25%;">40%</span>
                 <span class="color_3" style="width:39%;">39%</span>
-                <span class="color_4" style="width:1%;">1%</span>
-                <span class="color_5" style="width:10%;">10%</span>
-                <span class="color_6" style="width:5%;">5%</span>
+                <span class="color_4" style="width:16%;">%</span>
+
               </div>
               <div class="txt">
             <span class="one">
@@ -158,14 +157,7 @@
               <sapn>重度近视</sapn>
               <sapn>1%</sapn>
             </span>
-                <span class="thr">
-              <sapn>远视</sapn>
-              <sapn>10%</sapn>
-            </span>
-                <span class="for">
-              <sapn>其他</sapn>
-              <sapn>5%</sapn>
-            </span>
+
               </div>
             </div>
             <div class="pic-right">
@@ -181,4 +173,20 @@
       </div>
     </div>
   </body>
+  <script>
+      for(var i=0;i<4;i++){
+          var width = toPoint($('.limit span')[i].style.width)*0.985
+          $('.limit span')[i].style.width =toPercent(width)
+      }
+      function toPoint(percent){
+          var str=percent.replace("%","");
+          str= str/100;
+          return str;
+      }
+      function toPercent(point){
+          var percent = Number(point*100).toFixed(1);
+          percent+="%";
+          return percent;
+      }
+  </script>
 </html>
