@@ -172,6 +172,9 @@ img {
 .ml5 {
   margin-left: 5px;
 }
+.ml5b {
+  margin-left: 5%;
+}
 .ml10 {
   margin-left: 10px;
 }
@@ -1741,6 +1744,71 @@ textarea {
   background: #e4eaf1 !important;
   padding: 20px 50px;
   height: 100%;
+}
+.right-section .paicha_box .data_paicha {
+  line-height: 40px;
+}
+.right-section .paicha_box .paicha_info {
+  width: 100%;
+}
+.right-section .paicha_box .paicha_info .tiao_paicha {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.right-section .paicha_box .paicha_info .tiao_paicha .select_xiangmu {
+  width: 80%;
+  float: left;
+}
+.right-section .paicha_box .paicha_info .tiao_paicha .select_xiangmu .image-add {
+  width: 5%;
+  height: 40px;
+  color: #252525;
+  position: relative;
+  float: left;
+}
+.right-section .paicha_box .paicha_info .tiao_paicha .select_xiangmu .image-add::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40px;
+  margin-left: -20px;
+  margin-top: -5px;
+  border-top: 10px solid;
+}
+.right-section .paicha_box .paicha_info .tiao_paicha .select_xiangmu .image-add::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  margin-left: -5px;
+  margin-top: -20px;
+  border-left: 10px solid;
+}
+.right-section .paicha_box .paicha_info .tiao_paicha .select-xiangmubtn {
+  width: 20%;
+  float: right;
+}
+.right-section .paicha_box .paicha_info .chooseTop_2 {
+  height: 38px;
+  position: relative;
+  float: left;
+  z-index: 999;
+  width: 22%;
+}
+.right-section .paicha_box .paicha_info .chooseTop_2 .btn_big {
+  display: inline-block;
+  height: 38px;
+  width: 100%;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+}
+.right-section .paicha_box .paicha_info .chooseTop_2 img {
+  width: 30px;
+  height: 30px;
 }
 .right-section .mCSB_container {
   padding: 20px 50px 20px 50px;
