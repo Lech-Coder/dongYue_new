@@ -74,7 +74,8 @@
                                 <ul class="gradeData_export">
                                     <li class="choose btn-mid btn blueBtn no-padding "><a href="javascript:;" class="icon-chengjiguanli">&nbsp;腾讯校园模板</a></li>
                                     <li class="choose btn-mid btn blueBtn no-padding"><a href="javascript:;" class="icon-import">&nbsp;数据录入</a></li>
-                                    <li class="choose btn-mid btn blueBtn no-padding"><a href="javascript:;" class="icon-import data_same">&nbsp;数据同步</a></li>
+                                    <li class="choose btn-mid btn blueBtn no-padding"><a href="javascript:;" class="icon-import data_same">&nbsp;教师数据同步</a></li>
+                                    <li class="choose btn-mid btn blueBtn no-padding"><a href="javascript:;" class="icon-import data_same">&nbsp;家长数据同步</a></li>
                                 </ul>
                             </div>
                             <div class="new_position btn-mid btn-green ml10">
@@ -95,7 +96,7 @@
                 </div>
             </div>
             <div class="new_box">
-                <p class="data_tongbu">已开始腾讯校园数据同步，这个过程大概需要30分钟。</p>
+                <p class="data_tongbu">已开始腾讯校园数据同步，这个过程大概需要 <span id="time">30:00</span> 分钟。</p>
             </div>
             <div class="teaching-class-list mt20">
                 <div class="class-model mt20 back_white">
@@ -283,6 +284,21 @@
 
     $(".data_same").on('click',function () {
         $('.data_tongbu').css('display', 'block');
+
+        var m=29;
+        var s=59;
+        setInterval(function(){
+            if(s<10){
+                $('#time').html(m+':0'+s);
+            }else{
+                $('#time').html(m+':'+s);
+            }
+            s--;
+            if(s<0){
+                s=59;
+                m--;
+            }
+        },1000)
     })
 </script>
 </body>
