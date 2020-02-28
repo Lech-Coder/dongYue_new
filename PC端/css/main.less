@@ -522,6 +522,36 @@ textarea{
 .dataExport:hover #gradeData_export{
     display: block;
 }
+.gradeData_export{
+  display: none;
+
+  li{
+    a{
+      padding-top: 10px;
+      display: inline-block;
+      height: 38px;
+      width: 170px;
+      color: #ffffff;
+    }
+  }
+}
+.new_box{
+  width: 100%;
+  height: 10px;
+  .data_tongbu{
+    display: none;
+  }
+}
+
+.new_position:hover .gradeData_export{
+  display: block;
+}
+.new_position{
+  height: 38px;
+  position: relative;
+  float: left;
+  z-index: 999;
+}
 .school_tizhireport{
     display: none;
     li{
@@ -541,7 +571,6 @@ textarea{
     display: inline-block;
     width: 380px;
     line-height: 30px;
-;
     height: 30px;
     margin: 12px 0 12px 50px;
     position: relative;
@@ -6074,6 +6103,7 @@ input[type="button"] {
         }
     }
 }
+
 .healthyBox {
     background: #fff;
     margin-top: 20px;
