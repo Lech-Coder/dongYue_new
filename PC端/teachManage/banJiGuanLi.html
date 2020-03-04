@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="new_box">
-                <p class="data_tongbu">已开始腾讯校园数据同步，这个过程大概需要 <span id="time">30:00</span> 分钟。</p>
+                <p class="data_tongbu">已开始腾讯校园数据同步，这个过程大概需要 <span id="time">30</span> 分钟。</p>
             </div>
             <div class="teaching-class-list mt20">
                 <div class="class-model mt20 back_white">
@@ -282,23 +282,36 @@
     });
 
 
+
+
+    //数据同步倒计时
+
+
+    var interval_id;
+
     $(".data_same").on('click',function () {
         $('.data_tongbu').css('display', 'block');
 
-        var m=29;
-        var s=59;
-        setInterval(function(){
-            if(s<10){
-                $('#time').html(m+':0'+s);
-            }else{
-                $('#time').html(m+':'+s);
+
+
+        var countdown=document.getElementById("time");
+        countdown.innerHTML='30';
+        var time=1800;//30分钟换算成1800秒
+        if (interval_id != null) {
+            clearInterval(id)
+
+        }
+
+        id= setInterval(function(){
+            time=time-1;
+            var minute=parseInt(time/60);
+            // var second=parseInt(time%60);
+            countdown.innerHTML=minute;
+            if (minute<0){
+                clearInterval(id)
             }
-            s--;
-            if(s<0){
-                s=59;
-                m--;
-            }
-        },1000)
+
+        },1000);
     })
 </script>
 </body>
