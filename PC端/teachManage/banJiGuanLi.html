@@ -297,18 +297,19 @@
         var countdown=document.getElementById("time");
         countdown.innerHTML='30';
         var time=1800;//30分钟换算成1800秒
-        if (interval_id != null) {
-            clearInterval(id)
 
+        console.log(interval_id)
+        if (interval_id != null) {
+            clearInterval(interval_id)
         }
 
-        id= setInterval(function(){
+        interval_id= setInterval(function(){
             time=time-1;
             var minute=parseInt(time/60);
             // var second=parseInt(time%60);
             countdown.innerHTML=minute;
             if (minute<0){
-                clearInterval(id)
+                clearInterval(interval_id)
             }
 
         },1000);
