@@ -296,7 +296,7 @@
 
         var countdown=document.getElementById("time");
         countdown.innerHTML='30';
-        var time=1800;//30分钟换算成1800秒
+        var time=1860;//30分钟换算成1800秒
 
         console.log(interval_id)
         if (interval_id != null) {
@@ -308,7 +308,7 @@
             var minute=parseInt(time/60);
             // var second=parseInt(time%60);
             countdown.innerHTML=minute;
-            if (minute<0){
+            if (time<60){
                 clearInterval(interval_id)
             }
 
