@@ -7521,6 +7521,10 @@ input[type="button"] {
   display: table-cell;
   vertical-align: middle;
 }
+.footer-introl .middle-box p a:hover {
+  color: #249dff;
+  text-decoration: underline;
+}
 .scroll {
   overflow: auto;
 }
