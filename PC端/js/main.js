@@ -468,6 +468,8 @@ $.fn.setRadar = function (cfg) {
               formatter: function (params) {
                 return params.value;
               },
+                position:'center',   //增加 位置修改
+                // offset:[0,5],
               textStyle: {
                 color: opts.labelColor,
                 fontFamily: 'SimHei',

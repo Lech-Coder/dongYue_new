@@ -12298,7 +12298,7 @@ input[type="button"] {
   padding: 0;
 }
 .print .health-line-box .health-line-item {
-  margin-top: -40px !important;
+  margin-top: -10px !important;
   padding: 0 0;
 }
 .print .health-line-box .health-line-item:nth-child(3) {

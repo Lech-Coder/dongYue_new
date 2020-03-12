@@ -187,5 +187,31 @@
             </div>
         </div>
 </body>
+<script>
 
+    changeWidth()
+
+    function changeWidth() {
+        var span = $('.limit span')
+        for(var i=0;i<span.length;i++){
+
+            if(span[i].attributes.length>0){
+                var width = toPoint(span[i].style.width)*0.985
+                span[i].style.width =toPercent(width)
+            }
+
+        }
+        function toPoint(percent){
+            var str=percent.replace("%","");
+            str= str/100;
+            return str;
+        }
+        function toPercent(point){
+            var percent = Number(point*100).toFixed(2);
+            percent+="%";
+            return percent;
+        }
+    }
+
+</script>
 </html>
