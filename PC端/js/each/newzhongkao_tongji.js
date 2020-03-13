@@ -40,7 +40,7 @@ function grade_tongji(dom,oridata,grade,grade_class) {
             },
             // formatter: "{b}: {value}%"
         },
-        color:['#83b749','#00a9f0','#f59b1e','#d8d8d8'],
+        color:['#d8d8d8','#f59b1e','#00a9f0','#83b749'],
         legend: {
             data:["优秀",'良好','及格','不及格']
         },
@@ -74,28 +74,28 @@ function grade_tongji(dom,oridata,grade,grade_class) {
         },
         series : [
             {
-                name:'优秀',
-                type:'bar',
-                barWidth: '35%',
-                stack: '成绩',
-                data:data3
-            },
-            {
-                name:'良好',
+                name:'不及格',
                 type:'bar',
                 stack: '成绩',
-                data:data2
+                data:data0
             },
             {
                 name:'及格',
                 type:'bar',
                 stack: '成绩',
                 data:data1
-            },{
-                name:'不及格',
+            },
+            {
+                name:'良好',
                 type:'bar',
                 stack: '成绩',
-                data:data0
+                data:data2
+            },{
+                name:'优秀',
+                type:'bar',
+                barWidth: '35%',
+                stack: '成绩',
+                data:data3
             },
             {
                 name:'访问来源',
