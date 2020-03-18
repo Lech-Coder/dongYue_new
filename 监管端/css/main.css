@@ -6065,16 +6065,10 @@ i {
 }
 .healthyList .healthyBox > .center .row .school,
 .healthyList .healthyBox > .center .row .category {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   width: 10%;
   text-align: center;
 }
 .healthyList .healthyBox > .center .row .new_school30 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   width: 30%;
   text-align: center;
 }
@@ -7406,9 +7400,6 @@ i {
   display: inline-block;
   width: 10%;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .studentClass .healthyBox .center .row .category {
   width: 10%;
