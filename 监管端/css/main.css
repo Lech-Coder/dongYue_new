@@ -6071,6 +6071,13 @@ i {
   width: 10%;
   text-align: center;
 }
+.healthyList .healthyBox > .center .row .new_school30 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 30%;
+  text-align: center;
+}
 .healthyList .healthyBox > .center .row .category_8 {
   white-space: nowrap;
   overflow: hidden;
@@ -7398,7 +7405,7 @@ i {
 .studentClass .healthyBox .center .row .school {
   display: inline-block;
   width: 10%;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -7408,10 +7415,10 @@ i {
   text-align: center;
 }
 .studentClass .healthyBox .center .row .add {
-  width: 65%;
+  width: 45%;
 }
 .studentClass .healthyBox .center .row .wgai {
-  width: 25%;
+  width: 45%;
 }
 .studentClass .healthyBox .center .row .item {
   width: 55%;
