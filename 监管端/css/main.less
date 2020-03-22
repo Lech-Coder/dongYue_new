@@ -2483,6 +2483,13 @@ i{
         // top: 7px;
         display: inline-block;
       }
+      #gradeData_export{
+        a{
+          width: 99px;
+          height: 24px;
+          color: #ffffff;
+        }
+      }
     }
     >.center{
       .caption{
@@ -2678,6 +2685,9 @@ i{
         }
       }
     }
+  }
+  .choose_position{
+    padding: 0 30px;
   }
   .menu{
     width: 100%;
@@ -3213,6 +3223,9 @@ i{
 }
 #gradeData_export{
   display: none;
+  position: absolute;
+  z-index:1000;
+  width: 100%;
 }
 .daochu:hover #gradeData_export{
   display: block;
