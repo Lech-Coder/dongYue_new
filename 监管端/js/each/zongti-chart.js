@@ -26,28 +26,28 @@ $('body').on('click', '.chart-item-box', function () {
           data: [{
             name: '不及格',
             type: 'line',
-            stack: '总量',
+            stack: '成绩',
             areaStyle: {},
-            data: [70, 75, 70, 72, 75, 73, 74, 72, 75, 73, 74]
+            data: [7, 7, 7, 7, 7, 7, 4, 7, 7, 7, 7]
           },
           {
             name: '及格',
             type: 'line',
-            stack: '总量',
+            stack: '成绩',
             areaStyle: {},
             data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
           },
           {
             name: '良好',
             type: 'line',
-            stack: '总量',
+            stack: '成绩',
             areaStyle: {},
             data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
           },
           {
             name: '优秀',
             type: 'line',
-            stack: '总量',
+            stack: '成绩',
             areaStyle: {},
             data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
           }
@@ -61,28 +61,28 @@ $('body').on('click', '.chart-item-box', function () {
           data: [{
             name: '不及格',
             type: 'line',
-            stack: '总量',
+            stack: '成绩',
             areaStyle: {},
             data: [70, 75, 70, 72, 75, 73, 74, 72, 75, 73, 74]
           },
           {
             name: '及格',
             type: 'line',
-            stack: '总量',
+            stack: '成绩',
             areaStyle: {},
             data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
           },
           {
             name: '良好',
             type: 'line',
-            stack: '总量',
+            stack: '成绩',
             areaStyle: {},
             data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
           },
           {
             name: '优秀',
             type: 'line',
-            stack: '总量',
+            stack: '成绩',
             areaStyle: {},
             data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
           }
@@ -96,28 +96,28 @@ $('body').on('click', '.chart-item-box', function () {
           data: [{
             name: '不及格',
             type: 'line',
-            stack: '总量',
+            stack: '成绩',
             areaStyle: {},
             data: [70, 75, 70, 72, 75, 73, 74, 72, 75, 73, 74]
           },
           {
             name: '及格',
             type: 'line',
-            stack: '总量',
+            stack: '成绩',
             areaStyle: {},
             data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
           },
           {
             name: '良好',
             type: 'line',
-            stack: '总量',
+            stack: '成绩',
             areaStyle: {},
             data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
           },
           {
             name: '优秀',
             type: 'line',
-            stack: '总量',
+            stack: '成绩',
             areaStyle: {},
             data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
           }
