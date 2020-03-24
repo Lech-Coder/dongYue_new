@@ -4423,6 +4423,7 @@ i {
   display: inline-block;
   background-color: #F5F5F5;
   z-index: 1000;
+  overflow: auto;
 }
 .leftNav > ul > li {
   line-height: 55px;
