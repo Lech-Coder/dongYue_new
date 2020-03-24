@@ -6073,10 +6073,16 @@ i {
 }
 .healthyList .healthyBox > .center .row .school,
 .healthyList .healthyBox > .center .row .category {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   width: 10%;
   text-align: center;
 }
 .healthyList .healthyBox > .center .row .new_school30 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   width: 30%;
   text-align: center;
 }
@@ -6587,6 +6593,9 @@ i {
 .healthyChart .healthyBox > .center .row .limit .txt > span {
   margin-right: 1%;
 }
+.healthyChart .healthyBox > .center .row .limit_w {
+  width: 55%;
+}
 .healthyChart .healthyBox > .center .row .sex_gai {
   width: 30%;
   float: left;
@@ -6630,6 +6639,9 @@ i {
 }
 .healthyChart .healthyBox > .center .row .sex_gai .limit_gai > p > span {
   margin-left: 3px;
+}
+.healthyChart .healthyBox > .center .row .sex_gai .new_limit_w {
+  width: 20%;
 }
 .healthyChart .healthyBox > .center .row .pic-right {
   margin-left: 10px;
@@ -7419,6 +7431,9 @@ i {
   display: inline-block;
   width: 10%;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .studentClass .healthyBox .center .row .category {
   width: 10%;
