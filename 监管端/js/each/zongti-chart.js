@@ -28,28 +28,28 @@ $('body').on('click', '.chart-item-box', function () {
             type: 'line',
             stack: '成绩',
             areaStyle: {},
-            data: [7, 7, 7, 7, 7, 7, 4, 7, 7, 7, 7]
+            data: ['7','7', '7', '7', '7', '7', '7', '7', '7', '7', '7']
           },
           {
             name: '及格',
             type: 'line',
             stack: '成绩',
             areaStyle: {},
-            data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+            data: ['7','7', '7', 7, '7', '7', '7', '7', 7]
           },
           {
             name: '良好',
             type: 'line',
             stack: '成绩',
             areaStyle: {},
-            data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+            data: [7,'7', 7, 7, '7', '7', '7', '7', '7', '7', '7']
           },
           {
             name: '优秀',
             type: 'line',
             stack: '成绩',
             areaStyle: {},
-            data: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+            data: ['7','7', 7, '7', '7', 7, '7', '7', '7', '7', '7']
           }
           ]
         })
@@ -98,7 +98,7 @@ $('body').on('click', '.chart-item-box', function () {
             type: 'line',
             stack: '成绩',
             areaStyle: {},
-            data: [70, 75, 70, 72, 75, 73, 74, 72, 75, 73, 74]
+            data: ['45', '75', '70', '72', 75, 73, 74, 72, 75, 73, 74]
           },
           {
             name: '及格',
@@ -275,9 +275,12 @@ chart.areaLine = function (options) {
   // 默认值覆盖
   var opts = $.extend({}, defaults, options);
 
+
   // 基于准备好的dom，初始化echarts实例
   var myChart = echarts.init(document.getElementById(opts.element));
 
+
+  console.log(opts.xAxis)
   // 指定图表的配置项和数据
   var option = {
     title: {
@@ -291,6 +294,7 @@ chart.areaLine = function (options) {
           backgroundColor: '#6a7985'
         }
       }
+
     },
     legend: {
       data: opts.legend

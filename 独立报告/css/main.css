@@ -9727,6 +9727,12 @@ input[type="button"] {
 .zhihuiBox .clearfix .nei_rong .single_chart_bar .xiangmu_chart {
   width: 100%;
 }
+.zhihuiBox .clearfix .nei_rong .xiangmu_data .class_info,
+.zhihuiBox .clearfix .nei_rong .single_chart_line .class_info,
+.zhihuiBox .clearfix .nei_rong .single_chart_bar .class_info {
+  width: 100%;
+  height: 300px;
+}
 .zhihuiBox .clearfix .nei_rong .row {
   height: 40px;
   margin-top: 20px;
