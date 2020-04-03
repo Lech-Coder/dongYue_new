@@ -1278,6 +1278,9 @@ textarea {
 .txt-green {
   color: #82b64a;
 }
+.txt_blue {
+  color: #4ec5fa !important;
+}
 .mb20 {
   margin-bottom: 20px;
 }
