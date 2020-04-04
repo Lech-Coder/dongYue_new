@@ -1956,6 +1956,10 @@ textarea {
 .yujin_div .label_info .tooltip_kuai.kuai_three {
   background: #ff773e;
 }
+.yujin_div .label_info .tooltip_kuai input {
+  border: 1px solid;
+  height: 25px;
+}
 .yujin_div .label_info .yujin_info {
   height: 50px;
   display: flex;
@@ -3165,6 +3169,24 @@ div[class^="col"]:before > span.textArea {
 }
 .table-box .table-row.focus {
   background: #bfeb8f;
+}
+.table-box .table-row .single_wendu {
+  width: 100%;
+  height: 180px;
+}
+.table-box .table-row .single_wendu .student-name {
+  height: 70px;
+  width: 100%;
+  line-height: 70px;
+  font-size: 16px;
+}
+.table-box .table-row .single_wendu .wendu_num {
+  width: 100%;
+  height: 120px;
+  line-height: 120px;
+}
+.table-box .table-row .single_wendu .wendu_num span {
+  font-size: 22px;
 }
 .excel-table {
   line-height: 40px;
@@ -6448,16 +6470,96 @@ input[type="button"] {
   width: 95%;
   margin: 0 auto;
 }
+.datelimit {
+  overflow: auto;
+  background: #e4eaf1;
+}
 .healthyChart {
   padding: 50px;
   height: 100%;
   background: #e4eaf1;
   width: 100%;
 }
+.healthyChart .tiwentongji {
+  padding: 0 0 5px 0;
+}
+.healthyChart .tiwentongji .people_num {
+  color: #46c2fb;
+  cursor: pointer;
+}
+.healthyChart .tiwentongji .oneline {
+  display: flex;
+  justify-content: space-around;
+  line-height: 60px;
+  position: relative;
+  border-bottom: 1px solid #d7d7d7;
+}
+.healthyChart .tiwentongji .oneline .text-hide {
+  visibility: hidden;
+}
+.healthyChart .tiwentongji .oneline .boy_bili {
+  width: 40%;
+  text-align: left;
+  line-height: 15px;
+  padding: 10px 10px;
+}
+.healthyChart .tiwentongji .oneline ul li {
+  position: relative;
+  width: 100%;
+  height: 15px;
+}
+.healthyChart .tiwentongji .oneline > div {
+  flex: 1;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.healthyChart .tiwentongji .oneline > div:nth-child(2) {
+  text-align: center;
+  padding-right: 10px;
+}
+.healthyChart .tiwentongji .oneline > div:nth-child(3) {
+  text-align: right;
+  padding-right: 10px;
+}
+.healthyChart .tiwentongji .oneline .data_tiao {
+  display: inline-block;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 0px;
+}
+.healthyChart .tiwentongji .oneline .data_tiao > span {
+  height: 100%;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  float: left;
+}
+.healthyChart .tiwentongji .oneline .data_tiao > span.ml10 {
+  margin-left: 1%;
+}
+.healthyChart .tiwentongji .oneline .data_tiao > span.color_1 {
+  background-Color: #02a7f0;
+}
+.healthyChart .tiwentongji .oneline .data_tiao > span.color_2 {
+  background-Color: #00bfbf;
+}
+.healthyChart .tiwentongji .oneline .data_tiao > span.color_3 {
+  background-Color: #ff80db;
+}
+.healthyChart .tiwentongji .oneline .data_tiao > span.color_4 {
+  background-Color: #027db4;
+}
 .healthyChart .choosee {
   margin-bottom: 40px;
   height: 38px;
   float: left;
+}
+.healthyChart .choosee .time_input {
+  border: 1px solid;
+  height: 25px;
+  padding: 0 10px;
+  color: gray;
 }
 .healthyChart .choosee .address > li {
   font-size: 12px;

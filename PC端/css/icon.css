@@ -24,311 +24,321 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-rongyubang:before {
+.icon-gantanhao:before {
     content: "\e900";
+    color: #d81e06;
 }
-.icon-lianjie:before {
+.icon-rongyubang:before {
     content: "\e901";
 }
-.icon-bianji:before {
+.icon-lianjie:before {
     content: "\e902";
 }
-.icon-chakan:before {
+.icon-bianji:before {
     content: "\e903";
 }
-.icon-selected-gougou:before {
+.icon-chakan:before {
     content: "\e904";
 }
-.icon-toRight:before {
+.icon-selected-gougou:before {
     content: "\e905";
 }
-.icon-toLeft:before {
+.icon-toRight:before {
     content: "\e906";
 }
-.icon-beikeguanli:before {
+.icon-toLeft:before {
     content: "\e907";
 }
-.icon-jiaojuguanli:before {
+.icon-beikeguanli:before {
     content: "\e908";
 }
-.icon-zhongkaochengji:before {
+.icon-jiaojuguanli:before {
     content: "\e909";
 }
-.icon-addItem:before {
+.icon-zhongkaochengji:before {
     content: "\e90a";
 }
-.icon-classManage:before {
+.icon-addItem:before {
     content: "\e90b";
 }
-.icon-costRegister:before {
+.icon-classManage:before {
     content: "\e90c";
 }
-.icon-delete:before {
+.icon-costRegister:before {
     content: "\e90d";
 }
-.icon-errorTip:before {
+.icon-delete:before {
     content: "\e90e";
 }
-.icon-gou-nocked:before {
+.icon-errorTip:before {
     content: "\e90f";
 }
-.icon-guanbi:before {
+.icon-gou-nocked:before {
     content: "\e910";
 }
-.icon-jxgl-jtzy:before {
+.icon-guanbi:before {
     content: "\e911";
 }
-.icon-process:before {
+.icon-jxgl-jtzy:before {
     content: "\e912";
 }
-.icon-tzsj-xssjlr:before {
+.icon-process:before {
     content: "\e913";
 }
-.icon-unitPlan:before {
+.icon-tzsj-xssjlr:before {
     content: "\e914";
 }
-.icon-xinlv:before {
+.icon-unitPlan:before {
     content: "\e915";
 }
-.icon-jkda:before {
+.icon-xinlv:before {
     content: "\e916";
 }
-.icon-boyandgirl:before {
+.icon-jkda:before {
     content: "\e917";
 }
-.icon-ktbg:before {
+.icon-boyandgirl:before {
     content: "\e918";
 }
-.icon-girl:before {
+.icon-ktbg:before {
     content: "\e919";
 }
-.icon-boy:before {
+.icon-girl:before {
     content: "\e91a";
 }
-.icon-banjiguanli:before {
+.icon-boy:before {
     content: "\e91b";
 }
-.icon-banjikebiao:before {
+.icon-banjiguanli:before {
     content: "\e91c";
 }
-.icon-baomingguanli:before {
+.icon-banjikebiao:before {
     content: "\e91d";
 }
-.icon-chengjiguanli:before {
+.icon-baomingguanli:before {
     content: "\e91e";
 }
-.icon-jihuajindu:before {
+.icon-chengjiguanli:before {
     content: "\e91f";
 }
-.icon-jiatingzuoye:before {
+.icon-jihuajindu:before {
     content: "\e920";
 }
-.icon-jiaoxuejihua:before {
+.icon-jiatingzuoye:before {
     content: "\e921";
 }
-.icon-jiaoxuejiaoan:before {
+.icon-jiaoxuejihua:before {
     content: "\e922";
 }
-.icon-richangguanli:before {
+.icon-jiaoxuejiaoan:before {
     content: "\e923";
 }
-.icon-xueshengkaoqin:before {
+.icon-richangguanli:before {
     content: "\e924";
 }
-.icon-zhangkaochengji:before {
+.icon-xueshengkaoqin:before {
     content: "\e925";
 }
-.icon-default-head:before {
+.icon-zhangkaochengji:before {
     content: "\e926";
 }
-.icon-bjlr:before {
+.icon-default-head:before {
     content: "\e927";
 }
-.icon-left-jxzy:before {
+.icon-bjlr:before {
     content: "\e928";
 }
-.icon-left-sybz:before {
+.icon-left-jxzy:before {
     content: "\e929";
 }
-.icon-left-tzsj:before {
+.icon-left-sybz:before {
     content: "\e92a";
 }
-.icon-left-zzpx:before {
+.icon-left-tzsj:before {
     content: "\e92b";
 }
-.icon-tzsj-bjsjtj:before {
+.icon-left-zzpx:before {
     content: "\e92c";
 }
-.icon-jxgl-bmgl:before {
+.icon-tzsj-bjsjtj:before {
     content: "\e92d";
 }
-.icon-tzsj-xssjtb:before {
+.icon-jxgl-bmgl:before {
     content: "\e92e";
 }
-.icon-tzsj-xstzsj:before {
+.icon-tzsj-xssjtb:before {
     content: "\e92f";
 }
-.icon-add:before {
+.icon-tzsj-xstzsj:before {
     content: "\e930";
 }
-.icon-allSelect:before {
+.icon-add:before {
     content: "\e931";
 }
-.icon-back:before {
+.icon-allSelect:before {
     content: "\e932";
 }
-.icon-backComment:before {
+.icon-back:before {
     content: "\e933";
 }
-.icon-batchUpdate:before {
+.icon-backComment:before {
     content: "\e934";
 }
-.icon-borrow:before {
+.icon-batchUpdate:before {
     content: "\e935";
 }
-.icon-broken:before {
+.icon-borrow:before {
     content: "\e936";
 }
-.icon-classExcel:before {
+.icon-broken:before {
     content: "\e937";
 }
-.icon-commentTotal:before {
+.icon-classExcel:before {
     content: "\e938";
 }
-.icon-dec:before {
+.icon-commentTotal:before {
     content: "\e939";
 }
-.icon-edit:before {
+.icon-dec:before {
     content: "\e93a";
 }
-.icon-gradeManage:before {
+.icon-edit:before {
     content: "\e93b";
 }
-.icon-group:before {
+.icon-gradeManage:before {
     content: "\e93c";
 }
-.icon-hehe:before {
+.icon-group:before {
     content: "\e93d";
 }
-.icon-history:before {
+.icon-hehe:before {
     content: "\e93e";
 }
-.icon-home:before {
+.icon-history:before {
     content: "\e93f";
 }
-.icon-homeWork:before {
+.icon-home:before {
     content: "\e940";
 }
-.icon-import:before {
+.icon-homeWork:before {
     content: "\e941";
 }
-.icon-itemSelect:before {
+.icon-import:before {
     content: "\e942";
 }
-.icon-maintain:before {
+.icon-itemSelect:before {
     content: "\e943";
 }
-.icon-output:before {
+.icon-maintain:before {
     content: "\e944";
 }
-.icon-phone:before {
+.icon-output:before {
     content: "\e945";
 }
-.icon-save:before {
+.icon-phone:before {
     content: "\e946";
 }
-.icon-schedule:before {
+.icon-save:before {
     content: "\e947";
 }
-.icon-search:before {
+.icon-schedule:before {
     content: "\e948";
 }
-.icon-setting:before {
+.icon-search:before {
     content: "\e949";
 }
-.icon-stgList:before {
+.icon-setting:before {
     content: "\e94a";
 }
-.icon-teachManage:before {
+.icon-stgList:before {
     content: "\e94b";
 }
-.icon-teachPlan:before {
+.icon-teachManage:before {
     content: "\e94c";
 }
-.icon-teachProject:before {
+.icon-teachPlan:before {
     content: "\e94d";
 }
-.icon-testOption:before {
+.icon-teachProject:before {
     content: "\e94e";
 }
-.icon-tips:before {
+.icon-testOption:before {
     content: "\e94f";
 }
-.icon-download:before {
+.icon-tips:before {
     content: "\e950";
 }
-.icon-toolManage:before {
+.icon-download:before {
     content: "\e951";
 }
-.icon-top:before {
+.icon-toolManage:before {
     content: "\e952";
 }
-.icon-totalNum:before {
+.icon-top:before {
     content: "\e953";
 }
-.icon-uploadImg:before {
+.icon-totalNum:before {
     content: "\e954";
 }
-.icon-userHead:before {
+.icon-uploadImg:before {
     content: "\e955";
 }
-.icon-voliError:before {
+.icon-userHead:before {
     content: "\e956";
 }
-.icon-userName:before {
+.icon-voliError:before {
     content: "\e957";
 }
-.icon-voliCode:before {
+.icon-userName:before {
     content: "\e958";
 }
-.icon-voliPass:before {
+.icon-voliCode:before {
     content: "\e959";
 }
-.icon-bjxsgl:before {
+.icon-voliPass:before {
     content: "\e95a";
 }
-.icon-tzsjshsb:before {
+.icon-bjxsgl:before {
     content: "\e95b";
 }
-.icon-passWord:before {
+.icon-tzsjshsb:before {
     content: "\e95c";
 }
-.icon-toolImport:before {
+.icon-passWord:before {
     content: "\e95d";
 }
-.icon-bjtzsj:before {
+.icon-toolImport:before {
     content: "\e95e";
 }
-.icon-bjsjbb:before {
+.icon-bjtzsj:before {
     content: "\e95f";
 }
-.icon-njsjdc:before {
+.icon-bjsjbb:before {
     content: "\e960";
 }
-.icon-tzsjlrtjsh:before {
+.icon-njsjdc:before {
     content: "\e961";
 }
-.icon-gou-cked:before {
+.icon-tzsjlrtjsh:before {
     content: "\e962";
 }
-.icon-up:before {
+.icon-gou-cked:before {
     content: "\e963";
 }
-.icon-right:before {
+.icon-up:before {
     content: "\e964";
 }
-.icon-down:before {
+.icon-right:before {
     content: "\e965";
+}
+.icon-down:before {
+    content: "\e966";
+}
+.icon-datazicha:before {
+    content: "\e968";
+}
+.icon-wenduji:before {
+    content: "\e967";
 }
 .icon-spinner:before {
     content: "\e97a";
@@ -366,6 +376,7 @@
 .icon-arrow-left2:before {
     content: "\ea40";
 }
-.icon-datazicha:before {
-    content: "\e966";
+.icon-1:before {
+    content: "\e969";
+    color: #d81e06;
 }
