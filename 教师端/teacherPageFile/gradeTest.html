@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <script src="../js/flexible/flexible_css.js"></script>
+    <script src="../js/flexible/flexible.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/new.css">
+    <link rel="stylesheet" href="../js/mobiscroll2/mobiscroll.custom-2.17.0.min.css">
+    <script src="../js/jquery.js"></script>
+    <!--<script src="../js/mobiscroll2/mobiscroll.custom-2.17.0.min.js"></script>-->
+    <script src="../js/main.js"></script>
+    <title>动跃科技</title>
+    <style>
+        header .title>input {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body flex="dir:top">
+    <header style="position: relative; z-index: 100;" flex-box="0" flex="dir:left" font="18">
+        <a href="javascript:history.go(-1)" flex-box="0">
+            <i class="icon-back"></i>
+        </a>
+        <div class="title" flex-box="1" font="14">教案教案教案教案教案教案教案教案教案教案教案教案教案教案教案教案教案教案教案教案教案</div>
+
+    </header>
+    <div class="data-update-content-box" id="data-update-content-box">
+
+        <div class="data-update-content" flex="dir:top">
+            <!-- 关闭按钮 -->
+            <!-- <div class="exit" id="exit" flex="cross:center">
+                <i class="icon-close"></i>
+            </div> -->
+            <div class="data-update-detail-box">
+                <!-- 更新数据 -->
+                <ul class="drop-menu-list" id="gengxinshuju">
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" checked="checked" value="111">
+                        <span>立定跳远</span>
+                        <i class="icon-selected-gougou"></i>
+                    </li>
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" value="222">
+                        <span>耐力跑</span>
+                        <i class=""></i>
+                    </li>
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" value="222">
+                        <span>引体向上(男)/斜身引体(女)</span>
+                        <i class=""></i>
+                    </li>
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" value="222">
+                        <span>原地双手正面投掷实心球</span>
+                        <i class=""></i>
+                    </li>
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" value="222">
+                        <span>足球运球绕标志杆</span>
+                        <i class=""></i>
+                    </li>
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" value="222">
+                        <span>排球对枪垫球</span>
+                        <i class=""></i>
+                    </li>
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" value="222">
+                        <span>篮球行进间运球上篮</span>
+                        <i class=""></i>
+                    </li>
+                </ul>
+                <!-- 切换班级 -->
+                <ul class="drop-menu-list" id="qiehuanbanji">
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" value="111">
+                        <span>初一一班</span>
+                        <i class=""></i>
+                    </li>
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" value="111">
+                        <span>初二一班</span>
+                        <i class=""></i>
+                    </li>
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" checked="checked" value="222">
+                        <span>初二二班</span>
+                        <i class="icon-selected-gougou"></i>
+                    </li>
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" checked="checked" value="222">
+                        <span>初三一班</span>
+                        <i class="icon-selected-gougou"></i>
+                    </li>
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" checked="checked" value="222">
+                        <span>初三二班</span>
+                        <i class="icon-selected-gougou"></i>
+                    </li>
+                    <li class="data-update-detail" flex="cross:center">
+                        <input type="hidden" checked="checked" value="222">
+                        <span>初三三班</span>
+                        <i class="icon-selected-gougou"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="blank-content">
+            1234123
+        </div> -->
+    </div>
+    <section style="position: relative; z-index: 10;" flex-box="1" class="white-back" font="14">
+       <!-- <div class=" droplist" id="qhbj" flex="cross:center" style="left: 0.2rem;z-index:999;">
+            <span font="16" id="qhbj-res">一年级一班</span>&nbsp;
+            <i class="icon-up"></i>
+        </div>
+        <div class=" droplist" id="gxsj" font="16" flex="cross:center">
+            <span font="16" id="gxsj-res">更新数据</span>&nbsp;
+            <i class="icon-up"></i>
+        </div>-->
+
+        <div style="width: 100%;line-height: 1rem;background-color: red">
+            <div class=" droplist" id="qhbj" flex="cross:center" style="margin-left: 0.2rem;z-index:999;float: left">
+                <span font="16" id="qhbj-res">一年级一班</span>&nbsp;
+                <i class="icon-up"></i>
+            </div>
+            <div class=" droplist" id="gxsj" font="16" flex="cross:center"style="margin-right: 0.2rem;z-index:999;float: right">
+                <span font="16" id="gxsj-res">更新数据</span>&nbsp;
+                <i class="icon-up"></i>
+            </div>
+        </div>
+        <a href="javascript:void(0)" flex-box="0" class="clearfix"></a>
+        <div class="studentlist-wrapper clearfix" flex="dir:top">
+
+            <h1 class="page-title" font="14">立定跳远</h1>
+
+            <div class="gradeT_table " >
+                <!-- 一行 -->
+                <div class="line-item">
+                    <div class="item">
+                        学号
+                    </div>
+                    <div class="item">
+                        姓名
+                    </div>
+                    <div class="item">
+                        测试成绩
+                    </div>
+                    <div class="item">
+                        单位
+                    </div>
+                </div>
+                <!-- 一行 -->
+                <div class="line-item">
+                    <div class="item">
+                        1
+                    </div>
+                    <div class="item">
+                        张毅
+                        <i class="icon-boy" font="16"></i>
+                    </div>
+                    <div class="item">
+                        216
+                    </div>
+                    <div class="item">
+                        CM
+                    </div>
+                </div>
+                <!-- 一行 -->
+                <div class="line-item">
+                    <div class="item">
+                        1
+                    </div>
+                    <div class="item">
+                        张毅
+                        <i class="icon-girl" font="16"></i>
+                    </div>
+                    <div class="item">
+                        216
+                    </div>
+                    <div class="item">
+                        CM
+                    </div>
+                </div>
+                <!-- 一行 -->
+                <div class="line-item">
+                    <div class="item">
+                        1
+                    </div>
+                    <div class="item">
+                        张毅
+                        <i class="icon-boy" font="16"></i>
+                    </div>
+                    <div class="item">
+                        216
+                    </div>
+                    <div class="item">
+                        CM
+                    </div>
+                </div>
+                <!-- 一行 -->
+                <div class="line-item">
+                    <div class="item">
+                        1
+                    </div>
+                    <div class="item">
+                        张毅
+                        <i class="icon-girl" font="16"></i>
+                    </div>
+                    <div class="item">
+                        216
+                    </div>
+                    <div class="item">
+                        CM
+                    </div>
+                </div>
+                <!-- 一行 -->
+                <div class="line-item">
+                    <div class="item">
+                        1
+                    </div>
+                    <div class="item">
+                        张毅
+                        <i class="icon-boy" font="16"></i>
+                    </div>
+                    <div class="item">
+                        216
+                    </div>
+                    <div class="item">
+                        CM
+                    </div>
+                </div>
+                <!-- 一行 -->
+                <div class="line-item">
+                    <div class="item">
+                        1
+                    </div>
+                    <div class="item">
+                        张毅
+                        <i class="icon-girl" font="16"></i>
+                    </div>
+                    <div class="item">
+                        216
+                    </div>
+                    <div class="item">
+                        CM
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 绿色 -->
+            <!-- <div class="ldty-ok-box" flex="main:center cross:center">
+                <button type="button" font="16">保存</button>
+            </div> -->
+            <!-- 黑色 -->
+            <div class="ldty-ok-box" flex="main:center cross:center">
+                <button class="bg-black" type="button" font="16">录入数据</button>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="../js/each/studentList.js"></script>
+
+</body>
+
+</html>
