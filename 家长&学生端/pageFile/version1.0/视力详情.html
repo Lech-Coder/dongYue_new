@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="../../js/flexible/flexible_css.js"></script>
+  <script src="../../js/flexible/flexible.js"></script>
+  <link rel="stylesheet" href="../../css/studentMain.css">
+  <script src="../../js/jquery.js"></script>
+  <script src="../../js/studentMain.js"></script>
+  <script src="../../js/echart/echart.js"></script>
+  <script src="../../js/echart/echarts.min.js"></script>
+  <title>学校成绩</title>
+</head>
+<body flex="dir:top">
+<header flex-box="0" flex="dir:left" font="18">
+  <a href="javascript:history.go(-1)" flex-box="0">
+    返回
+  </a>
+  <a class="title" flex-box="1" font="14">
+      学校成绩
+  </a>
+  <a href="javascript:void(0)" flex-box="0">
+  </a>
+</header>
+<section class="class_xinlv" flex-box="1" class="white-back" flex="dir:top" font="14">
+  <div class="nav" flex="cross:center">
+    <span class="class_name">课程名称课程名称</span>
+  </div>
+    <div class="studentsGrade" flex="dir:top" font="12">
+        <div class="somedata" font="14">
+            <div class="chunk">
+                <div class="relativeBox">
+                    <div class="top" flex="dir:left cross:center" font="16" style="height:1rem;border-bottom:1px solid #707070">
+                        <h1 flex-box="1" font="12">视力</h1>
+                        <div flex-box="1">
+                            <span class="light" font="12">左：</span>
+                            <span class="bold" font="16">4.6</span>
+                            <span class="light" font="12">右：</span>
+                            <span class="bold" font="16">4.9</span>
+                        </div>
+                    </div>
+                    <!--<div class="center" style="border-top: 1px solid #707070">-->
+
+                    <!--</div>-->
+                    <div class="bottom mt20" flex="dir:top">
+                        <ul class="items" flex="dir:left box:mean">
+                            <li>重度</li>
+                            <li>中度</li>
+                            <li>轻度</li>
+                            <li>正常</li>
+                        </ul>
+                        <ul class="color" flex="dir:left box:mean" >
+                            <li class="color_5 ">
+                                <span class="category_1 new_w">3.0~4.5</span>
+                            </li>
+                            <li class="color_4 eyefocus_4">
+                                <span class="category_2 new_w">4.6~4.8</span>
+                            </li>
+                            <li class="color_1">
+                                <span class="category_3 new_w">4.9</span>
+                            </li>
+                            <li class="color_3 eyefocus_3">
+                                <span class="category_4 new_w">5.0以上</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p style="padding: 0.2rem 0.5rem; line-height: 0.5rem">
+                        视力是指视网膜分辨影像的能力。裸眼视力五米外能达到5.0及以上为正常，4.9为轻度视力低下，4.6~4.8为中度视力低下，低于4.5为重度视力低下。
+                        <br>
+                        预防学生近视眼要人人抓、经常抓、科学抓，还从预防为主、防治结合的原则出发，定期做眼睛视力检查，及时发现眼疾病并及时治疗，对于假性近视及时发现可以得到有效的矫正。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="xinlv_chart">
+    </div>
+</section>
+
+<footer flex-box="0" flex="dir:left box:mean" font="12">
+  <a class="focus" href="" flex="main:center cross:center dir:top">
+    <i class="icon-home" font="18"></i>
+    <span>首页</span>
+  </a>
+  <a href="" flex="main:center  dir:top">
+    <i class="icon-uniE939" font="18"></i>
+    <span>问答大厅</span>
+  </a>
+  <a href="" flex="main:center cross:center dir:top">
+    <i class="icon-xsq" font="18"></i>
+    <span>学生圈</span>
+  </a>
+  <a href="" flex="main:center cross:center dir:top">
+    <i class="icon-gerzhongxin" font="18"></i>
+    <span>我的</span>
+  </a>
+</footer>
+<script src="../../js/each/eye_bar.js"></script>
+<script>
+
+  var dataset=[
+      {people: '1', '左眼': 4,  '右眼': 9},
+      {people: '2', '左眼': 8,  '右眼': 5},
+      {people: '3', '左眼': 8,  '右眼': 8},
+      {people: '4', '左眼': 7,  '右眼': 3}
+  ]
+  eye_bar($('.xinlv_chart')[0],dataset)
+</script>
+</body>
+</html>
