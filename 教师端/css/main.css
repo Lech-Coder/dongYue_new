@@ -8566,6 +8566,12 @@ footer a:active {
   width: 100%;
   text-align: center;
 }
+.gradeT_table .line-item .item input {
+  width: 50%;
+  border-bottom: 1px solid;
+  padding: 0.1rem 0;
+  text-align: center;
+}
 .boder_all {
   border: 1px solid #969696;
 }
