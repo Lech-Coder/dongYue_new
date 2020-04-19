@@ -5103,6 +5103,18 @@ footer.answerFooter .send .relativeBox > i {
 .homework-status .control-list > li > a p {
   margin-top: 0.133rem;
 }
+.tiNum {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 0.467rem;
+  text-align: right;
+}
+.tiNum p {
+  font-size: 14px;
+}
+.tiNum p span {
+  font-size: 18px;
+}
 .userHomepage {
   height: 3.70666667rem;
   width: 100%;
@@ -5151,6 +5163,9 @@ footer.answerFooter .send .relativeBox > i {
   background-color: #F07868;
 }
 .userHomepage .user_health .user_health_grade > span.grade_z {
+  background-color: #DEDEDE;
+}
+.userHomepage .user_health .user_health_grade > span.an {
   background-color: #DEDEDE;
 }
 .userHomepage .user_health .user_health_grade > span.light {
