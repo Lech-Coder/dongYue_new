@@ -3278,6 +3278,15 @@ div[class^="col"]:before > span.textArea {
 .class-time-inputBox .form-inline .btnBox {
   line-height: 36px;
 }
+.kaoqin_box .form-inline {
+  height: 28px;
+  line-height: 28px;
+}
+.kaoqin_box .form-inline input {
+  height: 28px;
+  width: 100%;
+  border: 1px solid;
+}
 .course-edit {
   padding: 30px 40px;
 }
@@ -10635,6 +10644,9 @@ input[type="button"] {
   text-align: left;
   padding-left: 20px;
   color: #fff;
+}
+.title_zhihui .kaoqinshezhi {
+  cursor: pointer;
 }
 .ktbg-content .title {
   height: 45px;
