@@ -347,6 +347,9 @@ img {
 .l_h50 {
   line-height: 50px;
 }
+.l_h40_imp {
+  line-height: 40px !important;
+}
 .no-padding {
   padding: 0!important;
 }
@@ -1750,6 +1753,32 @@ textarea {
 }
 .tizhireport:hover .school_tizhireport {
   display: block;
+}
+.xiala_ul {
+  display: none;
+  position: absolute;
+  z-index: 111111;
+}
+.xiala_ul li a {
+  width: 170px;
+  height: 38px;
+  color: #fff;
+  display: inline-block;
+}
+.xiala_ul li a.new {
+  height: 40px;
+  width: 140px;
+}
+.xiala-box:hover .xiala_ul {
+  display: block;
+}
+.xiala-div {
+  display: inline-block;
+  height: 40px;
+  width: 140px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
 }
 .gradedaochu_btn {
   display: inline-block;

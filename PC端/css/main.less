@@ -575,7 +575,36 @@ textarea{
 .tizhireport:hover .school_tizhireport{
     display: block;
 }
+.xiala_ul{
+  display: none;
+  position: absolute;
+  z-index: 111111;
+  li{
+    a{
+      width: 170px;
+      height: 38px;
+      color: #fff;
+      display: inline-block;
+      &.new{
+        height: 40px;
+        width: 140px;
+      }
+    }
+  }
+}
 
+.xiala-box:hover .xiala_ul{
+  display: block;
+}
+.xiala-div{
+  display: inline-block;
+  height: 40px;
+  width: 140px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+
+}
 
 .gradedaochu_btn{
   display: inline-block;
