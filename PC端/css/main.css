@@ -1760,14 +1760,17 @@ textarea {
   z-index: 111111;
 }
 .xiala_ul li a {
-  width: 170px;
   height: 38px;
   color: #fff;
   display: inline-block;
 }
-.xiala_ul li a.new {
+.xiala_ul li a.new140 {
   height: 40px;
   width: 140px;
+}
+.xiala_ul li a.new100 {
+  height: 40px;
+  width: 100px;
 }
 .xiala-box:hover .xiala_ul {
   display: block;
@@ -1775,7 +1778,6 @@ textarea {
 .xiala-div {
   display: inline-block;
   height: 40px;
-  width: 140px;
   line-height: 40px;
   text-align: center;
   cursor: pointer;
