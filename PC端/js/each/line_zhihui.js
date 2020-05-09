@@ -6,7 +6,13 @@ function line_zhihui(div,xdata,data_inSchool,data_outSchool) {
         //     subtext: '纯属虚构'
         // },
         tooltip: {
-            trigger: 'axis'
+            trigger: 'axis',
+            formatter: function(params) {
+                console.log(params[0].marker)
+                return params[0].name + '<br/>'
+                    +params.marker+ params[0].seriesName + ' : ' + params[0].value + ' 人<br/>'
+                +params[1].marker+ params[1].seriesName + ' : ' + -params[1].value + '人';
+            }
         },
         legend: {
             data:['入校','出校']

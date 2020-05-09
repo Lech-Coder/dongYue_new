@@ -283,7 +283,7 @@ function simple_pie(dom,pdata){
             bottom:'10%',
             right:'10%',
         },
-        color:['#185c80','#ff7640','#e2b000','#1e9ea1'],
+        color:['#e2b000','#ff7640','#185c80','#1e9ea1'],
         tooltip : {
             formatter: "{b} : {d}%"
         },
