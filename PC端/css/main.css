@@ -9780,8 +9780,22 @@ input[type="button"] {
   pointer-events: none;
   color: #b0b0b0;
 }
+.zhongkao .class-select .form-inline .input-fenshu {
+  width: 45%;
+  height: 30px;
+  line-height: 35px;
+  border: 1px solid #CCCCCC;
+}
 .zhongkao .class-select.current {
   display: block;
+}
+.zhongkao .class-select .chooseTop_2 {
+  width: 80%;
+  margin: 0 auto;
+}
+.zhongkao .class-select .chooseTop_2 select {
+  width: 100%;
+  height: 35px;
 }
 .zhongkao .detail-title {
   height: 90px;
