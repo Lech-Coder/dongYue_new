@@ -10100,6 +10100,10 @@ input[type="button"] {
 .color-table tbody tr td:nth-child(12) {
   background: #e4eef4;
 }
+.color-table tbody tr td:nth-child(13),
+.color-table tbody tr td:nth-child(14) {
+  background: #ecf4e4;
+}
 .color-table tbody .zongfen td {
   color: #333333 !important;
 }

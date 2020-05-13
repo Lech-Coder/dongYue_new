@@ -377,13 +377,23 @@
         let list = $('.defen_list')[0]
         let rows = list.rows.length-2
         let cells = list.rows[0].cells.length
-        for (let j=5,t=1;j<cells;j=j+2,t++) {
+        for (let j=5,t=1;j<cells-2;j=j+2,t++) {
                 var total = 0
                 for (let i=0;i<rows;i++){
                    total = total+ list.rows[i].cells[j].innerHTML*1
                 }
                 var num = total/rows
                 item.cells[t].innerHTML = num.toFixed(2)
+        }
+
+
+        for (let j=cells-1,t=1;j>=cells-2;--j,t++) {
+            var total = 0
+            for (let i=0;i<rows;i++){
+                total = total+ list.rows[i].cells[j].innerHTML*1
+            }
+            var num = total/rows
+            item.cells[item.cells.length-t].innerHTML = num.toFixed(2)
         }
     </script>
     <script>
